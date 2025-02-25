@@ -31,8 +31,8 @@ router.get("/profile", async (req, res) => {
   }
 });
 
-// Route 1 - Update User details
-router.patch("/completeprofile", async (req, res) => {
+// Route 1 - Complete User Profile
+router.patch("/complete", async (req, res) => {
   try {
     const { Token } = req.cookies;
     const { tagLine, description, city, state, address, country, pincode } =
@@ -53,6 +53,55 @@ router.patch("/completeprofile", async (req, res) => {
           config: {
             hasCompletedProfile: true,
           },
+        },
+      },
+      { new: true },
+    );
+
+    if (!user) {
+      return res
+        .status(STATUSCODE.NOT_FOUND)
+        .json({ message: STATUSMESSAGE.USER_NOT_FOUND });
+    }
+
+    return res
+      .status(STATUSCODE.OK)
+      .json({ message: STATUSMESSAGE.PROFILE_UPDATE_SUCCESS });
+  } catch (error) {
+    res
+      .status(STATUSCODE.INTERNAL_SERVER_ERROR)
+      .json({ message: "Internal server error" });
+  }
+});
+
+// Route 2 - Update User details
+router.patch("/update", async (req, res) => {
+  try {
+    const { Token } = req.cookies;
+    const {
+      tagLine,
+      description,
+      city,
+      state,
+      address,
+      country,
+      pincode,
+      name,
+    } = req.body;
+    const email = jwt.verify(Token, process.env.JWT_SECRET).User.id;
+
+    const user = await User.findOneAndUpdate(
+      { email },
+      {
+        $set: {
+          tagLine,
+          description,
+          city,
+          name,
+          state,
+          address,
+          country,
+          pincode,
         },
       },
       { new: true },
