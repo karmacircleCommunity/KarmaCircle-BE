@@ -11,15 +11,21 @@ system.
 
 - Open your terminal and navigate to the `Milan-Backend` directory.
 - Type `npm install` to install all the dependencies.
-- Once the installation is done, you can start the frontend server by typing
-  `npm start`.
-- This should start the frontend server on `http://localhost:5000/`.
+- Once the installation is done, you can start the backend server in watch mode
+  by typing `npm run dev`.
+- This should start the backend server on `http://localhost:5000/`.
+- Interactive API docs are served at `http://localhost:5000/docs` once the
+  server is running.
 
 ## Techstack overview 🌀
 
-- We are currently using `ExpressJS v4` along with `MongoDB v6` as the backend
-  framework.
-- We are using `Nodemon` for the hot reloading.
+- We are currently using `ExpressJS v4`, `TypeScript`, and `MongoDB` as the
+  backend stack.
+- `npm run dev` runs the server in watch mode via `tsx`.
+- `npm run build` compiles TypeScript to `dist/`, and `npm start` runs the
+  compiled build (used in production, on non-Vercel hosts).
+- `npm run typecheck`, `npm run lint`, and `npm test` check types, lint, and
+  run the Jest/Supertest test suite, respectively.
 - List of all the other dependencies can be found in the `package.json` file.
 
 ## Setting up `.env`
