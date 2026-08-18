@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { requireAuth } from "../../middleware/auth";
+import { AuthenticatedRequest, requireAuth } from "../../middleware/auth";
 import { validate } from "../../middleware/validate";
 import { asyncHandler } from "../../utils/async-handler";
 import * as eventController from "./event.controller";
@@ -66,7 +66,7 @@ router.post(
   "/create",
   requireAuth,
   validate(createEventSchema),
-  asyncHandler(eventController.createEvent),
+  asyncHandler<AuthenticatedRequest>(eventController.createEvent),
 );
 
 export default router;

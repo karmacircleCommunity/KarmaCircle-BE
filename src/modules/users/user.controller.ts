@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { STATUS_CODE, STATUS_MESSAGE } from "../../constants/http-status";
+import { AuthenticatedRequest } from "../../middleware/auth";
 import { AppError } from "../../middleware/error-handler";
 import * as userService from "./user.service";
 import { ListUsersQuery, UpdateProfileInput } from "./user.validation";
@@ -21,8 +22,8 @@ export async function listUsers(req: Request, res: Response) {
   return res.status(STATUS_CODE.OK).json(users);
 }
 
-export async function updateProfile(req: Request, res: Response) {
-  const email = req.auth!.email;
+export async function updateProfile(req: AuthenticatedRequest, res: Response) {
+  const email = req.auth.email;
   const data = req.body as UpdateProfileInput;
 
   const user = await userService.updateProfile(email, data);

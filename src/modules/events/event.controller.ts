@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { STATUS_CODE, STATUS_MESSAGE } from "../../constants/http-status";
+import { AuthenticatedRequest } from "../../middleware/auth";
 import { AppError } from "../../middleware/error-handler";
 import * as eventService from "./event.service";
 import { CreateEventInput, ListEventsQuery } from "./event.validation";
@@ -22,8 +23,8 @@ export async function listEvents(req: Request, res: Response) {
   return res.status(STATUS_CODE.OK).json(events);
 }
 
-export async function createEvent(req: Request, res: Response) {
-  const email = req.auth!.email;
+export async function createEvent(req: AuthenticatedRequest, res: Response) {
+  const email = req.auth.email;
   const savedEvent = await eventService.createEvent(
     email,
     req.body as CreateEventInput,

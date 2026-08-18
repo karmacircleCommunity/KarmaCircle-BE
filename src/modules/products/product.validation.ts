@@ -3,10 +3,10 @@ import { z } from "zod";
 export const addProductSchema = z.object({
   productType: z.string().min(1),
   productName: z.string().min(1),
-  productPrice: z.number(),
+  productPrice: z.number().nonnegative(),
   productDescription: z.string().min(1),
   productImage: z.string().min(1),
-  productQty: z.number(),
+  productQty: z.number().nonnegative(),
   productSlug: z.string().min(1),
 });
 

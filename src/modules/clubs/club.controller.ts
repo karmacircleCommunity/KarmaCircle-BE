@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { STATUS_CODE, STATUS_MESSAGE } from "../../constants/http-status";
+import { AuthenticatedRequest } from "../../middleware/auth";
 import { AppError } from "../../middleware/error-handler";
 import * as userService from "../users/user.service";
 import { ListClubsQuery } from "./club.validation";
@@ -21,8 +22,8 @@ export async function listClubs(req: Request, res: Response) {
   return res.status(STATUS_CODE.OK).json(clubs);
 }
 
-export async function dashboard(req: Request, res: Response) {
-  const email = req.auth!.email;
+export async function dashboard(req: AuthenticatedRequest, res: Response) {
+  const email = req.auth.email;
   const user = await userService.findByEmail(email);
 
   if (!user) {

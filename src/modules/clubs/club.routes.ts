@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { requireAuth } from "../../middleware/auth";
+import { AuthenticatedRequest, requireAuth } from "../../middleware/auth";
 import { validate } from "../../middleware/validate";
 import { asyncHandler } from "../../utils/async-handler";
 import * as clubController from "./club.controller";
@@ -39,6 +39,10 @@ router.get(
  *       401: { description: Unauthorized }
  *       404: { description: Not found }
  */
-router.get("/dashboard", requireAuth, asyncHandler(clubController.dashboard));
+router.get(
+  "/dashboard",
+  requireAuth,
+  asyncHandler<AuthenticatedRequest>(clubController.dashboard),
+);
 
 export default router;

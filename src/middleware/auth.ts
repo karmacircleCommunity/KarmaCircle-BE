@@ -7,11 +7,26 @@ interface TokenPayload {
   User: { id: string };
 }
 
-export function requireAuth(req: Request, res: Response, next: NextFunction): void {
+/**
+ * Request shape after requireAuth has run: `auth` is guaranteed present,
+ * so handlers typed against this don't need a `req.auth!` assertion.
+ * Pair with asyncHandler<AuthenticatedRequest>(...) in the route file.
+ */
+export interface AuthenticatedRequest extends Request {
+  auth: { email: string };
+}
+
+export function requireAuth(
+  req: Request,
+  res: Response,
+  next: NextFunction,
+): void {
   const token = req.cookies?.Token;
 
   if (!token) {
-    res.status(STATUS_CODE.UNAUTHORIZED).json({ message: STATUS_MESSAGE.UNAUTHORIZED });
+    res
+      .status(STATUS_CODE.UNAUTHORIZED)
+      .json({ message: STATUS_MESSAGE.UNAUTHORIZED });
     return;
   }
 
@@ -20,6 +35,8 @@ export function requireAuth(req: Request, res: Response, next: NextFunction): vo
     req.auth = { email: decoded.User.id };
     next();
   } catch {
-    res.status(STATUS_CODE.UNAUTHORIZED).json({ message: STATUS_MESSAGE.UNAUTHORIZED });
+    res
+      .status(STATUS_CODE.UNAUTHORIZED)
+      .json({ message: STATUS_MESSAGE.UNAUTHORIZED });
   }
 }

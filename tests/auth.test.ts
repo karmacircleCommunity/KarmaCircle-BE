@@ -54,4 +54,65 @@ describe("Auth", () => {
 
     expect(res.status).toBe(401);
   });
+
+  describe("password update", () => {
+    it("changes the password without wiping the rest of the profile", async () => {
+      await request(app)
+        .post("/auth/signup")
+        .send({ ...credentials, name: "Jane Doe" });
+
+      const updateRes = await request(app).post("/auth/update").send({
+        email: credentials.email,
+        oldPassword: credentials.password,
+        newPassword: "new-password-1",
+      });
+      expect(updateRes.status).toBe(201);
+
+      const oldSignin = await request(app)
+        .post("/auth/signin")
+        .send(credentials);
+      expect(oldSignin.status).toBe(401);
+
+      const newSignin = await request(app)
+        .post("/auth/signin")
+        .send({ email: credentials.email, password: "new-password-1" });
+      expect(newSignin.status).toBe(200);
+      expect(newSignin.body.user.name).toBe("Jane Doe");
+      expect(newSignin.body.user.userName).toBeDefined();
+    });
+
+    it("rejects the wrong old password with 401", async () => {
+      await request(app).post("/auth/signup").send(credentials);
+
+      const res = await request(app).post("/auth/update").send({
+        email: credentials.email,
+        oldPassword: "not-the-real-password",
+        newPassword: "new-password-1",
+      });
+
+      expect(res.status).toBe(401);
+    });
+
+    it("rejects an unknown email with 404", async () => {
+      const res = await request(app).post("/auth/update").send({
+        email: "nobody@example.com",
+        oldPassword: "whatever",
+        newPassword: "new-password-1",
+      });
+
+      expect(res.status).toBe(404);
+    });
+
+    it("rejects a new password under 5 characters with 400", async () => {
+      await request(app).post("/auth/signup").send(credentials);
+
+      const res = await request(app).post("/auth/update").send({
+        email: credentials.email,
+        oldPassword: credentials.password,
+        newPassword: "abcd",
+      });
+
+      expect(res.status).toBe(400);
+    });
+  });
 });

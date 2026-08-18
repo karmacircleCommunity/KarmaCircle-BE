@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { requireAuth } from "../../middleware/auth";
+import { AuthenticatedRequest, requireAuth } from "../../middleware/auth";
 import { validate } from "../../middleware/validate";
 import { asyncHandler } from "../../utils/async-handler";
 import * as userController from "./user.controller";
@@ -57,7 +57,7 @@ router.post(
   "/update",
   requireAuth,
   validate(updateProfileSchema),
-  asyncHandler(userController.updateProfile),
+  asyncHandler<AuthenticatedRequest>(userController.updateProfile),
 );
 
 export default router;
