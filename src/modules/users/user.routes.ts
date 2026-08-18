@@ -3,7 +3,7 @@ import { requireAuth } from "../../middleware/auth";
 import { validate } from "../../middleware/validate";
 import { asyncHandler } from "../../utils/async-handler";
 import * as userController from "./user.controller";
-import { updateProfileSchema } from "./user.validation";
+import { listUsersQuerySchema, updateProfileSchema } from "./user.validation";
 
 const router = Router();
 
@@ -21,7 +21,11 @@ const router = Router();
  *       200: { description: A user or a list of users }
  *       404: { description: Not found }
  */
-router.get("/", asyncHandler(userController.listUsers));
+router.get(
+  "/",
+  validate(listUsersQuerySchema, "query"),
+  asyncHandler(userController.listUsers),
+);
 
 /**
  * @openapi

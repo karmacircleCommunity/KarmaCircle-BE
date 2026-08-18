@@ -1,7 +1,17 @@
 import mongoose, { Document, Schema } from "mongoose";
 
+/**
+ * The two categories the app's own code queries by. The Mongoose field
+ * itself stays an unconstrained string (not `enum: [...]`) because the
+ * DB was never validated at this level and may hold other values from
+ * before this type existed; `(string & NonNullable<unknown>)` keeps that
+ * honest while still giving autocomplete/typo-safety for the two known
+ * values.
+ */
+export type UserType = "individual" | "club";
+
 export interface IUser extends Document {
-  userType?: string;
+  userType?: UserType | (string & NonNullable<unknown>);
   userName: string;
   name?: string;
   email: string;

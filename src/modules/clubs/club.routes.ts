@@ -1,7 +1,9 @@
 import { Router } from "express";
 import { requireAuth } from "../../middleware/auth";
+import { validate } from "../../middleware/validate";
 import { asyncHandler } from "../../utils/async-handler";
 import * as clubController from "./club.controller";
+import { listClubsQuerySchema } from "./club.validation";
 
 const router = Router();
 
@@ -19,7 +21,11 @@ const router = Router();
  *       200: { description: A club or a list of clubs }
  *       404: { description: Not found }
  */
-router.get("/", asyncHandler(clubController.listClubs));
+router.get(
+  "/",
+  validate(listClubsQuerySchema, "query"),
+  asyncHandler(clubController.listClubs),
+);
 
 /**
  * @openapi
