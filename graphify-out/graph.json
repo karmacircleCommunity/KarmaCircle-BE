@@ -1129,9 +1129,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_milan_project",
       "community": 2,
-      "norm_label": "milan project overview"
+      "norm_label": "milan project overview",
+      "id": "readme_milan_project"
     },
     {
       "label": "Backend Tech Stack",
@@ -1142,9 +1142,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_tech_stack_backend",
       "community": 2,
-      "norm_label": "backend tech stack"
+      "norm_label": "backend tech stack",
+      "id": "readme_tech_stack_backend"
     },
     {
       "label": "Contributing to Milan",
@@ -1155,9 +1155,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_contributing_section",
       "community": 2,
-      "norm_label": "contributing to milan"
+      "norm_label": "contributing to milan",
+      "id": "readme_contributing_section"
     },
     {
       "label": "MIT License Notice",
@@ -1168,9 +1168,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_license",
       "community": 2,
-      "norm_label": "mit license notice"
+      "norm_label": "mit license notice",
+      "id": "readme_license"
     },
     {
       "label": "JWOC Code of Conduct Purpose",
@@ -1181,9 +1181,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "codeofconduct_jwoc_purpose",
       "community": 1,
-      "norm_label": "jwoc code of conduct purpose"
+      "norm_label": "jwoc code of conduct purpose",
+      "id": "codeofconduct_jwoc_purpose"
     },
     {
       "label": "Open Source Citizenship Goal",
@@ -1194,9 +1194,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "codeofconduct_open_citizenship",
       "community": 1,
-      "norm_label": "open source citizenship goal"
+      "norm_label": "open source citizenship goal",
+      "id": "codeofconduct_open_citizenship"
     },
     {
       "label": "Expected Behavior",
@@ -1207,9 +1207,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "codeofconduct_expected_behavior",
       "community": 1,
-      "norm_label": "expected behavior"
+      "norm_label": "expected behavior",
+      "id": "codeofconduct_expected_behavior"
     },
     {
       "label": "Unacceptable Behavior",
@@ -1220,9 +1220,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "codeofconduct_unacceptable_behavior",
       "community": 1,
-      "norm_label": "unacceptable behavior"
+      "norm_label": "unacceptable behavior",
+      "id": "codeofconduct_unacceptable_behavior"
     },
     {
       "label": "Weapons Policy",
@@ -1233,9 +1233,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "codeofconduct_weapons_policy",
       "community": 1,
-      "norm_label": "weapons policy"
+      "norm_label": "weapons policy",
+      "id": "codeofconduct_weapons_policy"
     },
     {
       "label": "Consequences of Unacceptable Behavior",
@@ -1246,9 +1246,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "codeofconduct_consequences",
       "community": 1,
-      "norm_label": "consequences of unacceptable behavior"
+      "norm_label": "consequences of unacceptable behavior",
+      "id": "codeofconduct_consequences"
     },
     {
       "label": "Reporting Guidelines",
@@ -1259,9 +1259,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "codeofconduct_reporting_guidelines",
       "community": 1,
-      "norm_label": "reporting guidelines"
+      "norm_label": "reporting guidelines",
+      "id": "codeofconduct_reporting_guidelines"
     },
     {
       "label": "Addressing Grievances",
@@ -1272,9 +1272,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "codeofconduct_addressing_grievances",
       "community": 1,
-      "norm_label": "addressing grievances"
+      "norm_label": "addressing grievances",
+      "id": "codeofconduct_addressing_grievances"
     },
     {
       "label": "Code of Conduct Scope",
@@ -1285,9 +1285,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "codeofconduct_scope",
       "community": 1,
-      "norm_label": "code of conduct scope"
+      "norm_label": "code of conduct scope",
+      "id": "codeofconduct_scope"
     },
     {
       "label": "Contact Info",
@@ -1298,9 +1298,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "codeofconduct_contact_info",
       "community": 1,
-      "norm_label": "contact info"
+      "norm_label": "contact info",
+      "id": "codeofconduct_contact_info"
     },
     {
       "label": "License and Attribution",
@@ -1311,9 +1311,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "codeofconduct_license_attribution",
       "community": 2,
-      "norm_label": "license and attribution"
+      "norm_label": "license and attribution",
+      "id": "codeofconduct_license_attribution"
     },
     {
       "label": "Django Code of Conduct",
@@ -1324,9 +1324,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "codeofconduct_django_coc",
       "community": 2,
-      "norm_label": "django code of conduct"
+      "norm_label": "django code of conduct",
+      "id": "codeofconduct_django_coc"
     },
     {
       "label": "Geek Feminism Anti-Harassment Policy",
@@ -1337,9 +1337,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "codeofconduct_geek_feminism_policy",
       "community": 2,
-      "norm_label": "geek feminism anti-harassment policy"
+      "norm_label": "geek feminism anti-harassment policy",
+      "id": "codeofconduct_geek_feminism_policy"
     },
     {
       "label": "Stumptown Syndicate Citizen Code of Conduct",
@@ -1350,9 +1350,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "codeofconduct_stumptown_syndicate",
       "community": 2,
-      "norm_label": "stumptown syndicate citizen code of conduct"
+      "norm_label": "stumptown syndicate citizen code of conduct",
+      "id": "codeofconduct_stumptown_syndicate"
     },
     {
       "label": "Commit Message Format",
@@ -1363,9 +1363,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "contributing_commit_message_format",
       "community": 8,
-      "norm_label": "commit message format"
+      "norm_label": "commit message format",
+      "id": "contributing_commit_message_format"
     },
     {
       "label": "ESLint and Prettier Pre-commit Hooks",
@@ -1376,9 +1376,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "contributing_eslint_prettier",
       "community": 8,
-      "norm_label": "eslint and prettier pre-commit hooks"
+      "norm_label": "eslint and prettier pre-commit hooks",
+      "id": "contributing_eslint_prettier"
     },
     {
       "label": "Creating an Issue",
@@ -1389,9 +1389,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "contributing_creating_issue",
       "community": 1,
-      "norm_label": "creating an issue"
+      "norm_label": "creating an issue",
+      "id": "contributing_creating_issue"
     },
     {
       "label": "Working on an Issue",
@@ -1402,9 +1402,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "contributing_working_on_issue",
       "community": 1,
-      "norm_label": "working on an issue"
+      "norm_label": "working on an issue",
+      "id": "contributing_working_on_issue"
     },
     {
       "label": "Closing an Issue",
@@ -1415,9 +1415,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "contributing_closing_issue",
       "community": 8,
-      "norm_label": "closing an issue"
+      "norm_label": "closing an issue",
+      "id": "contributing_closing_issue"
     },
     {
       "label": "Creating a Pull Request",
@@ -1428,9 +1428,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "contributing_creating_pr",
       "community": 8,
-      "norm_label": "creating a pull request"
+      "norm_label": "creating a pull request",
+      "id": "contributing_creating_pr"
     },
     {
       "label": "Pull Request Title Format",
@@ -1441,9 +1441,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "contributing_pr_title_format",
       "community": 8,
-      "norm_label": "pull request title format"
+      "norm_label": "pull request title format",
+      "id": "contributing_pr_title_format"
     },
     {
       "label": "Reviewing a Pull Request",
@@ -1454,9 +1454,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "contributing_reviewing_pr",
       "community": 8,
-      "norm_label": "reviewing a pull request"
+      "norm_label": "reviewing a pull request",
+      "id": "contributing_reviewing_pr"
     },
     {
       "label": "Reporting a Vulnerability",
@@ -1467,9 +1467,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "security_reporting_vulnerability",
       "community": 1,
-      "norm_label": "reporting a vulnerability"
+      "norm_label": "reporting a vulnerability",
+      "id": "security_reporting_vulnerability"
     },
     {
       "label": "Installing Dependencies",
@@ -1480,9 +1480,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "backendsetup_installing_dependencies",
       "community": 2,
-      "norm_label": "installing dependencies"
+      "norm_label": "installing dependencies",
+      "id": "backendsetup_installing_dependencies"
     },
     {
       "label": "Techstack Overview",
@@ -1493,9 +1493,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "backendsetup_techstack_overview",
       "community": 2,
-      "norm_label": "techstack overview"
+      "norm_label": "techstack overview",
+      "id": "backendsetup_techstack_overview"
     },
     {
       "label": "Setting up .env",
@@ -1506,9 +1506,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "backendsetup_env_setup",
       "community": 12,
-      "norm_label": "setting up .env"
+      "norm_label": "setting up .env",
+      "id": "backendsetup_env_setup"
     },
     {
       "label": "Setting up Google Client ID and Secret",
@@ -1519,9 +1519,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "backendsetup_google_client_setup",
       "community": 12,
-      "norm_label": "setting up google client id and secret"
+      "norm_label": "setting up google client id and secret",
+      "id": "backendsetup_google_client_setup"
     },
     {
       "label": "Setting up Razorpay API Key",
@@ -1532,9 +1532,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "backendsetup_razorpay_setup",
       "community": 12,
-      "norm_label": "setting up razorpay api key"
+      "norm_label": "setting up razorpay api key",
+      "id": "backendsetup_razorpay_setup"
     },
     {
       "label": "Coding Standards",
@@ -1545,9 +1545,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "backendsetup_coding_standards",
       "community": 20,
-      "norm_label": "coding standards"
+      "norm_label": "coding standards",
+      "id": "backendsetup_coding_standards"
     },
     {
       "label": "Backend Setup Next Steps",
@@ -1558,9 +1558,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "backendsetup_next_steps",
       "community": 20,
-      "norm_label": "backend setup next steps"
+      "norm_label": "backend setup next steps",
+      "id": "backendsetup_next_steps"
     },
     {
       "label": "Forking the Repository",
@@ -1571,9 +1571,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "clonesetup_forking",
       "community": 2,
-      "norm_label": "forking the repository"
+      "norm_label": "forking the repository",
+      "id": "clonesetup_forking"
     },
     {
       "label": "Cloning the Repository",
@@ -1584,9 +1584,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "clonesetup_cloning",
       "community": 2,
-      "norm_label": "cloning the repository"
+      "norm_label": "cloning the repository",
+      "id": "clonesetup_cloning"
     },
     {
       "label": "Clone Setup Next Steps",
@@ -1597,9 +1597,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "clonesetup_next_steps",
       "community": 2,
-      "norm_label": "clone setup next steps"
+      "norm_label": "clone setup next steps",
+      "id": "clonesetup_next_steps"
     },
     {
       "label": "Milan Promotional Banner",
@@ -1610,9 +1610,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "milanbanner_promotional_banner",
       "community": 9,
-      "norm_label": "milan promotional banner"
+      "norm_label": "milan promotional banner",
+      "id": "milanbanner_promotional_banner"
     },
     {
       "label": "Milan Platform",
@@ -1623,9 +1623,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "milanbanner_milan_platform",
       "community": 9,
-      "norm_label": "milan platform"
+      "norm_label": "milan platform",
+      "id": "milanbanner_milan_platform"
     },
     {
       "label": "Milan Landing Page (Desktop Mockup)",
@@ -1636,9 +1636,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "milanbanner_landing_page_design",
       "community": 9,
-      "norm_label": "milan landing page (desktop mockup)"
+      "norm_label": "milan landing page (desktop mockup)",
+      "id": "milanbanner_landing_page_design"
     },
     {
       "label": "Milan Mobile Web View (milanhub.org)",
@@ -1649,9 +1649,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "milanbanner_mobile_web_design",
       "community": 9,
-      "norm_label": "milan mobile web view (milanhub.org)"
+      "norm_label": "milan mobile web view (milanhub.org)",
+      "id": "milanbanner_mobile_web_design"
     },
     {
       "label": "Tagline: 'United, We Achieve Greatness'",
@@ -1662,9 +1662,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "milanbanner_tagline",
       "community": 9,
-      "norm_label": "tagline: 'united, we achieve greatness'"
+      "norm_label": "tagline: 'united, we achieve greatness'",
+      "id": "milanbanner_tagline"
     },
     {
       "label": "Charity/NGO Collaboration Hub Purpose",
@@ -1675,9 +1675,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "milanbanner_charity_ngo_collaboration",
       "community": 9,
-      "norm_label": "charity/ngo collaboration hub purpose"
+      "norm_label": "charity/ngo collaboration hub purpose",
+      "id": "milanbanner_charity_ngo_collaboration"
     }
   ],
   "links": [
@@ -1760,8 +1760,8 @@
       "source_file": "src/server.ts",
       "source_location": "L10",
       "weight": 1.0,
-      "_src": "server_main",
-      "_tgt": "app_createapp",
+      "_src": "app_createapp",
+      "_tgt": "server_main",
       "source": "app_createapp",
       "target": "server_main"
     },
@@ -2720,8 +2720,8 @@
       "source_file": "src/modules/events/event.service.ts",
       "source_location": "L21",
       "weight": 1.0,
-      "_src": "event_service_createevent",
-      "_tgt": "user_service_findbyemail",
+      "_src": "user_service_findbyemail",
+      "_tgt": "event_service_createevent",
       "source": "user_service_findbyemail",
       "target": "event_service_createevent"
     },
@@ -2768,8 +2768,8 @@
       "source_file": "src/modules/events/event.controller.ts",
       "source_location": "L13",
       "weight": 1.0,
-      "_src": "event_controller_listevents",
-      "_tgt": "event_service_findbyuid",
+      "_src": "event_service_findbyuid",
+      "_tgt": "event_controller_listevents",
       "source": "event_service_findbyuid",
       "target": "event_controller_listevents"
     },
@@ -2780,8 +2780,8 @@
       "source_file": "src/modules/events/event.controller.ts",
       "source_location": "L22",
       "weight": 1.0,
-      "_src": "event_controller_listevents",
-      "_tgt": "event_service_findall",
+      "_src": "event_service_findall",
+      "_tgt": "event_controller_listevents",
       "source": "event_service_findall",
       "target": "event_controller_listevents"
     },
@@ -3056,8 +3056,8 @@
       "source_file": "SECURITY.md",
       "source_location": "L1-6",
       "weight": 1.0,
-      "_src": "security_reporting_vulnerability",
-      "_tgt": "codeofconduct_reporting_guidelines",
+      "_src": "codeofconduct_reporting_guidelines",
+      "_tgt": "security_reporting_vulnerability",
       "source": "codeofconduct_reporting_guidelines",
       "target": "security_reporting_vulnerability"
     },
@@ -3116,8 +3116,8 @@
       "source_file": "CONTRIBUTING.md",
       "source_location": "L4-79",
       "weight": 1.0,
-      "_src": "contributing_pr_title_format",
-      "_tgt": "contributing_commit_message_format",
+      "_src": "contributing_commit_message_format",
+      "_tgt": "contributing_pr_title_format",
       "source": "contributing_commit_message_format",
       "target": "contributing_pr_title_format"
     },
@@ -3152,8 +3152,8 @@
       "source_file": "SECURITY.md",
       "source_location": "L1-6",
       "weight": 1.0,
-      "_src": "security_reporting_vulnerability",
-      "_tgt": "contributing_creating_issue",
+      "_src": "contributing_creating_issue",
+      "_tgt": "security_reporting_vulnerability",
       "source": "contributing_creating_issue",
       "target": "security_reporting_vulnerability"
     },
@@ -3212,8 +3212,8 @@
       "source_file": "docs/CloneSetup.md",
       "source_location": "L23",
       "weight": 1.0,
-      "_src": "clonesetup_cloning",
-      "_tgt": "backendsetup_installing_dependencies",
+      "_src": "backendsetup_installing_dependencies",
+      "_tgt": "clonesetup_cloning",
       "source": "backendsetup_installing_dependencies",
       "target": "clonesetup_cloning"
     },
@@ -3305,8 +3305,8 @@
       "relation": "RELATED_TO_KARMACIRCLE_PROJECT_NAMING",
       "type": "AMBIGUOUS",
       "confidence_score": 0.3,
-      "_src": "milanbanner_milan_platform",
-      "_tgt": "milanbanner_promotional_banner",
+      "_src": "milanbanner_promotional_banner",
+      "_tgt": "milanbanner_milan_platform",
       "source": "milanbanner_promotional_banner",
       "target": "milanbanner_milan_platform"
     },
@@ -3341,8 +3341,8 @@
       "relation": "REPRESENTS_RESPONSIVE_VIEW_OF",
       "type": "INFERRED",
       "confidence_score": 0.9,
-      "_src": "milanbanner_mobile_web_design",
-      "_tgt": "milanbanner_milan_platform",
+      "_src": "milanbanner_milan_platform",
+      "_tgt": "milanbanner_mobile_web_design",
       "source": "milanbanner_milan_platform",
       "target": "milanbanner_mobile_web_design"
     },

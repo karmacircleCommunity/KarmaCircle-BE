@@ -1,7 +1,8 @@
 # Graph Report - /Users/tamalcodes/Gh/KarmaCircle-BE  (2026-08-19)
 
 ## Corpus Check
-- Corpus is ~21,205 words - fits in a single context window. You may not need a graph.
+- 57 files · ~34,045 words
+- Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
 - 162 nodes · 141 edges · 52 communities detected
@@ -9,58 +10,58 @@
 - Token cost: 0 input · 0 output
 
 ## Community Hubs (Navigation)
-- [[_COMMUNITY_Auth Service Logic|Auth Service Logic]]
-- [[_COMMUNITY_Code of Conduct|Code of Conduct]]
-- [[_COMMUNITY_Contributor Onboarding|Contributor Onboarding]]
-- [[_COMMUNITY_Club & User Controllers|Club & User Controllers]]
-- [[_COMMUNITY_App Bootstrap & Server|App Bootstrap & Server]]
-- [[_COMMUNITY_Directory & Event Listing|Directory & Event Listing]]
-- [[_COMMUNITY_Product Catalog & Cart|Product Catalog & Cart]]
-- [[_COMMUNITY_Auth Controller & OAuth|Auth Controller & OAuth]]
-- [[_COMMUNITY_PR & Commit Workflow|PR & Commit Workflow]]
-- [[_COMMUNITY_Milan Brand & Landing|Milan Brand & Landing]]
-- [[_COMMUNITY_Error Handling|Error Handling]]
-- [[_COMMUNITY_Report Creation|Report Creation]]
-- [[_COMMUNITY_Env & API Key Setup|Env & API Key Setup]]
-- [[_COMMUNITY_Event Test Helper|Event Test Helper]]
-- [[_COMMUNITY_Request Validation Middleware|Request Validation Middleware]]
-- [[_COMMUNITY_Auth Guard Middleware|Auth Guard Middleware]]
-- [[_COMMUNITY_Env Loader|Env Loader]]
-- [[_COMMUNITY_Async Handler Wrapper|Async Handler Wrapper]]
-- [[_COMMUNITY_Payment Order Service|Payment Order Service]]
-- [[_COMMUNITY_Payment Order Controller|Payment Order Controller]]
-- [[_COMMUNITY_Setup Docs Wrap-up|Setup Docs Wrap-up]]
-- [[_COMMUNITY_Jest Config|Jest Config]]
-- [[_COMMUNITY_Commitlint Config|Commitlint Config]]
-- [[_COMMUNITY_Auth Test Suite|Auth Test Suite]]
-- [[_COMMUNITY_Test Env Setup|Test Env Setup]]
-- [[_COMMUNITY_Jest Setup|Jest Setup]]
-- [[_COMMUNITY_Rate Limiting|Rate Limiting]]
-- [[_COMMUNITY_Express Type Augmentation|Express Type Augmentation]]
-- [[_COMMUNITY_Logger|Logger]]
-- [[_COMMUNITY_Passport Strategy Config|Passport Strategy Config]]
-- [[_COMMUNITY_Swagger Docs Config|Swagger Docs Config]]
-- [[_COMMUNITY_HTTP Status Constants|HTTP Status Constants]]
-- [[_COMMUNITY_Payment Routes|Payment Routes]]
-- [[_COMMUNITY_Payment Validation|Payment Validation]]
-- [[_COMMUNITY_Club Routes|Club Routes]]
-- [[_COMMUNITY_Club Validation|Club Validation]]
-- [[_COMMUNITY_Product Routes|Product Routes]]
-- [[_COMMUNITY_Product Validation|Product Validation]]
-- [[_COMMUNITY_Product Model|Product Model]]
-- [[_COMMUNITY_Auth Validation|Auth Validation]]
-- [[_COMMUNITY_Auth Routes|Auth Routes]]
-- [[_COMMUNITY_Directory Routes|Directory Routes]]
-- [[_COMMUNITY_User Model|User Model]]
-- [[_COMMUNITY_User Routes|User Routes]]
-- [[_COMMUNITY_User Validation|User Validation]]
-- [[_COMMUNITY_Event Model|Event Model]]
-- [[_COMMUNITY_Event Routes|Event Routes]]
-- [[_COMMUNITY_Event Validation|Event Validation]]
-- [[_COMMUNITY_Report Model|Report Model]]
-- [[_COMMUNITY_Report Validation|Report Validation]]
-- [[_COMMUNITY_Report Routes|Report Routes]]
-- [[_COMMUNITY_Entry Point|Entry Point]]
+- [[_COMMUNITY_Community 0|Community 0]]
+- [[_COMMUNITY_Community 1|Community 1]]
+- [[_COMMUNITY_Community 2|Community 2]]
+- [[_COMMUNITY_Community 3|Community 3]]
+- [[_COMMUNITY_Community 4|Community 4]]
+- [[_COMMUNITY_Community 5|Community 5]]
+- [[_COMMUNITY_Community 6|Community 6]]
+- [[_COMMUNITY_Community 7|Community 7]]
+- [[_COMMUNITY_Community 8|Community 8]]
+- [[_COMMUNITY_Community 9|Community 9]]
+- [[_COMMUNITY_Community 10|Community 10]]
+- [[_COMMUNITY_Community 11|Community 11]]
+- [[_COMMUNITY_Community 12|Community 12]]
+- [[_COMMUNITY_Community 13|Community 13]]
+- [[_COMMUNITY_Community 14|Community 14]]
+- [[_COMMUNITY_Community 15|Community 15]]
+- [[_COMMUNITY_Community 16|Community 16]]
+- [[_COMMUNITY_Community 17|Community 17]]
+- [[_COMMUNITY_Community 18|Community 18]]
+- [[_COMMUNITY_Community 19|Community 19]]
+- [[_COMMUNITY_Community 20|Community 20]]
+- [[_COMMUNITY_Community 21|Community 21]]
+- [[_COMMUNITY_Community 22|Community 22]]
+- [[_COMMUNITY_Community 23|Community 23]]
+- [[_COMMUNITY_Community 24|Community 24]]
+- [[_COMMUNITY_Community 25|Community 25]]
+- [[_COMMUNITY_Community 26|Community 26]]
+- [[_COMMUNITY_Community 27|Community 27]]
+- [[_COMMUNITY_Community 28|Community 28]]
+- [[_COMMUNITY_Community 29|Community 29]]
+- [[_COMMUNITY_Community 30|Community 30]]
+- [[_COMMUNITY_Community 31|Community 31]]
+- [[_COMMUNITY_Community 32|Community 32]]
+- [[_COMMUNITY_Community 33|Community 33]]
+- [[_COMMUNITY_Community 34|Community 34]]
+- [[_COMMUNITY_Community 35|Community 35]]
+- [[_COMMUNITY_Community 36|Community 36]]
+- [[_COMMUNITY_Community 37|Community 37]]
+- [[_COMMUNITY_Community 38|Community 38]]
+- [[_COMMUNITY_Community 39|Community 39]]
+- [[_COMMUNITY_Community 40|Community 40]]
+- [[_COMMUNITY_Community 41|Community 41]]
+- [[_COMMUNITY_Community 42|Community 42]]
+- [[_COMMUNITY_Community 43|Community 43]]
+- [[_COMMUNITY_Community 44|Community 44]]
+- [[_COMMUNITY_Community 45|Community 45]]
+- [[_COMMUNITY_Community 46|Community 46]]
+- [[_COMMUNITY_Community 47|Community 47]]
+- [[_COMMUNITY_Community 48|Community 48]]
+- [[_COMMUNITY_Community 49|Community 49]]
+- [[_COMMUNITY_Community 50|Community 50]]
+- [[_COMMUNITY_Community 51|Community 51]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `findByEmail()` - 7 edges
@@ -79,10 +80,10 @@
   README.md → docs/BackendSetup.md
 - `MIT License Notice` --semantically_similar_to--> `License and Attribution`  [INFERRED] [semantically similar]
   README.md → CODE_OF_CONDUCT.md
-- `Reporting a Vulnerability` --semantically_similar_to--> `Reporting Guidelines`  [INFERRED] [semantically similar]
-  SECURITY.md → CODE_OF_CONDUCT.md
-- `Reporting a Vulnerability` --semantically_similar_to--> `Creating an Issue`  [INFERRED] [semantically similar]
-  SECURITY.md → CONTRIBUTING.md
+- `Reporting Guidelines` --semantically_similar_to--> `Reporting a Vulnerability`  [INFERRED] [semantically similar]
+  CODE_OF_CONDUCT.md → SECURITY.md
+- `Creating an Issue` --semantically_similar_to--> `Reporting a Vulnerability`  [INFERRED] [semantically similar]
+  CONTRIBUTING.md → SECURITY.md
 - `buildTestApp()` --calls--> `createApp()`  [INFERRED]
   tests/helpers/test-app.ts → src/app.ts
 
@@ -93,302 +94,302 @@
 
 ## Communities
 
-### Community 0 - "Auth Service Logic"
+### Community 0 - "Community 0"
 Cohesion: 0.23
 Nodes (13): loginSuccess(), logout(), clearedCookieOptions(), httpOnlyCookieOptions(), findOrCreateGoogleUser(), signin(), signToken(), signup() (+5 more)
 
-### Community 1 - "Code of Conduct"
+### Community 1 - "Community 1"
 Cohesion: 0.15
 Nodes (13): Addressing Grievances, Consequences of Unacceptable Behavior, Contact Info, Expected Behavior, JWOC Code of Conduct Purpose, Open Source Citizenship Goal, Reporting Guidelines, Code of Conduct Scope (+5 more)
 
-### Community 2 - "Contributor Onboarding"
+### Community 2 - "Community 2"
 Cohesion: 0.18
 Nodes (13): Installing Dependencies, Techstack Overview, Cloning the Repository, Forking the Repository, Clone Setup Next Steps, Django Code of Conduct, Geek Feminism Anti-Harassment Policy, License and Attribution (+5 more)
 
-### Community 3 - "Club & User Controllers"
+### Community 3 - "Community 3"
 Cohesion: 0.2
 Nodes (6): listClubs(), listClubs(), listUsers(), findByType(), findByUsername(), findIndividuals()
 
-### Community 4 - "App Bootstrap & Server"
+### Community 4 - "Community 4"
 Cohesion: 0.2
 Nodes (5): createApp(), connectToMongo(), handler(), main(), buildTestApp()
 
-### Community 5 - "Directory & Event Listing"
+### Community 5 - "Community 5"
 Cohesion: 0.22
 Nodes (6): listAllUsers(), listEvents(), createEvent(), findAll(), findByUid(), listProducts()
 
-### Community 6 - "Product Catalog & Cart"
+### Community 6 - "Community 6"
 Cohesion: 0.22
 Nodes (2): getProduct(), findBySlug()
 
-### Community 7 - "Auth Controller & OAuth"
+### Community 7 - "Community 7"
 Cohesion: 0.29
 Nodes (3): signin(), signup(), readableCookieOptions()
 
-### Community 8 - "PR & Commit Workflow"
+### Community 8 - "Community 8"
 Cohesion: 0.33
 Nodes (6): Closing an Issue, Commit Message Format, Creating a Pull Request, ESLint and Prettier Pre-commit Hooks, Pull Request Title Format, Reviewing a Pull Request
 
-### Community 9 - "Milan Brand & Landing"
+### Community 9 - "Community 9"
 Cohesion: 0.4
 Nodes (6): Charity/NGO Collaboration Hub Purpose, Milan Landing Page (Desktop Mockup), Milan Platform, Milan Mobile Web View (milanhub.org), Milan Promotional Banner, Tagline: 'United, We Achieve Greatness'
 
-### Community 10 - "Error Handling"
+### Community 10 - "Community 10"
 Cohesion: 0.4
 Nodes (1): AppError
 
-### Community 11 - "Report Creation"
+### Community 11 - "Community 11"
 Cohesion: 0.4
 Nodes (2): createReport(), hasReportedRecently()
 
-### Community 12 - "Env & API Key Setup"
+### Community 12 - "Community 12"
 Cohesion: 1.0
 Nodes (3): Setting up .env, Setting up Google Client ID and Secret, Setting up Razorpay API Key
 
-### Community 13 - "Event Test Helper"
+### Community 13 - "Community 13"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 14 - "Request Validation Middleware"
+### Community 14 - "Community 14"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 15 - "Auth Guard Middleware"
+### Community 15 - "Community 15"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 16 - "Env Loader"
+### Community 16 - "Community 16"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 17 - "Async Handler Wrapper"
+### Community 17 - "Community 17"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 18 - "Payment Order Service"
+### Community 18 - "Community 18"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 19 - "Payment Order Controller"
+### Community 19 - "Community 19"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 20 - "Setup Docs Wrap-up"
+### Community 20 - "Community 20"
 Cohesion: 1.0
 Nodes (2): Coding Standards, Backend Setup Next Steps
 
-### Community 21 - "Jest Config"
+### Community 21 - "Community 21"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 22 - "Commitlint Config"
+### Community 22 - "Community 22"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 23 - "Auth Test Suite"
+### Community 23 - "Community 23"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 24 - "Test Env Setup"
+### Community 24 - "Community 24"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 25 - "Jest Setup"
+### Community 25 - "Community 25"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 26 - "Rate Limiting"
+### Community 26 - "Community 26"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 27 - "Express Type Augmentation"
+### Community 27 - "Community 27"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 28 - "Logger"
+### Community 28 - "Community 28"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 29 - "Passport Strategy Config"
+### Community 29 - "Community 29"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 30 - "Swagger Docs Config"
+### Community 30 - "Community 30"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 31 - "HTTP Status Constants"
+### Community 31 - "Community 31"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 32 - "Payment Routes"
+### Community 32 - "Community 32"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 33 - "Payment Validation"
+### Community 33 - "Community 33"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 34 - "Club Routes"
+### Community 34 - "Community 34"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 35 - "Club Validation"
+### Community 35 - "Community 35"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 36 - "Product Routes"
+### Community 36 - "Community 36"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 37 - "Product Validation"
+### Community 37 - "Community 37"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 38 - "Product Model"
+### Community 38 - "Community 38"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 39 - "Auth Validation"
+### Community 39 - "Community 39"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 40 - "Auth Routes"
+### Community 40 - "Community 40"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 41 - "Directory Routes"
+### Community 41 - "Community 41"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 42 - "User Model"
+### Community 42 - "Community 42"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 43 - "User Routes"
+### Community 43 - "Community 43"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 44 - "User Validation"
+### Community 44 - "Community 44"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 45 - "Event Model"
+### Community 45 - "Community 45"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 46 - "Event Routes"
+### Community 46 - "Community 46"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 47 - "Event Validation"
+### Community 47 - "Community 47"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 48 - "Report Model"
+### Community 48 - "Community 48"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 49 - "Report Validation"
+### Community 49 - "Community 49"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 50 - "Report Routes"
+### Community 50 - "Community 50"
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 51 - "Entry Point"
+### Community 51 - "Community 51"
 Cohesion: 1.0
 Nodes (0): 
 
 ## Knowledge Gaps
 - **15 isolated node(s):** `Milan Project Overview`, `JWOC Code of Conduct Purpose`, `Weapons Policy`, `Code of Conduct Scope`, `Contact Info` (+10 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **Thin community `Event Test Helper`** (2 nodes): `signupAndGetCookie()`, `events.test.ts`
+- **Thin community `Community 13`** (2 nodes): `signupAndGetCookie()`, `events.test.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Request Validation Middleware`** (2 nodes): `validate.ts`, `validate()`
+- **Thin community `Community 14`** (2 nodes): `validate.ts`, `validate()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Auth Guard Middleware`** (2 nodes): `requireAuth()`, `auth.ts`
+- **Thin community `Community 15`** (2 nodes): `requireAuth()`, `auth.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Env Loader`** (2 nodes): `loadEnv()`, `env.ts`
+- **Thin community `Community 16`** (2 nodes): `loadEnv()`, `env.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Async Handler Wrapper`** (2 nodes): `asyncHandler()`, `async-handler.ts`
+- **Thin community `Community 17`** (2 nodes): `asyncHandler()`, `async-handler.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Payment Order Service`** (2 nodes): `createOrder()`, `payment.service.ts`
+- **Thin community `Community 18`** (2 nodes): `createOrder()`, `payment.service.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Payment Order Controller`** (2 nodes): `createOrder()`, `payment.controller.ts`
+- **Thin community `Community 19`** (2 nodes): `createOrder()`, `payment.controller.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Setup Docs Wrap-up`** (2 nodes): `Coding Standards`, `Backend Setup Next Steps`
+- **Thin community `Community 20`** (2 nodes): `Coding Standards`, `Backend Setup Next Steps`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Jest Config`** (1 nodes): `jest.config.js`
+- **Thin community `Community 21`** (1 nodes): `jest.config.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Commitlint Config`** (1 nodes): `commitlint.config.js`
+- **Thin community `Community 22`** (1 nodes): `commitlint.config.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Auth Test Suite`** (1 nodes): `auth.test.ts`
+- **Thin community `Community 23`** (1 nodes): `auth.test.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Test Env Setup`** (1 nodes): `env.setup.ts`
+- **Thin community `Community 24`** (1 nodes): `env.setup.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Jest Setup`** (1 nodes): `jest.setup.ts`
+- **Thin community `Community 25`** (1 nodes): `jest.setup.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Rate Limiting`** (1 nodes): `rate-limit.ts`
+- **Thin community `Community 26`** (1 nodes): `rate-limit.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Express Type Augmentation`** (1 nodes): `express.d.ts`
+- **Thin community `Community 27`** (1 nodes): `express.d.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Logger`** (1 nodes): `logger.ts`
+- **Thin community `Community 28`** (1 nodes): `logger.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Passport Strategy Config`** (1 nodes): `passport.ts`
+- **Thin community `Community 29`** (1 nodes): `passport.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Swagger Docs Config`** (1 nodes): `swagger.ts`
+- **Thin community `Community 30`** (1 nodes): `swagger.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `HTTP Status Constants`** (1 nodes): `http-status.ts`
+- **Thin community `Community 31`** (1 nodes): `http-status.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Payment Routes`** (1 nodes): `payment.routes.ts`
+- **Thin community `Community 32`** (1 nodes): `payment.routes.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Payment Validation`** (1 nodes): `payment.validation.ts`
+- **Thin community `Community 33`** (1 nodes): `payment.validation.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Club Routes`** (1 nodes): `club.routes.ts`
+- **Thin community `Community 34`** (1 nodes): `club.routes.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Club Validation`** (1 nodes): `club.validation.ts`
+- **Thin community `Community 35`** (1 nodes): `club.validation.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Product Routes`** (1 nodes): `product.routes.ts`
+- **Thin community `Community 36`** (1 nodes): `product.routes.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Product Validation`** (1 nodes): `product.validation.ts`
+- **Thin community `Community 37`** (1 nodes): `product.validation.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Product Model`** (1 nodes): `product.model.ts`
+- **Thin community `Community 38`** (1 nodes): `product.model.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Auth Validation`** (1 nodes): `auth.validation.ts`
+- **Thin community `Community 39`** (1 nodes): `auth.validation.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Auth Routes`** (1 nodes): `auth.routes.ts`
+- **Thin community `Community 40`** (1 nodes): `auth.routes.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Directory Routes`** (1 nodes): `directory.routes.ts`
+- **Thin community `Community 41`** (1 nodes): `directory.routes.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `User Model`** (1 nodes): `user.model.ts`
+- **Thin community `Community 42`** (1 nodes): `user.model.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `User Routes`** (1 nodes): `user.routes.ts`
+- **Thin community `Community 43`** (1 nodes): `user.routes.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `User Validation`** (1 nodes): `user.validation.ts`
+- **Thin community `Community 44`** (1 nodes): `user.validation.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Event Model`** (1 nodes): `event.model.ts`
+- **Thin community `Community 45`** (1 nodes): `event.model.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Event Routes`** (1 nodes): `event.routes.ts`
+- **Thin community `Community 46`** (1 nodes): `event.routes.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Event Validation`** (1 nodes): `event.validation.ts`
+- **Thin community `Community 47`** (1 nodes): `event.validation.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Report Model`** (1 nodes): `report.model.ts`
+- **Thin community `Community 48`** (1 nodes): `report.model.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Report Validation`** (1 nodes): `report.validation.ts`
+- **Thin community `Community 49`** (1 nodes): `report.validation.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Report Routes`** (1 nodes): `report.routes.ts`
+- **Thin community `Community 50`** (1 nodes): `report.routes.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Entry Point`** (1 nodes): `index.ts`
+- **Thin community `Community 51`** (1 nodes): `index.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `findByEmail()` connect `Auth Service Logic` to `Club & User Controllers`, `Directory & Event Listing`?**
+- **Why does `findByEmail()` connect `Community 0` to `Community 3`, `Community 5`?**
   _High betweenness centrality (0.046) - this node is a cross-community bridge._
-- **Why does `createEvent()` connect `Directory & Event Listing` to `Auth Service Logic`?**
+- **Why does `createEvent()` connect `Community 5` to `Community 0`?**
   _High betweenness centrality (0.041) - this node is a cross-community bridge._
 - **Are the 6 inferred relationships involving `findByEmail()` (e.g. with `dashboard()` and `signup()`) actually correct?**
   _`findByEmail()` has 6 INFERRED edges - model-reasoned connections that need verification._
