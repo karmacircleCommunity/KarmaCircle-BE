@@ -2,10 +2,10 @@ import { Request, Response } from "express";
 import { STATUS_CODE, STATUS_MESSAGE } from "../../constants/http-status";
 import { AppError } from "../../middleware/error-handler";
 import * as userService from "./user.service";
-import { UpdateProfileInput } from "./user.validation";
+import { ListUsersQuery, UpdateProfileInput } from "./user.validation";
 
 export async function listUsers(req: Request, res: Response) {
-  const { userName } = req.query as { userName?: string };
+  const { userName } = req.query as ListUsersQuery;
 
   if (userName) {
     const user = await userService.findByUsername(userName);
@@ -31,5 +31,7 @@ export async function updateProfile(req: Request, res: Response) {
     throw new AppError(STATUS_CODE.NOT_FOUND, STATUS_MESSAGE.USER_NOT_FOUND);
   }
 
-  return res.status(STATUS_CODE.OK).json({ message: STATUS_MESSAGE.PROFILE_UPDATE_SUCCESS });
+  return res
+    .status(STATUS_CODE.OK)
+    .json({ message: STATUS_MESSAGE.PROFILE_UPDATE_SUCCESS });
 }

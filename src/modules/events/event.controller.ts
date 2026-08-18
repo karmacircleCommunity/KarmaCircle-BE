@@ -2,10 +2,10 @@ import { Request, Response } from "express";
 import { STATUS_CODE, STATUS_MESSAGE } from "../../constants/http-status";
 import { AppError } from "../../middleware/error-handler";
 import * as eventService from "./event.service";
-import { CreateEventInput } from "./event.validation";
+import { CreateEventInput, ListEventsQuery } from "./event.validation";
 
 export async function listEvents(req: Request, res: Response) {
-  const { uid, slug } = req.query as { uid?: string; slug?: string };
+  const { uid, slug } = req.query as ListEventsQuery;
   const eventUid = uid ?? slug;
 
   if (eventUid) {
@@ -24,7 +24,12 @@ export async function listEvents(req: Request, res: Response) {
 
 export async function createEvent(req: Request, res: Response) {
   const email = req.auth!.email;
-  const savedEvent = await eventService.createEvent(email, req.body as CreateEventInput);
+  const savedEvent = await eventService.createEvent(
+    email,
+    req.body as CreateEventInput,
+  );
 
-  res.status(STATUS_CODE.CREATED).json({ message: "Event Created", savedEvent });
+  res
+    .status(STATUS_CODE.CREATED)
+    .json({ message: "Event Created", savedEvent });
 }

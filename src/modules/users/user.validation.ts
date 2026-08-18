@@ -15,3 +15,4 @@ export const listUsersQuerySchema = z.object({
 });
 
 export type UpdateProfileInput = z.infer<typeof updateProfileSchema>;
+export type ListUsersQuery = z.infer<typeof listUsersQuerySchema>;

@@ -1,6 +1,12 @@
 import { z } from "zod";
 
-const OFFLINE_REQUIRED_FIELDS = ["city", "state", "country", "address", "mapIframe"] as const;
+const OFFLINE_REQUIRED_FIELDS = [
+  "city",
+  "state",
+  "country",
+  "address",
+  "mapIframe",
+] as const;
 
 export const createEventSchema = z
   .object({
@@ -43,3 +49,4 @@ export const listEventsQuerySchema = z.object({
 });
 
 export type CreateEventInput = z.infer<typeof createEventSchema>;
+export type ListEventsQuery = z.infer<typeof listEventsQuerySchema>;
