@@ -67,7 +67,7 @@ Note: `validate()` ([src/middleware/validate.ts](../../src/middleware/validate.t
 
 | Base path | Router | Notes |
 |---|---|---|
-| `/user` | `users` routes, **then** `reports` routes (both mounted at `/user`) | `GET /user`, `POST /user/update` (users) + `POST /user/report` (reports) — two different modules sharing one path prefix |
+| `/user` | `users` routes, **then** `reports` routes (both mounted at `/user`) | `GET /user`, `GET /user/profile`, `PATCH /user/update`, `PATCH /user/complete` (users) + `POST /user/report` (reports) — two different modules sharing one path prefix |
 | `/auth` | `auth` routes | signup/signin/update-password/Google OAuth/logout |
 | `/clubs` | `clubs` routes | `GET /clubs`, `GET /clubs/dashboard` |
 | `/display` | `directory` routes | `GET /display/users`, `GET /display/clubs` |

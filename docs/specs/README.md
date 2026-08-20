@@ -50,7 +50,7 @@ Every module folder follows the same file-per-concern pattern (not every module 
 |---|---|---|---|
 | [architecture.md](./architecture.md) | App shell, middleware stack, config, two entry points, build/deploy, testing | — | — |
 | [auth.md](./auth.md) | Email/password signup+signin, password update, Google OAuth (Passport), JWT issuance, cookie shapes, `requireAuth` middleware | reuses `users`' `User` model | mixed (see file) |
-| [users.md](./users.md) | Look up a user (or list individuals) by username, update the authenticated user's profile, the shared `User` model (used by `auth`/`clubs`/`directory`/`events`/`products` too) | ✅ `User` | `POST /user/update` only |
+| [users.md](./users.md) | Look up a user (or list individuals) by username, fetch/update/complete the authenticated user's own profile, the shared `User` model (used by `auth`/`clubs`/`directory`/`events`/`products` too) | ✅ `User` | `GET /user/profile`, `PATCH /user/update`, `PATCH /user/complete` |
 | [clubs.md](./clubs.md) | Look up a club (or list all clubs) — same `User` collection, filtered by `userType`; the authenticated club's own dashboard | reuses `users`' `User` model | `GET /clubs/dashboard` only |
 | [directory.md](./directory.md) | Public, unfiltered "list every user" / "list every club" endpoints — no pagination, no auth | reuses `users`' `User` model | no |
 | [events.md](./events.md) | List all events / one event by `uid`, create an event as the authenticated host | ✅ `Event` | `POST /events/create` only |
@@ -58,7 +58,7 @@ Every module folder follows the same file-per-concern pattern (not every module 
 | [products.md](./products.md) | Add a product, list/get products, add a product to a user's cart (writes into `User.cart`) | ✅ `Product` | `POST /product/cart/add` only |
 | [reports.md](./reports.md) | "Report a problem" form submission, rate-limited per email | ✅ `ReportProblem` | no |
 | [api-contract.md](./api-contract.md) | Every route this API exposes, cross-referenced against exactly what the frontend calls (`src/services/ApiEndpoints.ts` / `MilanApi.ts` in the KarmaCircle repo) — **read this before changing any route path, method, or response shape** | — | — |
-| [known-issues.md](./known-issues.md) | Cross-cutting bugs and gaps found while writing these specs, including two live, load-bearing frontend calls that do not currently work against this backend — read this before touching `auth`/`users` | — | — |
+| [known-issues.md](./known-issues.md) | Cross-cutting bugs and gaps found while writing these specs (most now resolved — the file tracks what's still open vs. fixed) — read this before touching `auth`/`users` | — | — |
 
 Unlike the frontend, this backend does **not** use a two-tier "short cross-feature summary here, deep colocated `SPEC.md` inside the folder" split.
 Each module here is small enough (typically under ~150 lines total across its `.controller`/`.service`/`.routes`/`.validation` files) that a single `docs/specs/<module>.md` file already serves as the file-by-file deep reference.
