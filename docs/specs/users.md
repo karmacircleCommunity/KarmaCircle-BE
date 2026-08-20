@@ -4,7 +4,7 @@
 
 ## The `User` model is shared by five modules
 
-[user.model.ts](../../src/modules/users/user.model.ts) — one collection (`model<IUser>("user", ...)`) holds **both individuals and clubs**, distinguished only by an unconstrained `userType?: "individual" | "club" | string` field (not a Mongoose `enum:` constraint — see the comment in the source explaining this is deliberate, so pre-existing rows with other/missing values don't fail schema validation). There is no separate `Club` model or Mongoose discriminator.
+[user.model.ts](../../src/modules/users/user.model.ts) — one physical collection (`model<IUser>("user", ...)`) holds **both individuals and clubs**, split at the schema level via a Mongoose discriminator keyed on `userType` (`discriminatorKey: "userType"`). `Individual` and `Club` are exported discriminator models off the same base `User` model/collection — both currently add no extra fields (there's no club-only data yet), but it's the home for that once it exists, instead of it landing loosely on the shared base schema. The field itself stays an unconstrained `string` at the base-schema level (not a Mongoose `enum:` constraint — see the comment in the source explaining this is deliberate, so pre-existing rows with other/missing values don't fail schema validation); it's the discriminator models, not the field type, that give `"individual"`/`"club"` their real structure now. Construct a new user document via `getUserModel(userType)` (also exported from `user.model.ts`) rather than `new User(...)` directly — it resolves to `Club` only for exactly `"club"`, defaulting to `Individual` otherwise, and both `auth.service.ts` construction sites (`signup`, `findOrCreateGoogleUser`) go through it.
 
 | Field | Type | Notes |
 |---|---|---|

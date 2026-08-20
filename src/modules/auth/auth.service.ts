@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken";
 import { env } from "../../config/env";
 import { STATUS_CODE, STATUS_MESSAGE } from "../../constants/http-status";
 import { AppError } from "../../middleware/error-handler";
-import { IUser, User } from "../users/user.model";
+import { IUser, User, getUserModel } from "../users/user.model";
 import * as userService from "../users/user.service";
 import { THIRTY_DAYS_MS } from "./auth.cookies";
 import { SignupInput } from "./auth.validation";
@@ -52,7 +52,7 @@ export async function bumpTokenVersion(email: string): Promise<void> {
 export async function signup(
   input: SignupInput,
 ): Promise<{ token: string; user: unknown }> {
-  const { email, ...data } = input;
+  const { email, userType, ...data } = input;
 
   const existingUser = await userService.findByEmail(email);
   if (existingUser) {
@@ -65,7 +65,8 @@ export async function signup(
   const hashedPassword = await bcrypt.hash(data.password, SALT_ROUNDS);
   const userName = await userService.generateUniqueUsername(email);
 
-  const newUser = new User({
+  const UserModel = getUserModel(userType as string | undefined);
+  const newUser = new UserModel({
     ...data,
     userName,
     email,
@@ -150,10 +151,10 @@ export async function findOrCreateGoogleUser(params: {
     SALT_ROUNDS,
   );
 
-  return User.create({
+  const UserModel = getUserModel(userType);
+  return UserModel.create({
     email,
     name,
-    userType,
     userName,
     password: randomPassword,
   });

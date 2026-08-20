@@ -167,4 +167,39 @@ describe("Auth", () => {
       expect(res.status).toBe(200);
     });
   });
+
+  describe("userType discriminator", () => {
+    it("signing up with userType 'club' is queryable via GET /clubs, not GET /user", async () => {
+      const club = {
+        email: "club@example.com",
+        password: "hunter2",
+        userType: "club",
+      };
+      const signupRes = await request(app).post("/auth/signup").send(club);
+      expect(signupRes.status).toBe(201);
+
+      const clubList = await request(app).get("/clubs");
+      expect(
+        clubList.body.data.map((c: { email: string }) => c.email),
+      ).toContain(club.email);
+
+      const individualList = await request(app).get("/user");
+      expect(
+        individualList.body.data.map((u: { email: string }) => u.email),
+      ).not.toContain(club.email);
+    });
+
+    it("signing up with no userType defaults to an individual, listed via GET /user", async () => {
+      const individual = { email: "solo@example.com", password: "hunter2" };
+      const signupRes = await request(app)
+        .post("/auth/signup")
+        .send(individual);
+      expect(signupRes.status).toBe(201);
+
+      const individualList = await request(app).get("/user");
+      expect(
+        individualList.body.data.map((u: { email: string }) => u.email),
+      ).toContain(individual.email);
+    });
+  });
 });

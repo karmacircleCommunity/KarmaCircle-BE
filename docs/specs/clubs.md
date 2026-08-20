@@ -1,6 +1,6 @@
 # Clubs Module
 
-[src/modules/clubs/](../../src/modules/clubs/) — look up a club by username (or list all clubs), and the authenticated club's own dashboard data. Owns no model; both handlers query `users`' `User` collection filtered to `userType: "club"` (see [users.md](./users.md#the-user-model-is-shared-by-five-modules)). There is no separate `Club` schema anywhere in this codebase — "club" is a value of the same `User.userType` field an individual account also uses.
+[src/modules/clubs/](../../src/modules/clubs/) — look up a club by username (or list all clubs), and the authenticated club's own dashboard data. Owns no model of its own; both handlers query `users`' `User` collection filtered to `userType: "club"` (see [users.md](./users.md#the-user-model-is-shared-by-five-modules)). There's no separate `Club` collection — "club" is a Mongoose discriminator on the same `User` model/collection an individual account also uses (`user.model.ts` exports the `Club` discriminator model directly, though this module's queries still go through the shared `userService.findByType("club", ...)` helper rather than importing `Club` itself).
 
 ## `GET /clubs`
 
