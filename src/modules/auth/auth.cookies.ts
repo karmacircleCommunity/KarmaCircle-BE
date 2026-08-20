@@ -1,7 +1,12 @@
 import { CookieOptions } from "express";
 import { env } from "../../config/env";
 
-const THIRTY_DAYS_MS = 30 * 24 * 60 * 60 * 1000;
+/**
+ * Also the JWT's own expiresIn (see signToken in auth.service.ts) — kept as
+ * one source of truth so the Token cookie and the JWT it carries always
+ * expire at the exact same instant.
+ */
+export const THIRTY_DAYS_MS = 30 * 24 * 60 * 60 * 1000;
 
 export function httpOnlyCookieOptions(): CookieOptions {
   return {

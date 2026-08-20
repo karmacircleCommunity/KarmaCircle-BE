@@ -32,6 +32,13 @@ export interface IUser extends Document {
     hasCompletedProfile: boolean;
   };
   cart: Array<{ id: string }>;
+  /**
+   * Bumped on logout and on password change to revoke every JWT issued
+   * before that point — see src/modules/auth/auth.service.ts's signToken
+   * and src/middleware/auth.ts's requireAuth. Never returned to a client;
+   * excluded the same way `password` is (see user.service.ts).
+   */
+  tokenVersion: number;
 }
 
 const userSchema = new Schema<IUser>({
@@ -66,6 +73,7 @@ const userSchema = new Schema<IUser>({
     hasCompletedProfile: { type: Boolean, default: false },
   },
   cart: [{ id: { type: String } }],
+  tokenVersion: { type: Number, default: 0 },
 });
 
 export const User = mongoose.model<IUser>("user", userSchema);

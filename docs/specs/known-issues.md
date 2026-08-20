@@ -17,8 +17,8 @@ The single most important category in this file — see [api-contract.md](./api-
 
 ## Auth
 
+- **JWT expiry + session revocation: resolved.** `signToken` used to issue a JWT with no expiry at all — only the cookie carrying it expired (30 days), and there was no way to kill a session early. Fixed: the JWT now carries its own `expiresIn` (tied to the same `THIRTY_DAYS_MS` constant the cookie uses, so both lapse together), and every `User` has a `tokenVersion` embedded in the token and checked on every `requireAuth`-gated request — bumped on logout and on password change, so either one invalidates the token immediately rather than waiting out its expiry. This was a deliberate architecture trade-off, not a free change: `requireAuth` now does one DB read (`User.findOne(...).select("tokenVersion")`) per authenticated request, where it previously did zero. See [auth.md](./auth.md#signtoken-and-session-revocation).
 - `Token` cookie's `httpOnly` flag differs between the email/password path (`false`) and the Google OAuth path (`true`) — see [auth.md](./auth.md#two-parallel-login-mechanisms-one-resulting-cookie-shape).
-- `signToken` issues a JWT with **no expiry** — only the cookie carrying it expires (30 days). A leaked/copied token string remains valid indefinitely unless `JWT_SECRET` is rotated.
 - `POST /auth/update` (password change) is unauthenticated — it trusts `{ email, oldPassword }` in the body rather than the caller's own session/token. Anyone who knows an account's email and current password can change it without being logged in as that account, which is a reasonable design if that's the intended UX (a locked-out user changing their password), but worth confirming it's intentional rather than a missed `requireAuth`.
 - `POST /auth/update`'s wrong-old-password branch responds `401` with `STATUS_MESSAGE.USER_NOT_FOUND` — status code and message constant don't match; should likely be `INVALID_CREDENTIALS` or a dedicated message.
 - Google OAuth's `state` param carries `userType` through the redirect round-trip but is never validated against what `googleInitiate` originally issued — no CSRF protection on this flow, despite `state` conventionally serving that purpose in OAuth.
@@ -61,7 +61,9 @@ The single most important category in this file — see [api-contract.md](./api-
 
 ## Test coverage
 
-Only `auth` and `events` have any test files (`tests/auth.test.ts`, `tests/events.test.ts`). `users`, `clubs`, `directory`, `payments`, `products`, and `reports` are completely untested — a change to any of them is only checked by `typecheck`/`lint`, not by CI-run behavioral tests, until coverage is added. See [architecture.md](./architecture.md#testing).
+`auth`, `events`, and `products` have test files (`tests/auth.test.ts`, `tests/events.test.ts`, `tests/products.test.ts`). `users`, `clubs`, `directory`, `payments`, and `reports` are completely untested — a change to any of them is only checked by `typecheck`/`lint`, not by CI-run behavioral tests, until coverage is added. See [architecture.md](./architecture.md#testing).
+
+`apiLimiter`/`authLimiter` ([rate-limit.ts](../../src/middleware/rate-limit.ts)) are skipped when `NODE_ENV=test` — they weren't originally, and a test file making enough `/auth/*` calls across its whole suite (as `tests/auth.test.ts` does once its session-revocation tests were added) would start getting genuine `429`s partway through a run, unrelated to whatever behavior that test was actually checking. If you're ever debugging a mysteriously-failing test that looks like a state-leak between `it` blocks, check the response status/body before assuming it — a `429` disguised as a missing `Set-Cookie` header is exactly what this looked like before it was traced down.
 
 ## Keep this file honest
 

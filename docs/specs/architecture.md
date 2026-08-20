@@ -18,7 +18,7 @@ Both entry points read configuration through [src/config/env.ts](../../src/confi
 5. `express.json({ limit: "10mb" })`, then `express.urlencoded({ extended: false })`.
 6. `cookieParser()` — required for `req.cookies.Token` (see [auth.md](./auth.md)) to exist anywhere downstream.
 7. `passport.initialize()` — required for the Google OAuth route (`passport.authenticate("google", ...)` in `auth.routes.ts`); note there's no `passport.session()` — OAuth is `{ session: false }`, so Passport never touches `req.session` and this app has no server-side session store at all.
-8. `apiLimiter` (`src/middleware/rate-limit.ts`) — a **global** rate limit, 300 requests / 15 min per IP, applied to every route below it. `authLimiter` (20 requests / 15 min) is a second, stricter limiter applied only inside `auth.routes.ts` on top of the global one.
+8. `apiLimiter` (`src/middleware/rate-limit.ts`) — a **global** rate limit, 300 requests / 15 min per IP, applied to every route below it. `authLimiter` (20 requests / 15 min) is a second, stricter limiter applied only inside `auth.routes.ts` on top of the global one. Both are `skip`ped entirely when `env.NODE_ENV === "test"`, so Jest runs never trip them regardless of how many requests one test file makes.
 9. `GET /` → `"HELLO FROM API"` (plain text, liveness smoke check) and `GET /health` → `{ status: "ok", mongo: "connected" | "disconnected" }` (reads `mongoose.connection.readyState` live, not cached) — both **unauthenticated, unversioned**, mounted before the module routers.
 10. `/docs` → `swagger-ui-express` serving `swaggerSpec` (see "API docs" below).
 11. `routes` (`src/routes/index.ts`) — every module router, see the table below.
@@ -79,7 +79,7 @@ See [api-contract.md](./api-contract.md) for the full method+path+body+response 
 
 ## Data layer
 
-One Mongoose connection (`src/config/database.ts`), opened once at boot, reused by every module — there is no per-request connection or pooling logic to reason about beyond Mongoose's own default pool.
+One Mongoose connection (`src/config/database.ts`), opened once at boot, reused by every module — there is no per-request connection or pooling logic to reason about beyond Mongoose's own default pool. [`requireAuth`](../../src/middleware/auth.ts) is the one piece of middleware that reads the DB itself (a minimal `.select("tokenVersion")` lookup, for session revocation — see [auth.md](./auth.md#signtoken-and-session-revocation)); every other middleware in the stack above is purely in-process.
 Four collections exist: `user` (model name `"user"`, [users.md](./users.md)), `Event` ([events.md](./events.md)), `Products` (model name `"Products"`, [products.md](./products.md)), `report` (model name `"report"`, [reports.md](./reports.md)).
 **`clubs`, `directory`, and `auth` own no collection of their own** — all three read/write through `users`' `User` model (`clubs`/`directory` query it filtered by `userType`; `auth` creates/reads/updates it directly). See [users.md](./users.md#the-user-model-is-shared-by-five-modules) for the full list of modules that touch `User` and how.
 

@@ -19,6 +19,7 @@
 | `address` | `{ line1?, line2?, city?, state?, country?, pincode? }` | A **nested object**, not a flat string — see the profile-update mismatch below |
 | `config.hasCompletedProfile` | `boolean`, default `false` | Set at creation-time only; **nothing in this codebase ever sets it to `true`** — see [known-issues.md](./known-issues.md#users) |
 | `cart` | `{ id: string }[]` | Written to by `products.addToCart` ([products.md](./products.md)) — no other cart mutation (remove/clear) exists anywhere |
+| `tokenVersion` | `number`, default `0` | Session-revocation counter — bumped on logout/password-change, checked on every `requireAuth`-gated request. Never returned to a client (excluded from `PUBLIC_FIELDS` and `sanitize()`, same as `password`). See [auth.md](./auth.md#signtoken-and-session-revocation) |
 
 Modules touching `User` directly: `users` (this file), `auth` (create/find/update for login+signup), `clubs` (find, filtered by `userType`), `directory` (find, unfiltered), `events` (read-only, to resolve a host's name/username), `products` (push into `cart`).
 

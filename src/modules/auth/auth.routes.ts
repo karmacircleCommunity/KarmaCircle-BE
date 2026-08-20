@@ -4,7 +4,11 @@ import { authLimiter } from "../../middleware/rate-limit";
 import { validate } from "../../middleware/validate";
 import { asyncHandler } from "../../utils/async-handler";
 import * as authController from "./auth.controller";
-import { signinSchema, signupSchema, updatePasswordSchema } from "./auth.validation";
+import {
+  signinSchema,
+  signupSchema,
+  updatePasswordSchema,
+} from "./auth.validation";
 
 const router = Router();
 
@@ -118,7 +122,10 @@ router.get("/google", authController.googleInitiate);
  */
 router.get(
   "/google/callback",
-  passport.authenticate("google", { session: false, failureRedirect: "auth/login/failed" }),
+  passport.authenticate("google", {
+    session: false,
+    failureRedirect: "auth/login/failed",
+  }),
   authController.googleCallback,
 );
 
@@ -154,6 +161,6 @@ router.get("/login/success", authController.loginSuccess);
  *     responses:
  *       200: { description: Logged out }
  */
-router.get("/logout", authController.logout);
+router.get("/logout", asyncHandler(authController.logout));
 
 export default router;

@@ -115,4 +115,56 @@ describe("Auth", () => {
       expect(res.status).toBe(400);
     });
   });
+
+  describe("session revocation", () => {
+    it("invalidates a previously-issued token after a password change", async () => {
+      const signupRes = await request(app)
+        .post("/auth/signup")
+        .send(credentials);
+      const cookie = signupRes.headers["set-cookie"][0];
+
+      const before = await request(app)
+        .get("/clubs/dashboard")
+        .set("Cookie", cookie);
+      expect(before.status).toBe(200);
+
+      await request(app).post("/auth/update").send({
+        email: credentials.email,
+        oldPassword: credentials.password,
+        newPassword: "new-password-1",
+      });
+
+      const after = await request(app)
+        .get("/clubs/dashboard")
+        .set("Cookie", cookie);
+      expect(after.status).toBe(401);
+    });
+
+    it("invalidates a previously-issued token after logout", async () => {
+      const signupRes = await request(app)
+        .post("/auth/signup")
+        .send(credentials);
+      const cookie = signupRes.headers["set-cookie"][0];
+
+      const before = await request(app)
+        .get("/clubs/dashboard")
+        .set("Cookie", cookie);
+      expect(before.status).toBe(200);
+
+      const logoutRes = await request(app)
+        .get("/auth/logout")
+        .set("Cookie", cookie);
+      expect(logoutRes.status).toBe(200);
+
+      const after = await request(app)
+        .get("/clubs/dashboard")
+        .set("Cookie", cookie);
+      expect(after.status).toBe(401);
+    });
+
+    it("does not error when logging out with no cookie at all", async () => {
+      const res = await request(app).get("/auth/logout");
+      expect(res.status).toBe(200);
+    });
+  });
 });
