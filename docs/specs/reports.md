@@ -4,7 +4,7 @@
 
 ## `report.model.ts`
 
-`model<IReportProblem>("report", ...)`, `{ timestamps: true }`. Fields: `firstName`, `lastName`, `email`, `reportmessage` (note the lowercase, no-camelCase field name — matches the frontend's own field name for this form, so this is an intentional contract match, not a typo to "fix"), all `string` and required.
+`model<IReportProblem>("report", ...)`, `{ timestamps: true }`. Fields: `firstName`, `lastName`, `email`, `reportmessage` (note the lowercase, no-camelCase field name — matches the frontend's own field name for this form, so this is an intentional contract match, not a typo to "fix"), all `string` and required. A compound index on `{ email: 1, createdAt: 1 }` backs `hasReportedRecently`'s query below — without it, that lookup is a full collection scan.
 
 ## `POST /user/report`
 

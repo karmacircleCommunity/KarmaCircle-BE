@@ -83,6 +83,10 @@ One Mongoose connection (`src/config/database.ts`), opened once at boot, reused 
 Four collections exist: `user` (model name `"user"`, [users.md](./users.md)), `Event` ([events.md](./events.md)), `Products` (model name `"Products"`, [products.md](./products.md)), `report` (model name `"report"`, [reports.md](./reports.md)).
 **`clubs`, `directory`, and `auth` own no collection of their own** — all three read/write through `users`' `User` model (`clubs`/`directory` query it filtered by `userType`; `auth` creates/reads/updates it directly). See [users.md](./users.md#the-user-model-is-shared-by-five-modules) for the full list of modules that touch `User` and how.
 
+### Indexes
+
+Every field a service actually filters/looks up by is indexed: `User.email` (`unique: true`, also the login/`requireAuth` lookup key), `User.userName` and `User.userType` (both plain, added alongside the pagination work — see [users.md](./users.md#the-user-model-is-shared-by-five-modules)), `Event.uid` (`unique: true`), `Product.productSlug` (`unique: true`), and a compound `ReportProblem.{ email, createdAt }` backing `hasReportedRecently`'s cooldown check (see [reports.md](./reports.md)). There's no explicit migration tooling in this repo (no `migrate-mongo` or equivalent) — indexes take effect the same way `email`'s/`uid`'s/`productSlug`'s `unique: true` indexes always have, via Mongoose's default `autoIndex` behavior building them in the background the first time a model is used against a given database. Verified against a real (in-memory) Mongo via `Model.collection.indexes()`, not just read from the schema, when this was added.
+
 ## Build, lint, test, deploy
 
 - **`npm run dev`** — `tsx watch src/server.ts`, hot-reloads on file change.

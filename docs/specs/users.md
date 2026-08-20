@@ -8,8 +8,8 @@
 
 | Field | Type | Notes |
 |---|---|---|
-| `userType` | `string?` | `"individual"` \| `"club"` in practice, unenforced |
-| `userName` | `string` (required) | Unique in practice (see `generateUniqueUsername` below) but **not** declared `unique: true` on the schema — a race between two concurrent signups reading "is this taken?" then writing could still produce a duplicate; low likelihood, not impossible |
+| `userType` | `string?`, indexed | `"individual"` \| `"club"` in practice, unenforced. Indexed (plain, not unique) since `findByType`/`findIndividuals` filter on it — backs `clubs`, `directory`, and the unfiltered branch of `GET /user` |
+| `userName` | `string` (required), indexed | Unique in practice (see `generateUniqueUsername` below) but **not** declared `unique: true` on the schema — a race between two concurrent signups reading "is this taken?" then writing could still produce a duplicate; low likelihood, not impossible. The index (added alongside pagination/indexing work) only speeds up lookups by `userName` — it's deliberately a plain index, not unique, so it can't fail to build even if duplicates already exist in a live deployment; closing the race itself would need a separate, coordinated migration |
 | `name` | `string?` | |
 | `email` | `string` (required, `unique: true`) | The de facto identity field — see [auth.md](./auth.md) for how the JWT encodes it |
 | `phone` | `string?` | |

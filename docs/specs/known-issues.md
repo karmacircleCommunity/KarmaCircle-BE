@@ -6,6 +6,10 @@ A catalog of the cross-cutting bugs, gaps, and unresolved inconsistencies found 
 
 **Resolved.** Every "list everything" endpoint (`GET /user`, `GET /clubs`, `GET /display/users`, `GET /display/clubs`, `GET /events`, `GET /product/allproducts`) now takes `?page=&limit=` and returns `{ data, pagination: { page, limit, total, totalPages } }` instead of a bare array — see [architecture.md](./architecture.md#pagination). This is a **response-shape change** on those six routes. Per [api-contract.md](./api-contract.md), the only currently-reachable frontend caller of any of them was `GetAllClubs()` (`GET /clubs`, no `userName`), and per the frontend's own `donate-shop-trending/SPEC.md` that function is only invoked from `Donate.tsx` — a page with no registered route in the frontend today — so this shipped with **no live frontend breakage**. It will still need `GetAllClubs()`'s caller updated to read `response.data.data` (and the frontend's own specs updated) whenever `Donate.tsx`/that call site is fixed or routed.
 
+## Indexing
+
+**Resolved.** Every field actually filtered/looked up on is now indexed — see [architecture.md](./architecture.md#indexes) for the full list. `User.userName` got a plain (not unique) index deliberately: it's still only enforced unique at the application layer (`generateUniqueUsername`, a real check-then-write race), and a plain index is always safe to add regardless of whether duplicates already exist in a live deployment, where a `unique: true` index build would fail outright on any existing collision. Closing the race itself — making `userName` genuinely unique at the DB level — is a separate, deliberately-deferred follow-up; do it as its own coordinated change once existing data has been checked for duplicates, not bundled into a routine index pass.
+
 ## Cross-repo contract breaks
 
 The single most important category in this file — see [api-contract.md](./api-contract.md) for the full trace of each:

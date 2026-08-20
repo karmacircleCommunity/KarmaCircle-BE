@@ -42,10 +42,15 @@ export interface IUser extends Document {
 }
 
 const userSchema = new Schema<IUser>({
-  userType: { type: String },
+  userType: { type: String, index: true },
+  // Not `unique: true` — userName uniqueness is still only enforced at the
+  // application layer (generateUniqueUsername in user.service.ts), which
+  // has a real check-then-write race window. A plain index here only
+  // speeds up lookups; it does not close that race. See known-issues.md.
   userName: {
     type: String,
     required: true,
+    index: true,
   },
   name: { type: String },
   email: {
