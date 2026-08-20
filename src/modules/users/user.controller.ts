@@ -2,11 +2,12 @@ import { Request, Response } from "express";
 import { STATUS_CODE, STATUS_MESSAGE } from "../../constants/http-status";
 import { AuthenticatedRequest } from "../../middleware/auth";
 import { AppError } from "../../middleware/error-handler";
+import { buildPaginationMeta, toSkipLimit } from "../../utils/pagination";
 import * as userService from "./user.service";
 import { ListUsersQuery, UpdateProfileInput } from "./user.validation";
 
 export async function listUsers(req: Request, res: Response) {
-  const { userName } = req.query as ListUsersQuery;
+  const { userName, page, limit } = req.query as unknown as ListUsersQuery;
 
   if (userName) {
     const user = await userService.findByUsername(userName);
@@ -18,8 +19,12 @@ export async function listUsers(req: Request, res: Response) {
     return res.status(STATUS_CODE.OK).json(user);
   }
 
-  const users = await userService.findIndividuals();
-  return res.status(STATUS_CODE.OK).json(users);
+  const { data, total } = await userService.findIndividuals(
+    toSkipLimit({ page, limit }),
+  );
+  return res
+    .status(STATUS_CODE.OK)
+    .json({ data, pagination: buildPaginationMeta({ page, limit, total }) });
 }
 
 export async function updateProfile(req: AuthenticatedRequest, res: Response) {

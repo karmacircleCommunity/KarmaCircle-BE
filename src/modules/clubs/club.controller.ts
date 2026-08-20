@@ -2,11 +2,12 @@ import { Request, Response } from "express";
 import { STATUS_CODE, STATUS_MESSAGE } from "../../constants/http-status";
 import { AuthenticatedRequest } from "../../middleware/auth";
 import { AppError } from "../../middleware/error-handler";
+import { buildPaginationMeta, toSkipLimit } from "../../utils/pagination";
 import * as userService from "../users/user.service";
 import { ListClubsQuery } from "./club.validation";
 
 export async function listClubs(req: Request, res: Response) {
-  const { userName } = req.query as ListClubsQuery;
+  const { userName, page, limit } = req.query as unknown as ListClubsQuery;
 
   if (userName) {
     const club = await userService.findByUsername(userName);
@@ -18,8 +19,13 @@ export async function listClubs(req: Request, res: Response) {
     return res.status(STATUS_CODE.OK).json(club);
   }
 
-  const clubs = await userService.findByType("club");
-  return res.status(STATUS_CODE.OK).json(clubs);
+  const { data, total } = await userService.findByType(
+    "club",
+    toSkipLimit({ page, limit }),
+  );
+  return res
+    .status(STATUS_CODE.OK)
+    .json({ data, pagination: buildPaginationMeta({ page, limit, total }) });
 }
 
 export async function dashboard(req: AuthenticatedRequest, res: Response) {

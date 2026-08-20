@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { paginationQuerySchema } from "../../utils/pagination";
 
 const OFFLINE_REQUIRED_FIELDS = [
   "city",
@@ -43,10 +44,12 @@ export const createEventSchema = z
     }
   });
 
-export const listEventsQuerySchema = z.object({
-  uid: z.string().optional(),
-  slug: z.string().optional(),
-});
+export const listEventsQuerySchema = z
+  .object({
+    uid: z.string().optional(),
+    slug: z.string().optional(),
+  })
+  .merge(paginationQuerySchema);
 
 export type CreateEventInput = z.infer<typeof createEventSchema>;
 export type ListEventsQuery = z.infer<typeof listEventsQuerySchema>;

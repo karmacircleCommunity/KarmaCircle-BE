@@ -11,14 +11,20 @@ const router = Router();
  * @openapi
  * /clubs:
  *   get:
- *     summary: Get a club by username, or list all clubs
+ *     summary: Get a club by username, or list all clubs (paginated)
  *     tags: [Clubs]
  *     parameters:
  *       - in: query
  *         name: userName
  *         schema: { type: string }
+ *       - in: query
+ *         name: page
+ *         schema: { type: integer, minimum: 1, default: 1 }
+ *       - in: query
+ *         name: limit
+ *         schema: { type: integer, minimum: 1, maximum: 100, default: 20 }
  *     responses:
- *       200: { description: A club or a list of clubs }
+ *       200: { description: "A single club (if userName is set), or { data, pagination } otherwise" }
  *       404: { description: Not found }
  */
 router.get(

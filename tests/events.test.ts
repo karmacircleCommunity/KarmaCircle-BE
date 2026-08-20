@@ -6,7 +6,11 @@ const app = buildTestApp();
 async function signupAndGetCookie() {
   const res = await request(app)
     .post("/auth/signup")
-    .send({ email: "host@example.com", password: "hunter2", name: "Test Host" });
+    .send({
+      email: "host@example.com",
+      password: "hunter2",
+      name: "Test Host",
+    });
 
   const cookie = res.headers["set-cookie"]?.[0];
   if (!cookie) {
@@ -29,7 +33,9 @@ const validOnlineEvent = {
 
 describe("Events", () => {
   it("rejects event creation without authentication", async () => {
-    const res = await request(app).post("/events/create").send(validOnlineEvent);
+    const res = await request(app)
+      .post("/events/create")
+      .send(validOnlineEvent);
     expect(res.status).toBe(401);
   });
 
@@ -57,19 +63,71 @@ describe("Events", () => {
     expect(res.status).toBe(400);
   });
 
-  it("lists all events", async () => {
+  it("lists all events, paginated", async () => {
     const cookie = await signupAndGetCookie();
-    await request(app).post("/events/create").set("Cookie", cookie).send(validOnlineEvent);
+    await request(app)
+      .post("/events/create")
+      .set("Cookie", cookie)
+      .send(validOnlineEvent);
 
     const res = await request(app).get("/events");
 
     expect(res.status).toBe(200);
-    expect(res.body).toHaveLength(1);
+    expect(res.body.data).toHaveLength(1);
+    expect(res.body.pagination).toEqual({
+      page: 1,
+      limit: 20,
+      total: 1,
+      totalPages: 1,
+    });
+  });
+
+  it("paginates across multiple pages with skip/limit math", async () => {
+    const cookie = await signupAndGetCookie();
+    for (const uid of ["multi-1", "multi-2", "multi-3"]) {
+      await request(app)
+        .post("/events/create")
+        .set("Cookie", cookie)
+        .send({ ...validOnlineEvent, uid });
+    }
+
+    const page1 = await request(app).get("/events?page=1&limit=2");
+    expect(page1.body.data).toHaveLength(2);
+    expect(page1.body.pagination).toEqual({
+      page: 1,
+      limit: 2,
+      total: 3,
+      totalPages: 2,
+    });
+
+    const page2 = await request(app).get("/events?page=2&limit=2");
+    expect(page2.body.data).toHaveLength(1);
+    expect(page2.body.pagination).toEqual({
+      page: 2,
+      limit: 2,
+      total: 3,
+      totalPages: 2,
+    });
+
+    const uidsSeen = new Set(
+      [...page1.body.data, ...page2.body.data].map(
+        (e: { uid: string }) => e.uid,
+      ),
+    );
+    expect(uidsSeen.size).toBe(3);
+  });
+
+  it("rejects an out-of-range limit with 400", async () => {
+    const res = await request(app).get("/events?limit=101");
+    expect(res.status).toBe(400);
   });
 
   it("finds a single event by uid", async () => {
     const cookie = await signupAndGetCookie();
-    await request(app).post("/events/create").set("Cookie", cookie).send(validOnlineEvent);
+    await request(app)
+      .post("/events/create")
+      .set("Cookie", cookie)
+      .send(validOnlineEvent);
 
     const res = await request(app).get(`/events?uid=${validOnlineEvent.uid}`);
 

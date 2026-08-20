@@ -11,14 +11,20 @@ const router = Router();
  * @openapi
  * /user:
  *   get:
- *     summary: Get a user by username, or list individual users
+ *     summary: Get a user by username, or list individual users (paginated)
  *     tags: [Users]
  *     parameters:
  *       - in: query
  *         name: userName
  *         schema: { type: string }
+ *       - in: query
+ *         name: page
+ *         schema: { type: integer, minimum: 1, default: 1 }
+ *       - in: query
+ *         name: limit
+ *         schema: { type: integer, minimum: 1, maximum: 100, default: 20 }
  *     responses:
- *       200: { description: A user or a list of users }
+ *       200: { description: "A single user (if userName is set), or { data, pagination } otherwise" }
  *       404: { description: Not found }
  */
 router.get(

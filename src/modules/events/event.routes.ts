@@ -11,14 +11,20 @@ const router = Router();
  * @openapi
  * /events:
  *   get:
- *     summary: Get an event by uid, or list all events
+ *     summary: Get an event by uid, or list all events (paginated)
  *     tags: [Events]
  *     parameters:
  *       - in: query
  *         name: uid
  *         schema: { type: string }
+ *       - in: query
+ *         name: page
+ *         schema: { type: integer, minimum: 1, default: 1 }
+ *       - in: query
+ *         name: limit
+ *         schema: { type: integer, minimum: 1, maximum: 100, default: 20 }
  *     responses:
- *       200: { description: An event or a list of events }
+ *       200: { description: "A single event (if uid/slug is set), or { data, pagination } otherwise" }
  *       404: { description: Not found }
  */
 router.get(

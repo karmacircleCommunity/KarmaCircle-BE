@@ -8,14 +8,24 @@ export async function findByUid(uid: string) {
   return Event.findOne({ uid });
 }
 
-export async function findAll() {
-  return Event.find({});
+export async function findAll(pagination: { skip: number; limit: number }) {
+  const [data, total] = await Promise.all([
+    Event.find({}).skip(pagination.skip).limit(pagination.limit),
+    Event.countDocuments({}),
+  ]);
+  return { data, total };
 }
 
-export async function createEvent(email: string, data: CreateEventInput): Promise<IEvent> {
+export async function createEvent(
+  email: string,
+  data: CreateEventInput,
+): Promise<IEvent> {
   const existingEvent = await Event.findOne({ uid: data.uid });
   if (existingEvent) {
-    throw new AppError(STATUS_CODE.CONFLICT, STATUS_MESSAGE.EVENT_UID_ALREADY_EXISTS);
+    throw new AppError(
+      STATUS_CODE.CONFLICT,
+      STATUS_MESSAGE.EVENT_UID_ALREADY_EXISTS,
+    );
   }
 
   const host = await findByEmail(email);

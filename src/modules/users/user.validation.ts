@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { paginationQuerySchema } from "../../utils/pagination";
 
 export const updateProfileSchema = z.object({
   tagLine: z.string().optional(),
@@ -10,9 +11,11 @@ export const updateProfileSchema = z.object({
   pincode: z.string().optional(),
 });
 
-export const listUsersQuerySchema = z.object({
-  userName: z.string().optional(),
-});
+export const listUsersQuerySchema = z
+  .object({
+    userName: z.string().optional(),
+  })
+  .merge(paginationQuerySchema);
 
 export type UpdateProfileInput = z.infer<typeof updateProfileSchema>;
 export type ListUsersQuery = z.infer<typeof listUsersQuerySchema>;

@@ -1,6 +1,11 @@
 import { IUser, User, UserType } from "./user.model";
 import { UpdateProfileInput } from "./user.validation";
 
+interface Page<T> {
+  data: T[];
+  total: number;
+}
+
 const PUBLIC_FIELDS = "-password -__v";
 
 export async function generateUniqueUsername(email: string): Promise<string> {
@@ -23,16 +28,48 @@ export async function findByUsername(userName: string) {
 
 const INDIVIDUAL: UserType = "individual";
 
-export async function findIndividuals() {
-  return User.find({ userType: INDIVIDUAL }).select(PUBLIC_FIELDS);
+export async function findIndividuals(pagination: {
+  skip: number;
+  limit: number;
+}): Promise<Page<IUser>> {
+  const filter = { userType: INDIVIDUAL };
+  const [data, total] = await Promise.all([
+    User.find(filter)
+      .select(PUBLIC_FIELDS)
+      .skip(pagination.skip)
+      .limit(pagination.limit),
+    User.countDocuments(filter),
+  ]);
+  return { data, total };
 }
 
-export async function findAll() {
-  return User.find({}).select(PUBLIC_FIELDS);
+export async function findAll(pagination: {
+  skip: number;
+  limit: number;
+}): Promise<Page<IUser>> {
+  const [data, total] = await Promise.all([
+    User.find({})
+      .select(PUBLIC_FIELDS)
+      .skip(pagination.skip)
+      .limit(pagination.limit),
+    User.countDocuments({}),
+  ]);
+  return { data, total };
 }
 
-export async function findByType(userType: UserType) {
-  return User.find({ userType }).select(PUBLIC_FIELDS);
+export async function findByType(
+  userType: UserType,
+  pagination: { skip: number; limit: number },
+): Promise<Page<IUser>> {
+  const filter = { userType };
+  const [data, total] = await Promise.all([
+    User.find(filter)
+      .select(PUBLIC_FIELDS)
+      .skip(pagination.skip)
+      .limit(pagination.limit),
+    User.countDocuments(filter),
+  ]);
+  return { data, total };
 }
 
 export async function updateProfile(email: string, data: UpdateProfileInput) {
