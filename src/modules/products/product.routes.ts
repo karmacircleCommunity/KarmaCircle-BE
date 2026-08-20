@@ -1,8 +1,13 @@
 import { Router } from "express";
+import { AuthenticatedRequest, requireAuth } from "../../middleware/auth";
 import { validate } from "../../middleware/validate";
 import { asyncHandler } from "../../utils/async-handler";
 import * as productController from "./product.controller";
-import { addProductSchema, addToCartSchema } from "./product.validation";
+import {
+  addProductSchema,
+  addToCartSchema,
+  listProductsQuerySchema,
+} from "./product.validation";
 
 const router = Router();
 
@@ -41,37 +46,50 @@ router.post(
  * @openapi
  * /product/allproducts:
  *   get:
- *     summary: List all products
+ *     summary: List all products (paginated)
  *     tags: [Products]
+ *     parameters:
+ *       - in: query
+ *         name: page
+ *         schema: { type: integer, minimum: 1, default: 1 }
+ *       - in: query
+ *         name: limit
+ *         schema: { type: integer, minimum: 1, maximum: 100, default: 20 }
  *     responses:
- *       200: { description: List of products }
+ *       200: { description: "{ data, pagination }" }
  */
-router.get("/allproducts", asyncHandler(productController.listProducts));
+router.get(
+  "/allproducts",
+  validate(listProductsQuerySchema, "query"),
+  asyncHandler(productController.listProducts),
+);
 
 /**
  * @openapi
  * /product/cart/add:
  *   post:
- *     summary: Add a product to a user's cart
+ *     summary: Add a product to the authenticated user's own cart
  *     tags: [Products]
+ *     security: [{ cookieAuth: [] }]
  *     requestBody:
  *       required: true
  *       content:
  *         application/json:
  *           schema:
  *             type: object
- *             required: [email, productId]
+ *             required: [productId]
  *             properties:
- *               email: { type: string, format: email }
  *               productId: { type: string }
  *     responses:
  *       200: { description: Product added to cart }
+ *       401: { description: Unauthorized }
  *       404: { description: User not found }
  */
 router.post(
   "/cart/add",
+  requireAuth,
   validate(addToCartSchema),
-  asyncHandler(productController.addToCart),
+  asyncHandler<AuthenticatedRequest>(productController.addToCart),
 );
 
 /**

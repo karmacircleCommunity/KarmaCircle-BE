@@ -1,4 +1,7 @@
 import { z } from "zod";
+import { paginationQuerySchema } from "../../utils/pagination";
+
+export const listProductsQuerySchema = paginationQuerySchema;
 
 export const addProductSchema = z.object({
   productType: z.string().min(1),
@@ -11,9 +14,9 @@ export const addProductSchema = z.object({
 });
 
 export const addToCartSchema = z.object({
-  email: z.string().email(),
   productId: z.string().min(1),
 });
 
 export type AddProductInput = z.infer<typeof addProductSchema>;
 export type AddToCartInput = z.infer<typeof addToCartSchema>;
+export type ListProductsQuery = z.infer<typeof listProductsQuerySchema>;
