@@ -168,6 +168,33 @@ describe("Auth", () => {
     });
   });
 
+  describe("GET /auth/login/success", () => {
+    // Was previously unreachable for any real caller: its old req.user
+    // check could only ever pass inside the single request Passport's
+    // callback itself handled, never this separate follow-up request.
+    // It's now requireAuth-gated instead, so a valid Token cookie (the
+    // same kind googleCallback sets on its redirect response) is enough
+    // to reach it — see auth.controller.ts's loginSuccess/issueOAuthSession.
+    it("returns the caller's own user data given a valid Token cookie", async () => {
+      const signupRes = await request(app)
+        .post("/auth/signup")
+        .send(credentials);
+      const cookie = signupRes.headers["set-cookie"][0];
+
+      const res = await request(app)
+        .get("/auth/login/success")
+        .set("Cookie", cookie);
+
+      expect(res.status).toBe(200);
+      expect(res.body.user.email).toBe(credentials.email);
+    });
+
+    it("rejects a request with no Token cookie with 401", async () => {
+      const res = await request(app).get("/auth/login/success");
+      expect(res.status).toBe(401);
+    });
+  });
+
   describe("userType discriminator", () => {
     it("signing up with userType 'club' is queryable via GET /clubs, not GET /user", async () => {
       const club = {

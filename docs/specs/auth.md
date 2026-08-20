@@ -44,21 +44,24 @@ Google redirects to  GET /auth/google/callback?code=...&state=<userType>
               │      - re-reads `req.query.state` as `userType` (the same value googleInitiate embedded)
               │      - authService.findOrCreateGoogleUser({ email, name, userType }):
               │          existing User with this email? return it as-is (userType from THIS login is discarded if the account already existed)
-              │          else: create one, with a random unusable bcrypt-hashed password (crypto.randomBytes(20)) and userType from state
+              │          else: create one via getUserModel(userType) (see users.md), with a random unusable
+              │            bcrypt-hashed password (crypto.randomBytes(20))
               ▼
-googleCallback: sets `OAuthLoginInitiated=true` cookie (5-min expiry, NOT httpOnly, Secure, SameSite=None), redirects (302) to env.successURL
+googleCallback: issueOAuthSession(res, req.user) signs the REAL Token (httpOnly) and sets userName/isLoggedIn/userType,
+              │  THEN sets `OAuthLoginInitiated=true` (5-min expiry, NOT httpOnly, Secure, SameSite=None), redirects (302) to env.successURL
               ▼
 Frontend's landing page (per its own spec) detects OAuthLoginInitiated on mount, calls  GET /auth/login/success
-              │  loginSuccess: requires `req.user` (set by Passport during the callback above — this only works if this request
-              │    still carries Passport's session/auth artifact from the callback; see the passReqToCallback note below)
-              │  issues the REAL Token (httpOnly this time), clears OAuthLoginInitiated, sets userName/isLoggedIn/userType cookies
+              │  loginSuccess is now requireAuth-gated: the Token cookie googleCallback just set on the redirect response
+              │    is already present on this next request (browsers store Set-Cookie headers from redirect responses
+              │    same as any other response), so requireAuth resolves req.auth.email from it like any other protected route
+              │  looks the user back up by req.auth.email, clears OAuthLoginInitiated
               ▼
 200 { message: LOGIN_SUCCESS, user: <sanitized> }
 ```
 
 `GoogleStrategy` is registered with `passReqToCallback: true` specifically so the verify callback can reach `req.query.state` — that's the only reason `req` is threaded through. `state` is used here purely as a way to smuggle `userType` through Google's redirect round-trip, not as a CSRF nonce (Google's OAuth `state` param is conventionally for CSRF protection; this app repurposes it for a different, unrelated value, and does **not** validate the callback's `state` against what `googleInitiate` originally issued — there is no CSRF check on this flow).
 
-`GET /auth/login/success` calls `authService.signToken(user.email, user.tokenVersion)` directly rather than going through `signin`/`signup` — it assumes `req.user` is already populated, which only happens if Passport's `authenticate(..., { session: false })` middleware ran earlier **in the same request**. Since `googleCallback` already redirects the browser away with a 302 before this route is ever hit, `req.user` on the `/auth/login/success` request is a **fresh, unauthenticated Express request** with no Passport state carried over — `req.user` would only be set here if something else (e.g. a session, which this app deliberately doesn't use) persisted it. **This looks like it should never actually populate `req.user` in production traffic, meaning `GET /auth/login/success` would always hit its `401` branch.** This needs to be verified by actually exercising the flow (per the "reproduce the bug like an end user would" rule) before treating it as confirmed — the alternative is that the frontend's `successCallback()` (`GET /auth/login/success` with `withCredentials: true`) is relying on some cookie-based revalidation this doc hasn't traced yet. Flagged in [known-issues.md](./known-issues.md); do not assume this flow works end-to-end without testing it live.
+**`GET /auth/login/success` reachability: fixed.** It used to call `authService.signToken(...)` directly off `req.user`, assuming Passport's auth artifact from the *earlier* `/auth/google/callback` request was still available — it never was, since `session: false` means nothing persists `req.user` across the redirect to a fresh request, so this route always hit its `401` branch in real traffic. The actual session issuance (`issueOAuthSession` — signs the JWT, sets `Token`/`userName`/`isLoggedIn`/`userType`) moved into `googleCallback`, the one request in this handshake that legitimately has `req.user`. `loginSuccess` is now just another `requireAuth`-gated route, reading the `Token` cookie `googleCallback` already set rather than depending on `req.user` at all. Verified live (not just read from source) — see `tests/auth.test.ts`'s "GET /auth/login/success" tests, which confirm the route is reachable given a valid `Token` cookie and 401s without one.
 
 ## `signToken` and session revocation
 
@@ -84,7 +87,7 @@ The payload's nested shape (`{ User: { id: <email> }, tokenVersion }`) is decode
 
 **This is now the one DB read on every authenticated request** — a deliberate architecture trade-off (a few ms of latency per protected call) chosen specifically to get real, on-demand revocation instead of only a time-boxed token; see [known-issues.md](./known-issues.md#auth) for the reasoning. The projection (`.select("tokenVersion")`) keeps the read minimal — just `_id` + `tokenVersion`, not the full document.
 
-Three protected routes use it: `POST /user/update` ([users.md](./users.md)), `GET /clubs/dashboard` ([clubs.md](./clubs.md)), `POST /events/create` ([events.md](./events.md)). Everything else in `auth` itself is unauthenticated by design (you can't require a token to sign in).
+Protected routes using it: `GET /user/profile`, `PATCH /user/update`, `PATCH /user/complete` ([users.md](./users.md)), `GET /clubs/dashboard` ([clubs.md](./clubs.md)), `POST /events/create` ([events.md](./events.md)), and — as of the `GET /auth/login/success` fix above — that route itself. Everything else in `auth` remains unauthenticated by design (you can't require a token to sign in).
 
 ## `GET /auth/logout`
 
@@ -96,6 +99,4 @@ All three (`httpOnlyCookieOptions`, `readableCookieOptions`, `clearedCookieOptio
 
 ## What's known-broken here
 
-See [known-issues.md](./known-issues.md#auth) for the full list. JWT expiry and session revocation are **fixed** (see above). Still open, the two most load-bearing:
-- `GET /auth/login/success` appears unreachable via `req.user` in real cross-origin traffic (see above) — verify before relying on Google OAuth completing.
-- The frontend's profile-completion (`PATCH /user/complete`) and profile-update (`PATCH /user/update`) calls target routes/methods this API doesn't actually expose — see [api-contract.md](./api-contract.md) and [users.md](./users.md).
+See [known-issues.md](./known-issues.md#auth) for the full list. JWT expiry and session revocation, and `GET /auth/login/success`'s reachability, are **fixed** (see above). The frontend's profile-completion and profile-update calls now have matching backend routes too — see [users.md](./users.md) and [api-contract.md](./api-contract.md).

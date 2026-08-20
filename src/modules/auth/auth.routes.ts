@@ -1,5 +1,6 @@
 import { Router } from "express";
 import passport from "../../config/passport";
+import { AuthenticatedRequest, requireAuth } from "../../middleware/auth";
 import { authLimiter } from "../../middleware/rate-limit";
 import { validate } from "../../middleware/validate";
 import { asyncHandler } from "../../utils/async-handler";
@@ -144,13 +145,18 @@ router.get("/login/failed", authController.loginFailed);
  * @openapi
  * /auth/login/success:
  *   get:
- *     summary: OAuth login success landing route, issues the app JWT cookie
+ *     summary: OAuth login success landing route — reads back the Token cookie googleCallback already set
  *     tags: [Auth]
+ *     security: [{ cookieAuth: [] }]
  *     responses:
  *       200: { description: Logged in }
  *       401: { description: Unauthorized }
  */
-router.get("/login/success", authController.loginSuccess);
+router.get(
+  "/login/success",
+  requireAuth,
+  asyncHandler<AuthenticatedRequest>(authController.loginSuccess),
+);
 
 /**
  * @openapi

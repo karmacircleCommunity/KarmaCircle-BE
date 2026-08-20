@@ -49,5 +49,7 @@ export const STATUS_MESSAGE = {
   PRODUCT_NOT_FOUND: "Product not found",
   PASSWORD_UPDATE_SUCCESS: "Password Updated Successfully",
   PROFILE_UPDATE_SUCCESS: "Profile Updated Successfully",
+  PROFILE_COMPLETE_SUCCESS: "Profile Completed Successfully",
+  PROFILE_FETCH_FAILED: "Failed to fetch profile data !",
   TOO_MANY_REQUESTS: "You have already reported a problem in the last 2 hours.",
 } as const;

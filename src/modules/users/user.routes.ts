@@ -3,7 +3,11 @@ import { AuthenticatedRequest, requireAuth } from "../../middleware/auth";
 import { validate } from "../../middleware/validate";
 import { asyncHandler } from "../../utils/async-handler";
 import * as userController from "./user.controller";
-import { listUsersQuerySchema, updateProfileSchema } from "./user.validation";
+import {
+  completeProfileSchema,
+  listUsersQuerySchema,
+  updateProfileSchema,
+} from "./user.validation";
 
 const router = Router();
 
@@ -35,8 +39,26 @@ router.get(
 
 /**
  * @openapi
+ * /user/profile:
+ *   get:
+ *     summary: Get the authenticated user's own profile record
+ *     tags: [Users]
+ *     security: [{ cookieAuth: [] }]
+ *     responses:
+ *       200: { description: "{ user }" }
+ *       401: { description: Unauthorized }
+ *       404: { description: Not found }
+ */
+router.get(
+  "/profile",
+  requireAuth,
+  asyncHandler<AuthenticatedRequest>(userController.profile),
+);
+
+/**
+ * @openapi
  * /user/update:
- *   post:
+ *   patch:
  *     summary: Update the authenticated user's profile
  *     tags: [Users]
  *     security: [{ cookieAuth: [] }]
@@ -47,23 +69,66 @@ router.get(
  *           schema:
  *             type: object
  *             properties:
- *               tagLine: { type: string }
+ *               name: { type: string }
  *               description: { type: string }
- *               city: { type: string }
- *               state: { type: string }
- *               address: { type: string }
- *               country: { type: string }
- *               pincode: { type: string }
+ *               coverImage: { type: string }
+ *               address:
+ *                 type: object
+ *                 properties:
+ *                   line1: { type: string }
+ *                   line2: { type: string }
+ *                   city: { type: string }
+ *                   state: { type: string }
+ *                   country: { type: string }
+ *                   pincode: { type: string }
  *     responses:
  *       200: { description: Profile updated }
  *       401: { description: Unauthorized }
  *       404: { description: User not found }
  */
-router.post(
+router.patch(
   "/update",
   requireAuth,
   validate(updateProfileSchema),
   asyncHandler<AuthenticatedRequest>(userController.updateProfile),
+);
+
+/**
+ * @openapi
+ * /user/complete:
+ *   patch:
+ *     summary: Complete the authenticated user's profile (sets config.hasCompletedProfile)
+ *     tags: [Users]
+ *     security: [{ cookieAuth: [] }]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               name: { type: string }
+ *               description: { type: string }
+ *               coverImage: { type: string }
+ *               address:
+ *                 type: object
+ *                 properties:
+ *                   line1: { type: string }
+ *                   line2: { type: string }
+ *                   city: { type: string }
+ *                   state: { type: string }
+ *                   country: { type: string }
+ *                   pincode: { type: string }
+ *     responses:
+ *       200: { description: Profile completed }
+ *       401: { description: Unauthorized }
+ *       404: { description: User not found }
+ */
+router.patch(
+  "/complete",
+  requireAuth,
+  validate(completeProfileSchema),
+  asyncHandler<AuthenticatedRequest>(userController.completeProfile),
 );
 
 export default router;

@@ -16,12 +16,15 @@ A catalog of the cross-cutting bugs, gaps, and unresolved inconsistencies found 
 
 ## Cross-repo contract breaks
 
-The single most important category in this file — see [api-contract.md](./api-contract.md) for the full trace of each:
+**Resolved (all four).** Was the single most important category in this file — see [api-contract.md](./api-contract.md) for the historical trace of each break, now updated to reflect the fix.
 
-1. **`POST /user/update` vs. the frontend's `PATCH` call.** The live "edit my profile" feature does not work against this backend today — Express doesn't match `PATCH` against a `router.post(...)` registration, so every real call 404s.
-2. **`GET /user/profile` doesn't exist**, but `Dashboard.tsx` calls it live via SWR. The dashboard's actual working data source (`GET /clubs/dashboard`, via `fetchDashboard()`) is a separate, correctly-wired path the same page doesn't currently use for this particular fetch.
-3. **`GET /auth/login/success` likely can't complete Google OAuth** — its controller needs `req.user`, which nothing in this stateless-JWT-only backend carries forward from the earlier `/auth/google/callback` request. Needs live verification, not just static reading, before treating as confirmed.
-4. **`PATCH /user/complete` doesn't exist at all**, but the frontend's profile-completion modal calls it live. `User.config.hasCompletedProfile` can never become `true` through any code path in this API.
+1. **`POST /user/update` vs. the frontend's `PATCH` call — fixed.** The route now registers as `router.patch("/update", ...)`, matching what the frontend's `updateUserProfile()` always sent; the old `POST` registration is gone (nothing else called it). Its body shape was fixed in the same change — see #1b below.
+   - **1b. Body shape — fixed.** `updateProfileSchema` now accepts `{ name?, description?, coverImage?, address?: { line1?, line2?, city?, state?, country?, pincode? } }`, matching exactly what `ProfileUpdate.tsx` sends. `coverImage` is translated onto `IUser.bannerPicture` in `user.service.ts`'s `toUserUpdate` — the schema has no `coverImage` field, `bannerPicture` is what it's describing.
+2. **`GET /user/profile` — fixed.** Added (`requireAuth`-gated), backed by the same "look the caller up by `req.auth.email`" pattern `GET /clubs/dashboard` already used, wrapped as `{ user: <sanitized> }` to match `Dashboard.tsx`'s `profileData?.user` read.
+3. **`GET /auth/login/success` — fixed.** The real fix was moving session issuance (signing the JWT, setting `Token`/`userName`/`isLoggedIn`/`userType`) into `googleCallback`, the one request in the OAuth handshake that legitimately has `req.user` from Passport. `loginSuccess` is now `requireAuth`-gated instead of depending on `req.user` directly, and reads the `Token` cookie `googleCallback` already set on its redirect response. Verified live via Supertest (`tests/auth.test.ts`), not just reasoned about statically.
+4. **`PATCH /user/complete` — fixed.** Added (`requireAuth`-gated, same body shape as `PATCH /user/update`), always sets `config.hasCompletedProfile: true` server-side on success regardless of what the client's body claims about that field.
+
+See [users.md](./users.md) and [auth.md](./auth.md) for the full per-route detail, and `tests/users.test.ts` / `tests/auth.test.ts` for the regression coverage.
 
 ## Auth
 
@@ -35,7 +38,7 @@ The single most important category in this file — see [api-contract.md](./api-
 
 ## Users
 
-- `config.hasCompletedProfile` defaults to `false` and nothing in this codebase ever sets it `true` — see contract break #4 above.
+- `config.hasCompletedProfile` defaults to `false`; `PATCH /user/complete` is now the one route that sets it `true` — see contract break #4 above.
 - `sanitize()` strips `_id` along with `password`/`__v` — the user object returned from signup/signin/dashboard has no id field at all; only `GET /user`'s `PUBLIC_FIELDS`-projected responses include `_id`. A frontend or future backend feature that needs a stable per-user id from a sanitized response has to use `email`/`userName` instead — there is currently no id in that shape.
 - `userName` is not declared `unique: true` on the schema, only made unique in practice by `generateUniqueUsername`'s pre-check — a race between two concurrent signups could theoretically still collide.
 

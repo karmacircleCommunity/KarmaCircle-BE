@@ -1,5 +1,5 @@
 import { IUser, User, UserType } from "./user.model";
-import { UpdateProfileInput } from "./user.validation";
+import { CompleteProfileInput, UpdateProfileInput } from "./user.validation";
 
 interface Page<T> {
   data: T[];
@@ -72,10 +72,44 @@ export async function findByType(
   return { data, total };
 }
 
+/**
+ * `coverImage` is the field name both frontend profile forms send;
+ * `IUser` has no such field, only `bannerPicture` (the large top-of-
+ * profile image `coverImage` is describing) — translate it here so the
+ * request/response boundary can use the frontend's name without the
+ * schema needing to match it. See user.validation.ts's updateProfileSchema.
+ */
+function toUserUpdate(data: UpdateProfileInput) {
+  const { coverImage, ...rest } = data;
+  return {
+    ...rest,
+    ...(coverImage !== undefined && { bannerPicture: coverImage }),
+  };
+}
+
 export async function updateProfile(email: string, data: UpdateProfileInput) {
-  return User.findOneAndUpdate({ email }, { $set: data }, { new: true }).select(
-    PUBLIC_FIELDS,
-  );
+  return User.findOneAndUpdate(
+    { email },
+    { $set: toUserUpdate(data) },
+    { new: true },
+  ).select(PUBLIC_FIELDS);
+}
+
+/**
+ * PATCH /user/complete — same field set as updateProfile, but always
+ * flips config.hasCompletedProfile to true server-side, independent of
+ * whatever the client's body claims about it (see completeProfileSchema
+ * in user.validation.ts) — the server owns this invariant, not the caller.
+ */
+export async function completeProfile(
+  email: string,
+  data: CompleteProfileInput,
+) {
+  return User.findOneAndUpdate(
+    { email },
+    { $set: { ...toUserUpdate(data), "config.hasCompletedProfile": true } },
+    { new: true },
+  ).select(PUBLIC_FIELDS);
 }
 
 export function sanitize(user: IUser) {
