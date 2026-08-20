@@ -55,7 +55,7 @@
       "source_file": "jest.config.js",
       "source_location": "L1",
       "id": "jest_config_js",
-      "community": 21,
+      "community": 20,
       "norm_label": "jest.config.js"
     },
     {
@@ -64,7 +64,7 @@
       "source_file": "commitlint.config.js",
       "source_location": "L1",
       "id": "commitlint_config_js",
-      "community": 22,
+      "community": 21,
       "norm_label": "commitlint.config.js"
     },
     {
@@ -73,26 +73,44 @@
       "source_file": "tests/auth.test.ts",
       "source_location": "L1",
       "id": "tests_auth_test_ts",
-      "community": 23,
+      "community": 22,
       "norm_label": "auth.test.ts"
     },
     {
       "label": "events.test.ts",
       "file_type": "code",
-      "source_file": "tests/events.test.ts",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/tests/events.test.ts",
       "source_location": "L1",
-      "id": "tests_events_test_ts",
-      "community": 13,
+      "id": "users_tamalcodes_gh_karmacircle_be_tests_events_test_ts",
+      "community": 11,
       "norm_label": "events.test.ts"
     },
     {
       "label": "signupAndGetCookie()",
       "file_type": "code",
-      "source_file": "tests/events.test.ts",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/tests/events.test.ts",
       "source_location": "L6",
       "id": "events_test_signupandgetcookie",
-      "community": 13,
+      "community": 11,
       "norm_label": "signupandgetcookie()"
+    },
+    {
+      "label": "products.test.ts",
+      "file_type": "code",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/tests/products.test.ts",
+      "source_location": "L1",
+      "id": "users_tamalcodes_gh_karmacircle_be_tests_products_test_ts",
+      "community": 12,
+      "norm_label": "products.test.ts"
+    },
+    {
+      "label": "signup()",
+      "file_type": "code",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/tests/products.test.ts",
+      "source_location": "L6",
+      "id": "products_test_signup",
+      "community": 12,
+      "norm_label": "signup()"
     },
     {
       "label": "env.setup.ts",
@@ -100,7 +118,7 @@
       "source_file": "tests/helpers/env.setup.ts",
       "source_location": "L1",
       "id": "tests_helpers_env_setup_ts",
-      "community": 24,
+      "community": 23,
       "norm_label": "env.setup.ts"
     },
     {
@@ -109,7 +127,7 @@
       "source_file": "tests/helpers/jest.setup.ts",
       "source_location": "L1",
       "id": "tests_helpers_jest_setup_ts",
-      "community": 25,
+      "community": 24,
       "norm_label": "jest.setup.ts"
     },
     {
@@ -190,7 +208,7 @@
       "source_file": "src/middleware/error-handler.ts",
       "source_location": "L1",
       "id": "src_middleware_error_handler_ts",
-      "community": 10,
+      "community": 8,
       "norm_label": "error-handler.ts"
     },
     {
@@ -199,7 +217,7 @@
       "source_file": "src/middleware/error-handler.ts",
       "source_location": "L7",
       "id": "error_handler_apperror",
-      "community": 10,
+      "community": 8,
       "norm_label": "apperror"
     },
     {
@@ -208,7 +226,7 @@
       "source_file": "src/middleware/error-handler.ts",
       "source_location": "L11",
       "id": "error_handler_apperror_constructor",
-      "community": 10,
+      "community": 8,
       "norm_label": ".constructor()"
     },
     {
@@ -217,7 +235,7 @@
       "source_file": "src/middleware/error-handler.ts",
       "source_location": "L18",
       "id": "error_handler_notfoundhandler",
-      "community": 10,
+      "community": 8,
       "norm_label": "notfoundhandler()"
     },
     {
@@ -226,7 +244,7 @@
       "source_file": "src/middleware/error-handler.ts",
       "source_location": "L23",
       "id": "error_handler_errorhandler",
-      "community": 10,
+      "community": 8,
       "norm_label": "errorhandler()"
     },
     {
@@ -235,7 +253,7 @@
       "source_file": "src/middleware/validate.ts",
       "source_location": "L1",
       "id": "src_middleware_validate_ts",
-      "community": 14,
+      "community": 13,
       "norm_label": "validate.ts"
     },
     {
@@ -244,7 +262,7 @@
       "source_file": "src/middleware/validate.ts",
       "source_location": "L6",
       "id": "validate_validate",
-      "community": 14,
+      "community": 13,
       "norm_label": "validate()"
     },
     {
@@ -253,7 +271,7 @@
       "source_file": "src/middleware/rate-limit.ts",
       "source_location": "L1",
       "id": "src_middleware_rate_limit_ts",
-      "community": 26,
+      "community": 25,
       "norm_label": "rate-limit.ts"
     },
     {
@@ -262,7 +280,7 @@
       "source_file": "src/middleware/auth.ts",
       "source_location": "L1",
       "id": "src_middleware_auth_ts",
-      "community": 15,
+      "community": 14,
       "norm_label": "auth.ts"
     },
     {
@@ -271,7 +289,7 @@
       "source_file": "src/middleware/auth.ts",
       "source_location": "L19",
       "id": "auth_requireauth",
-      "community": 15,
+      "community": 14,
       "norm_label": "requireauth()"
     },
     {
@@ -280,7 +298,7 @@
       "source_file": "src/types/express.d.ts",
       "source_location": "L1",
       "id": "src_types_express_d_ts",
-      "community": 27,
+      "community": 26,
       "norm_label": "express.d.ts"
     },
     {
@@ -289,7 +307,7 @@
       "source_file": "src/config/logger.ts",
       "source_location": "L1",
       "id": "src_config_logger_ts",
-      "community": 28,
+      "community": 27,
       "norm_label": "logger.ts"
     },
     {
@@ -316,7 +334,7 @@
       "source_file": "src/config/passport.ts",
       "source_location": "L1",
       "id": "src_config_passport_ts",
-      "community": 29,
+      "community": 28,
       "norm_label": "passport.ts"
     },
     {
@@ -325,7 +343,7 @@
       "source_file": "src/config/env.ts",
       "source_location": "L1",
       "id": "src_config_env_ts",
-      "community": 16,
+      "community": 15,
       "norm_label": "env.ts"
     },
     {
@@ -334,7 +352,7 @@
       "source_file": "src/config/env.ts",
       "source_location": "L28",
       "id": "env_loadenv",
-      "community": 16,
+      "community": 15,
       "norm_label": "loadenv()"
     },
     {
@@ -343,7 +361,7 @@
       "source_file": "src/config/swagger.ts",
       "source_location": "L1",
       "id": "src_config_swagger_ts",
-      "community": 30,
+      "community": 29,
       "norm_label": "swagger.ts"
     },
     {
@@ -352,8 +370,35 @@
       "source_file": "src/constants/http-status.ts",
       "source_location": "L1",
       "id": "src_constants_http_status_ts",
-      "community": 31,
+      "community": 30,
       "norm_label": "http-status.ts"
+    },
+    {
+      "label": "pagination.ts",
+      "file_type": "code",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/utils/pagination.ts",
+      "source_location": "L1",
+      "id": "users_tamalcodes_gh_karmacircle_be_src_utils_pagination_ts",
+      "community": 2,
+      "norm_label": "pagination.ts"
+    },
+    {
+      "label": "toSkipLimit()",
+      "file_type": "code",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/utils/pagination.ts",
+      "source_location": "L23",
+      "id": "pagination_toskiplimit",
+      "community": 2,
+      "norm_label": "toskiplimit()"
+    },
+    {
+      "label": "buildPaginationMeta()",
+      "file_type": "code",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/utils/pagination.ts",
+      "source_location": "L27",
+      "id": "pagination_buildpaginationmeta",
+      "community": 2,
+      "norm_label": "buildpaginationmeta()"
     },
     {
       "label": "async-handler.ts",
@@ -361,7 +406,7 @@
       "source_file": "src/utils/async-handler.ts",
       "source_location": "L1",
       "id": "src_utils_async_handler_ts",
-      "community": 17,
+      "community": 16,
       "norm_label": "async-handler.ts"
     },
     {
@@ -370,7 +415,7 @@
       "source_file": "src/utils/async-handler.ts",
       "source_location": "L19",
       "id": "async_handler_asynchandler",
-      "community": 17,
+      "community": 16,
       "norm_label": "asynchandler()"
     },
     {
@@ -379,7 +424,7 @@
       "source_file": "src/modules/payments/payment.routes.ts",
       "source_location": "L1",
       "id": "src_modules_payments_payment_routes_ts",
-      "community": 32,
+      "community": 31,
       "norm_label": "payment.routes.ts"
     },
     {
@@ -388,7 +433,7 @@
       "source_file": "src/modules/payments/payment.validation.ts",
       "source_location": "L1",
       "id": "src_modules_payments_payment_validation_ts",
-      "community": 33,
+      "community": 32,
       "norm_label": "payment.validation.ts"
     },
     {
@@ -397,7 +442,7 @@
       "source_file": "src/modules/payments/payment.service.ts",
       "source_location": "L1",
       "id": "src_modules_payments_payment_service_ts",
-      "community": 18,
+      "community": 17,
       "norm_label": "payment.service.ts"
     },
     {
@@ -406,7 +451,7 @@
       "source_file": "src/modules/payments/payment.service.ts",
       "source_location": "L13",
       "id": "payment_service_createorder",
-      "community": 18,
+      "community": 17,
       "norm_label": "createorder()"
     },
     {
@@ -415,7 +460,7 @@
       "source_file": "src/modules/payments/payment.controller.ts",
       "source_location": "L1",
       "id": "src_modules_payments_payment_controller_ts",
-      "community": 19,
+      "community": 18,
       "norm_label": "payment.controller.ts"
     },
     {
@@ -424,32 +469,32 @@
       "source_file": "src/modules/payments/payment.controller.ts",
       "source_location": "L6",
       "id": "payment_controller_createorder",
-      "community": 19,
+      "community": 18,
       "norm_label": "createorder()"
     },
     {
       "label": "club.controller.ts",
       "file_type": "code",
-      "source_file": "src/modules/clubs/club.controller.ts",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/clubs/club.controller.ts",
       "source_location": "L1",
-      "id": "src_modules_clubs_club_controller_ts",
-      "community": 3,
+      "id": "users_tamalcodes_gh_karmacircle_be_src_modules_clubs_club_controller_ts",
+      "community": 2,
       "norm_label": "club.controller.ts"
     },
     {
       "label": "listClubs()",
       "file_type": "code",
-      "source_file": "src/modules/clubs/club.controller.ts",
-      "source_location": "L8",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/clubs/club.controller.ts",
+      "source_location": "L9",
       "id": "club_controller_listclubs",
-      "community": 3,
+      "community": 2,
       "norm_label": "listclubs()"
     },
     {
       "label": "dashboard()",
       "file_type": "code",
-      "source_file": "src/modules/clubs/club.controller.ts",
-      "source_location": "L25",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/clubs/club.controller.ts",
+      "source_location": "L26",
       "id": "club_controller_dashboard",
       "community": 0,
       "norm_label": "dashboard()"
@@ -457,37 +502,37 @@
     {
       "label": "club.routes.ts",
       "file_type": "code",
-      "source_file": "src/modules/clubs/club.routes.ts",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/clubs/club.routes.ts",
       "source_location": "L1",
-      "id": "src_modules_clubs_club_routes_ts",
-      "community": 34,
+      "id": "users_tamalcodes_gh_karmacircle_be_src_modules_clubs_club_routes_ts",
+      "community": 33,
       "norm_label": "club.routes.ts"
     },
     {
       "label": "club.validation.ts",
       "file_type": "code",
-      "source_file": "src/modules/clubs/club.validation.ts",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/clubs/club.validation.ts",
       "source_location": "L1",
-      "id": "src_modules_clubs_club_validation_ts",
-      "community": 35,
+      "id": "users_tamalcodes_gh_karmacircle_be_src_modules_clubs_club_validation_ts",
+      "community": 34,
       "norm_label": "club.validation.ts"
     },
     {
       "label": "product.routes.ts",
       "file_type": "code",
-      "source_file": "src/modules/products/product.routes.ts",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/products/product.routes.ts",
       "source_location": "L1",
-      "id": "src_modules_products_product_routes_ts",
-      "community": 36,
+      "id": "users_tamalcodes_gh_karmacircle_be_src_modules_products_product_routes_ts",
+      "community": 35,
       "norm_label": "product.routes.ts"
     },
     {
       "label": "product.validation.ts",
       "file_type": "code",
-      "source_file": "src/modules/products/product.validation.ts",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/products/product.validation.ts",
       "source_location": "L1",
-      "id": "src_modules_products_product_validation_ts",
-      "community": 37,
+      "id": "users_tamalcodes_gh_karmacircle_be_src_modules_products_product_validation_ts",
+      "community": 36,
       "norm_label": "product.validation.ts"
     },
     {
@@ -496,97 +541,97 @@
       "source_file": "src/modules/products/product.model.ts",
       "source_location": "L1",
       "id": "src_modules_products_product_model_ts",
-      "community": 38,
+      "community": 37,
       "norm_label": "product.model.ts"
     },
     {
       "label": "product.controller.ts",
       "file_type": "code",
-      "source_file": "src/modules/products/product.controller.ts",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/products/product.controller.ts",
       "source_location": "L1",
-      "id": "src_modules_products_product_controller_ts",
-      "community": 6,
+      "id": "users_tamalcodes_gh_karmacircle_be_src_modules_products_product_controller_ts",
+      "community": 5,
       "norm_label": "product.controller.ts"
     },
     {
       "label": "addProduct()",
       "file_type": "code",
-      "source_file": "src/modules/products/product.controller.ts",
-      "source_location": "L7",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/products/product.controller.ts",
+      "source_location": "L9",
       "id": "product_controller_addproduct",
-      "community": 6,
+      "community": 5,
       "norm_label": "addproduct()"
     },
     {
       "label": "listProducts()",
       "file_type": "code",
-      "source_file": "src/modules/products/product.controller.ts",
-      "source_location": "L12",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/products/product.controller.ts",
+      "source_location": "L14",
       "id": "product_controller_listproducts",
-      "community": 5,
+      "community": 2,
       "norm_label": "listproducts()"
     },
     {
       "label": "getProduct()",
       "file_type": "code",
-      "source_file": "src/modules/products/product.controller.ts",
-      "source_location": "L17",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/products/product.controller.ts",
+      "source_location": "L20",
       "id": "product_controller_getproduct",
-      "community": 6,
+      "community": 5,
       "norm_label": "getproduct()"
     },
     {
       "label": "addToCart()",
       "file_type": "code",
-      "source_file": "src/modules/products/product.controller.ts",
-      "source_location": "L28",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/products/product.controller.ts",
+      "source_location": "L31",
       "id": "product_controller_addtocart",
-      "community": 6,
+      "community": 5,
       "norm_label": "addtocart()"
     },
     {
       "label": "product.service.ts",
       "file_type": "code",
-      "source_file": "src/modules/products/product.service.ts",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/products/product.service.ts",
       "source_location": "L1",
-      "id": "src_modules_products_product_service_ts",
-      "community": 6,
+      "id": "users_tamalcodes_gh_karmacircle_be_src_modules_products_product_service_ts",
+      "community": 5,
       "norm_label": "product.service.ts"
     },
     {
       "label": "addProduct()",
       "file_type": "code",
-      "source_file": "src/modules/products/product.service.ts",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/products/product.service.ts",
       "source_location": "L7",
       "id": "product_service_addproduct",
-      "community": 6,
+      "community": 5,
       "norm_label": "addproduct()"
     },
     {
       "label": "findAll()",
       "file_type": "code",
-      "source_file": "src/modules/products/product.service.ts",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/products/product.service.ts",
       "source_location": "L17",
       "id": "product_service_findall",
-      "community": 6,
+      "community": 5,
       "norm_label": "findall()"
     },
     {
       "label": "findBySlug()",
       "file_type": "code",
-      "source_file": "src/modules/products/product.service.ts",
-      "source_location": "L21",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/products/product.service.ts",
+      "source_location": "L25",
       "id": "product_service_findbyslug",
-      "community": 6,
+      "community": 5,
       "norm_label": "findbyslug()"
     },
     {
       "label": "addToCart()",
       "file_type": "code",
-      "source_file": "src/modules/products/product.service.ts",
-      "source_location": "L25",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/products/product.service.ts",
+      "source_location": "L29",
       "id": "product_service_addtocart",
-      "community": 6,
+      "community": 5,
       "norm_label": "addtocart()"
     },
     {
@@ -595,7 +640,7 @@
       "source_file": "src/modules/auth/auth.controller.ts",
       "source_location": "L1",
       "id": "src_modules_auth_auth_controller_ts",
-      "community": 7,
+      "community": 0,
       "norm_label": "auth.controller.ts"
     },
     {
@@ -604,7 +649,7 @@
       "source_file": "src/modules/auth/auth.controller.ts",
       "source_location": "L10",
       "id": "auth_controller_signup",
-      "community": 7,
+      "community": 0,
       "norm_label": "signup()"
     },
     {
@@ -613,7 +658,7 @@
       "source_file": "src/modules/auth/auth.controller.ts",
       "source_location": "L19",
       "id": "auth_controller_signin",
-      "community": 7,
+      "community": 0,
       "norm_label": "signin()"
     },
     {
@@ -622,7 +667,7 @@
       "source_file": "src/modules/auth/auth.controller.ts",
       "source_location": "L29",
       "id": "auth_controller_updatepassword",
-      "community": 7,
+      "community": 0,
       "norm_label": "updatepassword()"
     },
     {
@@ -631,7 +676,7 @@
       "source_file": "src/modules/auth/auth.controller.ts",
       "source_location": "L36",
       "id": "auth_controller_googleinitiate",
-      "community": 7,
+      "community": 0,
       "norm_label": "googleinitiate()"
     },
     {
@@ -640,7 +685,7 @@
       "source_file": "src/modules/auth/auth.controller.ts",
       "source_location": "L50",
       "id": "auth_controller_googlecallback",
-      "community": 7,
+      "community": 0,
       "norm_label": "googlecallback()"
     },
     {
@@ -649,7 +694,7 @@
       "source_file": "src/modules/auth/auth.controller.ts",
       "source_location": "L67",
       "id": "auth_controller_loginfailed",
-      "community": 7,
+      "community": 0,
       "norm_label": "loginfailed()"
     },
     {
@@ -748,7 +793,7 @@
       "source_file": "src/modules/auth/auth.cookies.ts",
       "source_location": "L16",
       "id": "auth_cookies_readablecookieoptions",
-      "community": 7,
+      "community": 0,
       "norm_label": "readablecookieoptions()"
     },
     {
@@ -766,7 +811,7 @@
       "source_file": "src/modules/auth/auth.validation.ts",
       "source_location": "L1",
       "id": "src_modules_auth_auth_validation_ts",
-      "community": 39,
+      "community": 38,
       "norm_label": "auth.validation.ts"
     },
     {
@@ -775,44 +820,53 @@
       "source_file": "src/modules/auth/auth.routes.ts",
       "source_location": "L1",
       "id": "src_modules_auth_auth_routes_ts",
-      "community": 40,
+      "community": 39,
       "norm_label": "auth.routes.ts"
     },
     {
       "label": "directory.controller.ts",
       "file_type": "code",
-      "source_file": "src/modules/directory/directory.controller.ts",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/directory/directory.controller.ts",
       "source_location": "L1",
-      "id": "src_modules_directory_directory_controller_ts",
-      "community": 5,
+      "id": "users_tamalcodes_gh_karmacircle_be_src_modules_directory_directory_controller_ts",
+      "community": 2,
       "norm_label": "directory.controller.ts"
     },
     {
       "label": "listAllUsers()",
       "file_type": "code",
-      "source_file": "src/modules/directory/directory.controller.ts",
-      "source_location": "L5",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/directory/directory.controller.ts",
+      "source_location": "L6",
       "id": "directory_controller_listallusers",
-      "community": 5,
+      "community": 2,
       "norm_label": "listallusers()"
     },
     {
       "label": "listClubs()",
       "file_type": "code",
-      "source_file": "src/modules/directory/directory.controller.ts",
-      "source_location": "L10",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/directory/directory.controller.ts",
+      "source_location": "L12",
       "id": "directory_controller_listclubs",
-      "community": 3,
+      "community": 2,
       "norm_label": "listclubs()"
     },
     {
       "label": "directory.routes.ts",
       "file_type": "code",
-      "source_file": "src/modules/directory/directory.routes.ts",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/directory/directory.routes.ts",
       "source_location": "L1",
-      "id": "src_modules_directory_directory_routes_ts",
-      "community": 41,
+      "id": "users_tamalcodes_gh_karmacircle_be_src_modules_directory_directory_routes_ts",
+      "community": 40,
       "norm_label": "directory.routes.ts"
+    },
+    {
+      "label": "directory.validation.ts",
+      "file_type": "code",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/directory/directory.validation.ts",
+      "source_location": "L1",
+      "id": "users_tamalcodes_gh_karmacircle_be_src_modules_directory_directory_validation_ts",
+      "community": 41,
+      "norm_label": "directory.validation.ts"
     },
     {
       "label": "user.model.ts",
@@ -826,53 +880,53 @@
     {
       "label": "user.routes.ts",
       "file_type": "code",
-      "source_file": "src/modules/users/user.routes.ts",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.routes.ts",
       "source_location": "L1",
-      "id": "src_modules_users_user_routes_ts",
+      "id": "users_tamalcodes_gh_karmacircle_be_src_modules_users_user_routes_ts",
       "community": 43,
       "norm_label": "user.routes.ts"
     },
     {
       "label": "user.controller.ts",
       "file_type": "code",
-      "source_file": "src/modules/users/user.controller.ts",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.controller.ts",
       "source_location": "L1",
-      "id": "src_modules_users_user_controller_ts",
-      "community": 3,
+      "id": "users_tamalcodes_gh_karmacircle_be_src_modules_users_user_controller_ts",
+      "community": 6,
       "norm_label": "user.controller.ts"
     },
     {
       "label": "listUsers()",
       "file_type": "code",
-      "source_file": "src/modules/users/user.controller.ts",
-      "source_location": "L8",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.controller.ts",
+      "source_location": "L9",
       "id": "user_controller_listusers",
-      "community": 3,
+      "community": 6,
       "norm_label": "listusers()"
     },
     {
       "label": "updateProfile()",
       "file_type": "code",
-      "source_file": "src/modules/users/user.controller.ts",
-      "source_location": "L25",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.controller.ts",
+      "source_location": "L26",
       "id": "user_controller_updateprofile",
-      "community": 3,
+      "community": 6,
       "norm_label": "updateprofile()"
     },
     {
       "label": "user.service.ts",
       "file_type": "code",
-      "source_file": "src/modules/users/user.service.ts",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.service.ts",
       "source_location": "L1",
-      "id": "src_modules_users_user_service_ts",
-      "community": 3,
+      "id": "users_tamalcodes_gh_karmacircle_be_src_modules_users_user_service_ts",
+      "community": 6,
       "norm_label": "user.service.ts"
     },
     {
       "label": "generateUniqueUsername()",
       "file_type": "code",
-      "source_file": "src/modules/users/user.service.ts",
-      "source_location": "L6",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.service.ts",
+      "source_location": "L11",
       "id": "user_service_generateuniqueusername",
       "community": 0,
       "norm_label": "generateuniqueusername()"
@@ -880,8 +934,8 @@
     {
       "label": "findByEmail()",
       "file_type": "code",
-      "source_file": "src/modules/users/user.service.ts",
-      "source_location": "L16",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.service.ts",
+      "source_location": "L21",
       "id": "user_service_findbyemail",
       "community": 0,
       "norm_label": "findbyemail()"
@@ -889,53 +943,53 @@
     {
       "label": "findByUsername()",
       "file_type": "code",
-      "source_file": "src/modules/users/user.service.ts",
-      "source_location": "L20",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.service.ts",
+      "source_location": "L25",
       "id": "user_service_findbyusername",
-      "community": 3,
+      "community": 6,
       "norm_label": "findbyusername()"
     },
     {
       "label": "findIndividuals()",
       "file_type": "code",
-      "source_file": "src/modules/users/user.service.ts",
-      "source_location": "L26",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.service.ts",
+      "source_location": "L31",
       "id": "user_service_findindividuals",
-      "community": 3,
+      "community": 6,
       "norm_label": "findindividuals()"
     },
     {
       "label": "findAll()",
       "file_type": "code",
-      "source_file": "src/modules/users/user.service.ts",
-      "source_location": "L30",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.service.ts",
+      "source_location": "L40",
       "id": "user_service_findall",
-      "community": 3,
+      "community": 6,
       "norm_label": "findall()"
     },
     {
       "label": "findByType()",
       "file_type": "code",
-      "source_file": "src/modules/users/user.service.ts",
-      "source_location": "L34",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.service.ts",
+      "source_location": "L48",
       "id": "user_service_findbytype",
-      "community": 3,
+      "community": 2,
       "norm_label": "findbytype()"
     },
     {
       "label": "updateProfile()",
       "file_type": "code",
-      "source_file": "src/modules/users/user.service.ts",
-      "source_location": "L38",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.service.ts",
+      "source_location": "L60",
       "id": "user_service_updateprofile",
-      "community": 3,
+      "community": 6,
       "norm_label": "updateprofile()"
     },
     {
       "label": "sanitize()",
       "file_type": "code",
-      "source_file": "src/modules/users/user.service.ts",
-      "source_location": "L44",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.service.ts",
+      "source_location": "L66",
       "id": "user_service_sanitize",
       "community": 0,
       "norm_label": "sanitize()"
@@ -943,46 +997,46 @@
     {
       "label": "user.validation.ts",
       "file_type": "code",
-      "source_file": "src/modules/users/user.validation.ts",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.validation.ts",
       "source_location": "L1",
-      "id": "src_modules_users_user_validation_ts",
+      "id": "users_tamalcodes_gh_karmacircle_be_src_modules_users_user_validation_ts",
       "community": 44,
       "norm_label": "user.validation.ts"
     },
     {
       "label": "event.service.ts",
       "file_type": "code",
-      "source_file": "src/modules/events/event.service.ts",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/events/event.service.ts",
       "source_location": "L1",
-      "id": "src_modules_events_event_service_ts",
-      "community": 5,
+      "id": "users_tamalcodes_gh_karmacircle_be_src_modules_events_event_service_ts",
+      "community": 2,
       "norm_label": "event.service.ts"
     },
     {
       "label": "findByUid()",
       "file_type": "code",
-      "source_file": "src/modules/events/event.service.ts",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/events/event.service.ts",
       "source_location": "L7",
       "id": "event_service_findbyuid",
-      "community": 5,
+      "community": 2,
       "norm_label": "findbyuid()"
     },
     {
       "label": "findAll()",
       "file_type": "code",
-      "source_file": "src/modules/events/event.service.ts",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/events/event.service.ts",
       "source_location": "L11",
       "id": "event_service_findall",
-      "community": 5,
+      "community": 2,
       "norm_label": "findall()"
     },
     {
       "label": "createEvent()",
       "file_type": "code",
-      "source_file": "src/modules/events/event.service.ts",
-      "source_location": "L15",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/events/event.service.ts",
+      "source_location": "L19",
       "id": "event_service_createevent",
-      "community": 5,
+      "community": 2,
       "norm_label": "createevent()"
     },
     {
@@ -997,45 +1051,45 @@
     {
       "label": "event.controller.ts",
       "file_type": "code",
-      "source_file": "src/modules/events/event.controller.ts",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/events/event.controller.ts",
       "source_location": "L1",
-      "id": "src_modules_events_event_controller_ts",
-      "community": 5,
+      "id": "users_tamalcodes_gh_karmacircle_be_src_modules_events_event_controller_ts",
+      "community": 2,
       "norm_label": "event.controller.ts"
     },
     {
       "label": "listEvents()",
       "file_type": "code",
-      "source_file": "src/modules/events/event.controller.ts",
-      "source_location": "L8",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/events/event.controller.ts",
+      "source_location": "L9",
       "id": "event_controller_listevents",
-      "community": 5,
+      "community": 2,
       "norm_label": "listevents()"
     },
     {
       "label": "createEvent()",
       "file_type": "code",
-      "source_file": "src/modules/events/event.controller.ts",
-      "source_location": "L26",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/events/event.controller.ts",
+      "source_location": "L27",
       "id": "event_controller_createevent",
-      "community": 5,
+      "community": 2,
       "norm_label": "createevent()"
     },
     {
       "label": "event.routes.ts",
       "file_type": "code",
-      "source_file": "src/modules/events/event.routes.ts",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/events/event.routes.ts",
       "source_location": "L1",
-      "id": "src_modules_events_event_routes_ts",
+      "id": "users_tamalcodes_gh_karmacircle_be_src_modules_events_event_routes_ts",
       "community": 46,
       "norm_label": "event.routes.ts"
     },
     {
       "label": "event.validation.ts",
       "file_type": "code",
-      "source_file": "src/modules/events/event.validation.ts",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/events/event.validation.ts",
       "source_location": "L1",
-      "id": "src_modules_events_event_validation_ts",
+      "id": "users_tamalcodes_gh_karmacircle_be_src_modules_events_event_validation_ts",
       "community": 47,
       "norm_label": "event.validation.ts"
     },
@@ -1045,7 +1099,7 @@
       "source_file": "src/modules/reports/report.controller.ts",
       "source_location": "L1",
       "id": "src_modules_reports_report_controller_ts",
-      "community": 11,
+      "community": 9,
       "norm_label": "report.controller.ts"
     },
     {
@@ -1054,7 +1108,7 @@
       "source_file": "src/modules/reports/report.controller.ts",
       "source_location": "L6",
       "id": "report_controller_createreport",
-      "community": 11,
+      "community": 9,
       "norm_label": "createreport()"
     },
     {
@@ -1072,7 +1126,7 @@
       "source_file": "src/modules/reports/report.service.ts",
       "source_location": "L1",
       "id": "src_modules_reports_report_service_ts",
-      "community": 11,
+      "community": 9,
       "norm_label": "report.service.ts"
     },
     {
@@ -1081,7 +1135,7 @@
       "source_file": "src/modules/reports/report.service.ts",
       "source_location": "L5",
       "id": "report_service_hasreportedrecently",
-      "community": 11,
+      "community": 9,
       "norm_label": "hasreportedrecently()"
     },
     {
@@ -1090,7 +1144,7 @@
       "source_file": "src/modules/reports/report.service.ts",
       "source_location": "L15",
       "id": "report_service_createreport",
-      "community": 11,
+      "community": 9,
       "norm_label": "createreport()"
     },
     {
@@ -1129,7 +1183,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 3,
       "norm_label": "milan project overview",
       "id": "readme_milan_project"
     },
@@ -1142,7 +1196,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 3,
       "norm_label": "backend tech stack",
       "id": "readme_tech_stack_backend"
     },
@@ -1155,7 +1209,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 3,
       "norm_label": "contributing to milan",
       "id": "readme_contributing_section"
     },
@@ -1168,7 +1222,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 3,
       "norm_label": "mit license notice",
       "id": "readme_license"
     },
@@ -1311,7 +1365,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 3,
       "norm_label": "license and attribution",
       "id": "codeofconduct_license_attribution"
     },
@@ -1324,7 +1378,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 3,
       "norm_label": "django code of conduct",
       "id": "codeofconduct_django_coc"
     },
@@ -1337,7 +1391,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 3,
       "norm_label": "geek feminism anti-harassment policy",
       "id": "codeofconduct_geek_feminism_policy"
     },
@@ -1350,7 +1404,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 3,
       "norm_label": "stumptown syndicate citizen code of conduct",
       "id": "codeofconduct_stumptown_syndicate"
     },
@@ -1363,7 +1417,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 8,
+      "community": 1,
       "norm_label": "commit message format",
       "id": "contributing_commit_message_format"
     },
@@ -1376,7 +1430,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 8,
+      "community": 1,
       "norm_label": "eslint and prettier pre-commit hooks",
       "id": "contributing_eslint_prettier"
     },
@@ -1415,7 +1469,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 8,
+      "community": 1,
       "norm_label": "closing an issue",
       "id": "contributing_closing_issue"
     },
@@ -1428,7 +1482,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 8,
+      "community": 1,
       "norm_label": "creating a pull request",
       "id": "contributing_creating_pr"
     },
@@ -1441,7 +1495,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 8,
+      "community": 1,
       "norm_label": "pull request title format",
       "id": "contributing_pr_title_format"
     },
@@ -1454,7 +1508,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 8,
+      "community": 1,
       "norm_label": "reviewing a pull request",
       "id": "contributing_reviewing_pr"
     },
@@ -1480,7 +1534,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 3,
       "norm_label": "installing dependencies",
       "id": "backendsetup_installing_dependencies"
     },
@@ -1493,7 +1547,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 3,
       "norm_label": "techstack overview",
       "id": "backendsetup_techstack_overview"
     },
@@ -1506,7 +1560,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 12,
+      "community": 10,
       "norm_label": "setting up .env",
       "id": "backendsetup_env_setup"
     },
@@ -1519,7 +1573,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 12,
+      "community": 10,
       "norm_label": "setting up google client id and secret",
       "id": "backendsetup_google_client_setup"
     },
@@ -1532,7 +1586,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 12,
+      "community": 10,
       "norm_label": "setting up razorpay api key",
       "id": "backendsetup_razorpay_setup"
     },
@@ -1545,7 +1599,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 20,
+      "community": 19,
       "norm_label": "coding standards",
       "id": "backendsetup_coding_standards"
     },
@@ -1558,7 +1612,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 20,
+      "community": 19,
       "norm_label": "backend setup next steps",
       "id": "backendsetup_next_steps"
     },
@@ -1571,7 +1625,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 3,
       "norm_label": "forking the repository",
       "id": "clonesetup_forking"
     },
@@ -1584,7 +1638,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 3,
       "norm_label": "cloning the repository",
       "id": "clonesetup_cloning"
     },
@@ -1597,7 +1651,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 3,
       "norm_label": "clone setup next steps",
       "id": "clonesetup_next_steps"
     },
@@ -1610,7 +1664,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 9,
+      "community": 7,
       "norm_label": "milan promotional banner",
       "id": "milanbanner_promotional_banner"
     },
@@ -1623,7 +1677,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 9,
+      "community": 7,
       "norm_label": "milan platform",
       "id": "milanbanner_milan_platform"
     },
@@ -1636,7 +1690,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 9,
+      "community": 7,
       "norm_label": "milan landing page (desktop mockup)",
       "id": "milanbanner_landing_page_design"
     },
@@ -1649,7 +1703,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 9,
+      "community": 7,
       "norm_label": "milan mobile web view (milanhub.org)",
       "id": "milanbanner_mobile_web_design"
     },
@@ -1662,7 +1716,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 9,
+      "community": 7,
       "norm_label": "tagline: 'united, we achieve greatness'",
       "id": "milanbanner_tagline"
     },
@@ -1675,7 +1729,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 9,
+      "community": 7,
       "norm_label": "charity/ngo collaboration hub purpose",
       "id": "milanbanner_charity_ngo_collaboration"
     }
@@ -1684,13 +1738,25 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "tests/events.test.ts",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/tests/events.test.ts",
       "source_location": "L6",
       "weight": 1.0,
-      "_src": "tests_events_test_ts",
+      "_src": "users_tamalcodes_gh_karmacircle_be_tests_events_test_ts",
       "_tgt": "events_test_signupandgetcookie",
-      "source": "tests_events_test_ts",
+      "source": "users_tamalcodes_gh_karmacircle_be_tests_events_test_ts",
       "target": "events_test_signupandgetcookie",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/tests/products.test.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_src": "users_tamalcodes_gh_karmacircle_be_tests_products_test_ts",
+      "_tgt": "products_test_signup",
+      "source": "users_tamalcodes_gh_karmacircle_be_tests_products_test_ts",
+      "target": "products_test_signup",
       "confidence_score": 1.0
     },
     {
@@ -1888,6 +1954,174 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/utils/pagination.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_src": "users_tamalcodes_gh_karmacircle_be_src_utils_pagination_ts",
+      "_tgt": "pagination_toskiplimit",
+      "source": "users_tamalcodes_gh_karmacircle_be_src_utils_pagination_ts",
+      "target": "pagination_toskiplimit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/utils/pagination.ts",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_src": "users_tamalcodes_gh_karmacircle_be_src_utils_pagination_ts",
+      "_tgt": "pagination_buildpaginationmeta",
+      "source": "users_tamalcodes_gh_karmacircle_be_src_utils_pagination_ts",
+      "target": "pagination_buildpaginationmeta",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/clubs/club.controller.ts",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_src": "club_controller_listclubs",
+      "_tgt": "pagination_toskiplimit",
+      "source": "pagination_toskiplimit",
+      "target": "club_controller_listclubs"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/products/product.controller.ts",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_src": "product_controller_listproducts",
+      "_tgt": "pagination_toskiplimit",
+      "source": "pagination_toskiplimit",
+      "target": "product_controller_listproducts"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/directory/directory.controller.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_src": "directory_controller_listallusers",
+      "_tgt": "pagination_toskiplimit",
+      "source": "pagination_toskiplimit",
+      "target": "directory_controller_listallusers"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/directory/directory.controller.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_src": "directory_controller_listclubs",
+      "_tgt": "pagination_toskiplimit",
+      "source": "pagination_toskiplimit",
+      "target": "directory_controller_listclubs"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.controller.ts",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_src": "user_controller_listusers",
+      "_tgt": "pagination_toskiplimit",
+      "source": "pagination_toskiplimit",
+      "target": "user_controller_listusers"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/events/event.controller.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_src": "event_controller_listevents",
+      "_tgt": "pagination_toskiplimit",
+      "source": "pagination_toskiplimit",
+      "target": "event_controller_listevents"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/clubs/club.controller.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_src": "club_controller_listclubs",
+      "_tgt": "pagination_buildpaginationmeta",
+      "source": "pagination_buildpaginationmeta",
+      "target": "club_controller_listclubs"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/products/product.controller.ts",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_src": "product_controller_listproducts",
+      "_tgt": "pagination_buildpaginationmeta",
+      "source": "pagination_buildpaginationmeta",
+      "target": "product_controller_listproducts"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/directory/directory.controller.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_src": "directory_controller_listallusers",
+      "_tgt": "pagination_buildpaginationmeta",
+      "source": "pagination_buildpaginationmeta",
+      "target": "directory_controller_listallusers"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/directory/directory.controller.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_src": "directory_controller_listclubs",
+      "_tgt": "pagination_buildpaginationmeta",
+      "source": "pagination_buildpaginationmeta",
+      "target": "directory_controller_listclubs"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.controller.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_src": "user_controller_listusers",
+      "_tgt": "pagination_buildpaginationmeta",
+      "source": "pagination_buildpaginationmeta",
+      "target": "user_controller_listusers"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/events/event.controller.ts",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_src": "event_controller_listevents",
+      "_tgt": "pagination_buildpaginationmeta",
+      "source": "pagination_buildpaginationmeta",
+      "target": "event_controller_listevents"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "src/utils/async-handler.ts",
       "source_location": "L19",
       "weight": 1.0,
@@ -1924,24 +2158,24 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/modules/clubs/club.controller.ts",
-      "source_location": "L8",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/clubs/club.controller.ts",
+      "source_location": "L9",
       "weight": 1.0,
-      "_src": "src_modules_clubs_club_controller_ts",
+      "_src": "users_tamalcodes_gh_karmacircle_be_src_modules_clubs_club_controller_ts",
       "_tgt": "club_controller_listclubs",
-      "source": "src_modules_clubs_club_controller_ts",
+      "source": "users_tamalcodes_gh_karmacircle_be_src_modules_clubs_club_controller_ts",
       "target": "club_controller_listclubs",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/modules/clubs/club.controller.ts",
-      "source_location": "L25",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/clubs/club.controller.ts",
+      "source_location": "L26",
       "weight": 1.0,
-      "_src": "src_modules_clubs_club_controller_ts",
+      "_src": "users_tamalcodes_gh_karmacircle_be_src_modules_clubs_club_controller_ts",
       "_tgt": "club_controller_dashboard",
-      "source": "src_modules_clubs_club_controller_ts",
+      "source": "users_tamalcodes_gh_karmacircle_be_src_modules_clubs_club_controller_ts",
       "target": "club_controller_dashboard",
       "confidence_score": 1.0
     },
@@ -1996,48 +2230,48 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/modules/products/product.controller.ts",
-      "source_location": "L7",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/products/product.controller.ts",
+      "source_location": "L9",
       "weight": 1.0,
-      "_src": "src_modules_products_product_controller_ts",
+      "_src": "users_tamalcodes_gh_karmacircle_be_src_modules_products_product_controller_ts",
       "_tgt": "product_controller_addproduct",
-      "source": "src_modules_products_product_controller_ts",
+      "source": "users_tamalcodes_gh_karmacircle_be_src_modules_products_product_controller_ts",
       "target": "product_controller_addproduct",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/modules/products/product.controller.ts",
-      "source_location": "L12",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/products/product.controller.ts",
+      "source_location": "L14",
       "weight": 1.0,
-      "_src": "src_modules_products_product_controller_ts",
+      "_src": "users_tamalcodes_gh_karmacircle_be_src_modules_products_product_controller_ts",
       "_tgt": "product_controller_listproducts",
-      "source": "src_modules_products_product_controller_ts",
+      "source": "users_tamalcodes_gh_karmacircle_be_src_modules_products_product_controller_ts",
       "target": "product_controller_listproducts",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/modules/products/product.controller.ts",
-      "source_location": "L17",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/products/product.controller.ts",
+      "source_location": "L20",
       "weight": 1.0,
-      "_src": "src_modules_products_product_controller_ts",
+      "_src": "users_tamalcodes_gh_karmacircle_be_src_modules_products_product_controller_ts",
       "_tgt": "product_controller_getproduct",
-      "source": "src_modules_products_product_controller_ts",
+      "source": "users_tamalcodes_gh_karmacircle_be_src_modules_products_product_controller_ts",
       "target": "product_controller_getproduct",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/modules/products/product.controller.ts",
-      "source_location": "L28",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/products/product.controller.ts",
+      "source_location": "L31",
       "weight": 1.0,
-      "_src": "src_modules_products_product_controller_ts",
+      "_src": "users_tamalcodes_gh_karmacircle_be_src_modules_products_product_controller_ts",
       "_tgt": "product_controller_addtocart",
-      "source": "src_modules_products_product_controller_ts",
+      "source": "users_tamalcodes_gh_karmacircle_be_src_modules_products_product_controller_ts",
       "target": "product_controller_addtocart",
       "confidence_score": 1.0
     },
@@ -2068,48 +2302,48 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/modules/products/product.service.ts",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/products/product.service.ts",
       "source_location": "L7",
       "weight": 1.0,
-      "_src": "src_modules_products_product_service_ts",
+      "_src": "users_tamalcodes_gh_karmacircle_be_src_modules_products_product_service_ts",
       "_tgt": "product_service_addproduct",
-      "source": "src_modules_products_product_service_ts",
+      "source": "users_tamalcodes_gh_karmacircle_be_src_modules_products_product_service_ts",
       "target": "product_service_addproduct",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/modules/products/product.service.ts",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/products/product.service.ts",
       "source_location": "L17",
       "weight": 1.0,
-      "_src": "src_modules_products_product_service_ts",
+      "_src": "users_tamalcodes_gh_karmacircle_be_src_modules_products_product_service_ts",
       "_tgt": "product_service_findall",
-      "source": "src_modules_products_product_service_ts",
+      "source": "users_tamalcodes_gh_karmacircle_be_src_modules_products_product_service_ts",
       "target": "product_service_findall",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/modules/products/product.service.ts",
-      "source_location": "L21",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/products/product.service.ts",
+      "source_location": "L25",
       "weight": 1.0,
-      "_src": "src_modules_products_product_service_ts",
+      "_src": "users_tamalcodes_gh_karmacircle_be_src_modules_products_product_service_ts",
       "_tgt": "product_service_findbyslug",
-      "source": "src_modules_products_product_service_ts",
+      "source": "users_tamalcodes_gh_karmacircle_be_src_modules_products_product_service_ts",
       "target": "product_service_findbyslug",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/modules/products/product.service.ts",
-      "source_location": "L25",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/products/product.service.ts",
+      "source_location": "L29",
       "weight": 1.0,
-      "_src": "src_modules_products_product_service_ts",
+      "_src": "users_tamalcodes_gh_karmacircle_be_src_modules_products_product_service_ts",
       "_tgt": "product_service_addtocart",
-      "source": "src_modules_products_product_service_ts",
+      "source": "users_tamalcodes_gh_karmacircle_be_src_modules_products_product_service_ts",
       "target": "product_service_addtocart",
       "confidence_score": 1.0
     },
@@ -2524,24 +2758,24 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/modules/directory/directory.controller.ts",
-      "source_location": "L5",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/directory/directory.controller.ts",
+      "source_location": "L6",
       "weight": 1.0,
-      "_src": "src_modules_directory_directory_controller_ts",
+      "_src": "users_tamalcodes_gh_karmacircle_be_src_modules_directory_directory_controller_ts",
       "_tgt": "directory_controller_listallusers",
-      "source": "src_modules_directory_directory_controller_ts",
+      "source": "users_tamalcodes_gh_karmacircle_be_src_modules_directory_directory_controller_ts",
       "target": "directory_controller_listallusers",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/modules/directory/directory.controller.ts",
-      "source_location": "L10",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/directory/directory.controller.ts",
+      "source_location": "L12",
       "weight": 1.0,
-      "_src": "src_modules_directory_directory_controller_ts",
+      "_src": "users_tamalcodes_gh_karmacircle_be_src_modules_directory_directory_controller_ts",
       "_tgt": "directory_controller_listclubs",
-      "source": "src_modules_directory_directory_controller_ts",
+      "source": "users_tamalcodes_gh_karmacircle_be_src_modules_directory_directory_controller_ts",
       "target": "directory_controller_listclubs",
       "confidence_score": 1.0
     },
@@ -2572,24 +2806,24 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/modules/users/user.controller.ts",
-      "source_location": "L8",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.controller.ts",
+      "source_location": "L9",
       "weight": 1.0,
-      "_src": "src_modules_users_user_controller_ts",
+      "_src": "users_tamalcodes_gh_karmacircle_be_src_modules_users_user_controller_ts",
       "_tgt": "user_controller_listusers",
-      "source": "src_modules_users_user_controller_ts",
+      "source": "users_tamalcodes_gh_karmacircle_be_src_modules_users_user_controller_ts",
       "target": "user_controller_listusers",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/modules/users/user.controller.ts",
-      "source_location": "L25",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.controller.ts",
+      "source_location": "L26",
       "weight": 1.0,
-      "_src": "src_modules_users_user_controller_ts",
+      "_src": "users_tamalcodes_gh_karmacircle_be_src_modules_users_user_controller_ts",
       "_tgt": "user_controller_updateprofile",
-      "source": "src_modules_users_user_controller_ts",
+      "source": "users_tamalcodes_gh_karmacircle_be_src_modules_users_user_controller_ts",
       "target": "user_controller_updateprofile",
       "confidence_score": 1.0
     },
@@ -2620,96 +2854,96 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/modules/users/user.service.ts",
-      "source_location": "L6",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.service.ts",
+      "source_location": "L11",
       "weight": 1.0,
-      "_src": "src_modules_users_user_service_ts",
+      "_src": "users_tamalcodes_gh_karmacircle_be_src_modules_users_user_service_ts",
       "_tgt": "user_service_generateuniqueusername",
-      "source": "src_modules_users_user_service_ts",
+      "source": "users_tamalcodes_gh_karmacircle_be_src_modules_users_user_service_ts",
       "target": "user_service_generateuniqueusername",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/modules/users/user.service.ts",
-      "source_location": "L16",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.service.ts",
+      "source_location": "L21",
       "weight": 1.0,
-      "_src": "src_modules_users_user_service_ts",
+      "_src": "users_tamalcodes_gh_karmacircle_be_src_modules_users_user_service_ts",
       "_tgt": "user_service_findbyemail",
-      "source": "src_modules_users_user_service_ts",
+      "source": "users_tamalcodes_gh_karmacircle_be_src_modules_users_user_service_ts",
       "target": "user_service_findbyemail",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/modules/users/user.service.ts",
-      "source_location": "L20",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.service.ts",
+      "source_location": "L25",
       "weight": 1.0,
-      "_src": "src_modules_users_user_service_ts",
+      "_src": "users_tamalcodes_gh_karmacircle_be_src_modules_users_user_service_ts",
       "_tgt": "user_service_findbyusername",
-      "source": "src_modules_users_user_service_ts",
+      "source": "users_tamalcodes_gh_karmacircle_be_src_modules_users_user_service_ts",
       "target": "user_service_findbyusername",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/modules/users/user.service.ts",
-      "source_location": "L26",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.service.ts",
+      "source_location": "L31",
       "weight": 1.0,
-      "_src": "src_modules_users_user_service_ts",
+      "_src": "users_tamalcodes_gh_karmacircle_be_src_modules_users_user_service_ts",
       "_tgt": "user_service_findindividuals",
-      "source": "src_modules_users_user_service_ts",
+      "source": "users_tamalcodes_gh_karmacircle_be_src_modules_users_user_service_ts",
       "target": "user_service_findindividuals",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/modules/users/user.service.ts",
-      "source_location": "L30",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.service.ts",
+      "source_location": "L40",
       "weight": 1.0,
-      "_src": "src_modules_users_user_service_ts",
+      "_src": "users_tamalcodes_gh_karmacircle_be_src_modules_users_user_service_ts",
       "_tgt": "user_service_findall",
-      "source": "src_modules_users_user_service_ts",
+      "source": "users_tamalcodes_gh_karmacircle_be_src_modules_users_user_service_ts",
       "target": "user_service_findall",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/modules/users/user.service.ts",
-      "source_location": "L34",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.service.ts",
+      "source_location": "L48",
       "weight": 1.0,
-      "_src": "src_modules_users_user_service_ts",
+      "_src": "users_tamalcodes_gh_karmacircle_be_src_modules_users_user_service_ts",
       "_tgt": "user_service_findbytype",
-      "source": "src_modules_users_user_service_ts",
+      "source": "users_tamalcodes_gh_karmacircle_be_src_modules_users_user_service_ts",
       "target": "user_service_findbytype",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/modules/users/user.service.ts",
-      "source_location": "L38",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.service.ts",
+      "source_location": "L60",
       "weight": 1.0,
-      "_src": "src_modules_users_user_service_ts",
+      "_src": "users_tamalcodes_gh_karmacircle_be_src_modules_users_user_service_ts",
       "_tgt": "user_service_updateprofile",
-      "source": "src_modules_users_user_service_ts",
+      "source": "users_tamalcodes_gh_karmacircle_be_src_modules_users_user_service_ts",
       "target": "user_service_updateprofile",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/modules/users/user.service.ts",
-      "source_location": "L44",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.service.ts",
+      "source_location": "L66",
       "weight": 1.0,
-      "_src": "src_modules_users_user_service_ts",
+      "_src": "users_tamalcodes_gh_karmacircle_be_src_modules_users_user_service_ts",
       "_tgt": "user_service_sanitize",
-      "source": "src_modules_users_user_service_ts",
+      "source": "users_tamalcodes_gh_karmacircle_be_src_modules_users_user_service_ts",
       "target": "user_service_sanitize",
       "confidence_score": 1.0
     },
@@ -2728,36 +2962,36 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/modules/events/event.service.ts",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/events/event.service.ts",
       "source_location": "L7",
       "weight": 1.0,
-      "_src": "src_modules_events_event_service_ts",
+      "_src": "users_tamalcodes_gh_karmacircle_be_src_modules_events_event_service_ts",
       "_tgt": "event_service_findbyuid",
-      "source": "src_modules_events_event_service_ts",
+      "source": "users_tamalcodes_gh_karmacircle_be_src_modules_events_event_service_ts",
       "target": "event_service_findbyuid",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/modules/events/event.service.ts",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/events/event.service.ts",
       "source_location": "L11",
       "weight": 1.0,
-      "_src": "src_modules_events_event_service_ts",
+      "_src": "users_tamalcodes_gh_karmacircle_be_src_modules_events_event_service_ts",
       "_tgt": "event_service_findall",
-      "source": "src_modules_events_event_service_ts",
+      "source": "users_tamalcodes_gh_karmacircle_be_src_modules_events_event_service_ts",
       "target": "event_service_findall",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/modules/events/event.service.ts",
-      "source_location": "L15",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/events/event.service.ts",
+      "source_location": "L19",
       "weight": 1.0,
-      "_src": "src_modules_events_event_service_ts",
+      "_src": "users_tamalcodes_gh_karmacircle_be_src_modules_events_event_service_ts",
       "_tgt": "event_service_createevent",
-      "source": "src_modules_events_event_service_ts",
+      "source": "users_tamalcodes_gh_karmacircle_be_src_modules_events_event_service_ts",
       "target": "event_service_createevent",
       "confidence_score": 1.0
     },
@@ -2788,24 +3022,24 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/modules/events/event.controller.ts",
-      "source_location": "L8",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/events/event.controller.ts",
+      "source_location": "L9",
       "weight": 1.0,
-      "_src": "src_modules_events_event_controller_ts",
+      "_src": "users_tamalcodes_gh_karmacircle_be_src_modules_events_event_controller_ts",
       "_tgt": "event_controller_listevents",
-      "source": "src_modules_events_event_controller_ts",
+      "source": "users_tamalcodes_gh_karmacircle_be_src_modules_events_event_controller_ts",
       "target": "event_controller_listevents",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/modules/events/event.controller.ts",
-      "source_location": "L26",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/events/event.controller.ts",
+      "source_location": "L27",
       "weight": 1.0,
-      "_src": "src_modules_events_event_controller_ts",
+      "_src": "users_tamalcodes_gh_karmacircle_be_src_modules_events_event_controller_ts",
       "_tgt": "event_controller_createevent",
-      "source": "src_modules_events_event_controller_ts",
+      "source": "users_tamalcodes_gh_karmacircle_be_src_modules_events_event_controller_ts",
       "target": "event_controller_createevent",
       "confidence_score": 1.0
     },

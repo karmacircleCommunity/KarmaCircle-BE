@@ -1,12 +1,12 @@
-# Graph Report - /Users/tamalcodes/Gh/KarmaCircle-BE  (2026-08-19)
+# Graph Report - /Users/tamalcodes/Gh/KarmaCircle-BE  (2026-08-20)
 
 ## Corpus Check
-- 57 files · ~33,722 words
+- 60 files · ~47,711 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 162 nodes · 141 edges · 52 communities detected
-- Extraction: 72% EXTRACTED · 28% INFERRED · 0% AMBIGUOUS · INFERRED: 40 edges (avg confidence: 0.79)
+- 168 nodes · 156 edges · 52 communities detected
+- Extraction: 67% EXTRACTED · 33% INFERRED · 0% AMBIGUOUS · INFERRED: 52 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Community Hubs (Navigation)
@@ -64,16 +64,16 @@
 - [[_COMMUNITY_Community 51|Community 51]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `findByEmail()` - 7 edges
-2. `loginSuccess()` - 6 edges
-3. `signup()` - 5 edges
-4. `sanitize()` - 5 edges
-5. `Contributing to Milan` - 5 edges
-6. `signToken()` - 4 edges
-7. `signin()` - 4 edges
-8. `readableCookieOptions()` - 4 edges
-9. `findAll()` - 4 edges
-10. `Reporting Guidelines` - 4 edges
+1. `toSkipLimit()` - 7 edges
+2. `buildPaginationMeta()` - 7 edges
+3. `findByEmail()` - 7 edges
+4. `loginSuccess()` - 6 edges
+5. `listClubs()` - 5 edges
+6. `signup()` - 5 edges
+7. `listUsers()` - 5 edges
+8. `sanitize()` - 5 edges
+9. `listEvents()` - 5 edges
+10. `Contributing to Milan` - 5 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Backend Tech Stack` --semantically_similar_to--> `Techstack Overview`  [INFERRED] [semantically similar]
@@ -84,8 +84,8 @@
   CODE_OF_CONDUCT.md → SECURITY.md
 - `Creating an Issue` --semantically_similar_to--> `Reporting a Vulnerability`  [INFERRED] [semantically similar]
   CONTRIBUTING.md → SECURITY.md
-- `buildTestApp()` --calls--> `createApp()`  [INFERRED]
-  tests/helpers/test-app.ts → src/app.ts
+- `updatePassword()` --calls--> `findByEmail()`  [INFERRED]
+  src/modules/auth/auth.service.ts → /Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.service.ts
 
 ## Hyperedges (group relationships)
 - **Pull Request Contribution Workflow** — contributing_creating_issue, contributing_working_on_issue, contributing_closing_issue, contributing_creating_pr, contributing_pr_title_format, contributing_reviewing_pr [EXTRACTED 0.90]
@@ -95,20 +95,20 @@
 ## Communities
 
 ### Community 0 - "Community 0"
-Cohesion: 0.23
-Nodes (13): loginSuccess(), logout(), clearedCookieOptions(), httpOnlyCookieOptions(), findOrCreateGoogleUser(), signin(), signToken(), signup() (+5 more)
+Cohesion: 0.14
+Nodes (16): loginSuccess(), logout(), signin(), signup(), clearedCookieOptions(), httpOnlyCookieOptions(), readableCookieOptions(), findOrCreateGoogleUser() (+8 more)
 
 ### Community 1 - "Community 1"
-Cohesion: 0.15
-Nodes (13): Addressing Grievances, Consequences of Unacceptable Behavior, Contact Info, Expected Behavior, JWOC Code of Conduct Purpose, Open Source Citizenship Goal, Reporting Guidelines, Code of Conduct Scope (+5 more)
+Cohesion: 0.11
+Nodes (19): Addressing Grievances, Consequences of Unacceptable Behavior, Contact Info, Expected Behavior, JWOC Code of Conduct Purpose, Open Source Citizenship Goal, Reporting Guidelines, Code of Conduct Scope (+11 more)
 
 ### Community 2 - "Community 2"
-Cohesion: 0.18
-Nodes (13): Installing Dependencies, Techstack Overview, Cloning the Repository, Forking the Repository, Clone Setup Next Steps, Django Code of Conduct, Geek Feminism Anti-Harassment Policy, License and Attribution (+5 more)
+Cohesion: 0.19
+Nodes (11): listClubs(), listAllUsers(), listClubs(), listEvents(), createEvent(), findAll(), findByUid(), buildPaginationMeta() (+3 more)
 
 ### Community 3 - "Community 3"
-Cohesion: 0.2
-Nodes (6): listClubs(), listClubs(), listUsers(), findByType(), findByUsername(), findIndividuals()
+Cohesion: 0.18
+Nodes (13): Installing Dependencies, Techstack Overview, Cloning the Repository, Forking the Repository, Clone Setup Next Steps, Django Code of Conduct, Geek Feminism Anti-Harassment Policy, License and Attribution (+5 more)
 
 ### Community 4 - "Community 4"
 Cohesion: 0.2
@@ -116,35 +116,35 @@ Nodes (5): createApp(), connectToMongo(), handler(), main(), buildTestApp()
 
 ### Community 5 - "Community 5"
 Cohesion: 0.22
-Nodes (6): listAllUsers(), listEvents(), createEvent(), findAll(), findByUid(), listProducts()
-
-### Community 6 - "Community 6"
-Cohesion: 0.22
 Nodes (2): getProduct(), findBySlug()
 
-### Community 7 - "Community 7"
+### Community 6 - "Community 6"
 Cohesion: 0.29
-Nodes (3): signin(), signup(), readableCookieOptions()
+Nodes (3): listUsers(), findByUsername(), findIndividuals()
 
-### Community 8 - "Community 8"
-Cohesion: 0.33
-Nodes (6): Closing an Issue, Commit Message Format, Creating a Pull Request, ESLint and Prettier Pre-commit Hooks, Pull Request Title Format, Reviewing a Pull Request
-
-### Community 9 - "Community 9"
+### Community 7 - "Community 7"
 Cohesion: 0.4
 Nodes (6): Charity/NGO Collaboration Hub Purpose, Milan Landing Page (Desktop Mockup), Milan Platform, Milan Mobile Web View (milanhub.org), Milan Promotional Banner, Tagline: 'United, We Achieve Greatness'
 
-### Community 10 - "Community 10"
+### Community 8 - "Community 8"
 Cohesion: 0.4
 Nodes (1): AppError
 
-### Community 11 - "Community 11"
+### Community 9 - "Community 9"
 Cohesion: 0.4
 Nodes (2): createReport(), hasReportedRecently()
 
-### Community 12 - "Community 12"
+### Community 10 - "Community 10"
 Cohesion: 1.0
 Nodes (3): Setting up .env, Setting up Google Client ID and Secret, Setting up Razorpay API Key
+
+### Community 11 - "Community 11"
+Cohesion: 1.0
+Nodes (0): 
+
+### Community 12 - "Community 12"
+Cohesion: 1.0
+Nodes (0): 
 
 ### Community 13 - "Community 13"
 Cohesion: 1.0
@@ -172,11 +172,11 @@ Nodes (0):
 
 ### Community 19 - "Community 19"
 Cohesion: 1.0
-Nodes (0): 
+Nodes (2): Coding Standards, Backend Setup Next Steps
 
 ### Community 20 - "Community 20"
 Cohesion: 1.0
-Nodes (2): Coding Standards, Backend Setup Next Steps
+Nodes (0): 
 
 ### Community 21 - "Community 21"
 Cohesion: 1.0
@@ -305,63 +305,67 @@ Nodes (0):
 ## Knowledge Gaps
 - **15 isolated node(s):** `Milan Project Overview`, `JWOC Code of Conduct Purpose`, `Weapons Policy`, `Code of Conduct Scope`, `Contact Info` (+10 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **Thin community `Community 13`** (2 nodes): `signupAndGetCookie()`, `events.test.ts`
+- **Thin community `Community 11`** (2 nodes): `signupAndGetCookie()`, `events.test.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 14`** (2 nodes): `validate.ts`, `validate()`
+- **Thin community `Community 12`** (2 nodes): `signup()`, `products.test.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 15`** (2 nodes): `requireAuth()`, `auth.ts`
+- **Thin community `Community 13`** (2 nodes): `validate.ts`, `validate()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 16`** (2 nodes): `loadEnv()`, `env.ts`
+- **Thin community `Community 14`** (2 nodes): `requireAuth()`, `auth.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 17`** (2 nodes): `asyncHandler()`, `async-handler.ts`
+- **Thin community `Community 15`** (2 nodes): `loadEnv()`, `env.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 18`** (2 nodes): `createOrder()`, `payment.service.ts`
+- **Thin community `Community 16`** (2 nodes): `asyncHandler()`, `async-handler.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 19`** (2 nodes): `createOrder()`, `payment.controller.ts`
+- **Thin community `Community 17`** (2 nodes): `createOrder()`, `payment.service.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 20`** (2 nodes): `Coding Standards`, `Backend Setup Next Steps`
+- **Thin community `Community 18`** (2 nodes): `createOrder()`, `payment.controller.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 21`** (1 nodes): `jest.config.js`
+- **Thin community `Community 19`** (2 nodes): `Coding Standards`, `Backend Setup Next Steps`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 22`** (1 nodes): `commitlint.config.js`
+- **Thin community `Community 20`** (1 nodes): `jest.config.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 23`** (1 nodes): `auth.test.ts`
+- **Thin community `Community 21`** (1 nodes): `commitlint.config.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 24`** (1 nodes): `env.setup.ts`
+- **Thin community `Community 22`** (1 nodes): `auth.test.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 25`** (1 nodes): `jest.setup.ts`
+- **Thin community `Community 23`** (1 nodes): `env.setup.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 26`** (1 nodes): `rate-limit.ts`
+- **Thin community `Community 24`** (1 nodes): `jest.setup.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 27`** (1 nodes): `express.d.ts`
+- **Thin community `Community 25`** (1 nodes): `rate-limit.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 28`** (1 nodes): `logger.ts`
+- **Thin community `Community 26`** (1 nodes): `express.d.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 29`** (1 nodes): `passport.ts`
+- **Thin community `Community 27`** (1 nodes): `logger.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 30`** (1 nodes): `swagger.ts`
+- **Thin community `Community 28`** (1 nodes): `passport.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 31`** (1 nodes): `http-status.ts`
+- **Thin community `Community 29`** (1 nodes): `swagger.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 32`** (1 nodes): `payment.routes.ts`
+- **Thin community `Community 30`** (1 nodes): `http-status.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 33`** (1 nodes): `payment.validation.ts`
+- **Thin community `Community 31`** (1 nodes): `payment.routes.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 34`** (1 nodes): `club.routes.ts`
+- **Thin community `Community 32`** (1 nodes): `payment.validation.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 35`** (1 nodes): `club.validation.ts`
+- **Thin community `Community 33`** (1 nodes): `club.routes.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 36`** (1 nodes): `product.routes.ts`
+- **Thin community `Community 34`** (1 nodes): `club.validation.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 37`** (1 nodes): `product.validation.ts`
+- **Thin community `Community 35`** (1 nodes): `product.routes.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 38`** (1 nodes): `product.model.ts`
+- **Thin community `Community 36`** (1 nodes): `product.validation.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 39`** (1 nodes): `auth.validation.ts`
+- **Thin community `Community 37`** (1 nodes): `product.model.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 40`** (1 nodes): `auth.routes.ts`
+- **Thin community `Community 38`** (1 nodes): `auth.validation.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 41`** (1 nodes): `directory.routes.ts`
+- **Thin community `Community 39`** (1 nodes): `auth.routes.ts`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 40`** (1 nodes): `directory.routes.ts`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 41`** (1 nodes): `directory.validation.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 - **Thin community `Community 42`** (1 nodes): `user.model.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
@@ -387,17 +391,17 @@ Nodes (0):
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `findByEmail()` connect `Community 0` to `Community 3`, `Community 5`?**
-  _High betweenness centrality (0.046) - this node is a cross-community bridge._
-- **Why does `createEvent()` connect `Community 5` to `Community 0`?**
-  _High betweenness centrality (0.041) - this node is a cross-community bridge._
+- **Why does `sanitize()` connect `Community 0` to `Community 6`?**
+  _High betweenness centrality (0.036) - this node is a cross-community bridge._
+- **Why does `listProducts()` connect `Community 2` to `Community 5`?**
+  _High betweenness centrality (0.031) - this node is a cross-community bridge._
+- **Are the 6 inferred relationships involving `toSkipLimit()` (e.g. with `listClubs()` and `listProducts()`) actually correct?**
+  _`toSkipLimit()` has 6 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 6 inferred relationships involving `buildPaginationMeta()` (e.g. with `listClubs()` and `listProducts()`) actually correct?**
+  _`buildPaginationMeta()` has 6 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 6 inferred relationships involving `findByEmail()` (e.g. with `dashboard()` and `signup()`) actually correct?**
   _`findByEmail()` has 6 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 5 inferred relationships involving `loginSuccess()` (e.g. with `signToken()` and `sanitize()`) actually correct?**
   _`loginSuccess()` has 5 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 3 inferred relationships involving `signup()` (e.g. with `findByEmail()` and `generateUniqueUsername()`) actually correct?**
-  _`signup()` has 3 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 4 inferred relationships involving `sanitize()` (e.g. with `dashboard()` and `loginSuccess()`) actually correct?**
-  _`sanitize()` has 4 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `Milan Project Overview`, `JWOC Code of Conduct Purpose`, `Weapons Policy` to the rest of the system?**
-  _15 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Are the 4 inferred relationships involving `listClubs()` (e.g. with `findByUsername()` and `findByType()`) actually correct?**
+  _`listClubs()` has 4 INFERRED edges - model-reasoned connections that need verification._
