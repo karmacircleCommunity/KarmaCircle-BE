@@ -505,7 +505,7 @@
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/clubs/club.controller.ts",
       "source_location": "L31",
       "id": "club_controller_dashboard",
-      "community": 3,
+      "community": 2,
       "norm_label": "dashboard()"
     },
     {
@@ -649,7 +649,7 @@
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/auth/auth.controller.ts",
       "source_location": "L1",
       "id": "users_tamalcodes_gh_karmacircle_be_src_modules_auth_auth_controller_ts",
-      "community": 2,
+      "community": 3,
       "norm_label": "auth.controller.ts"
     },
     {
@@ -658,7 +658,7 @@
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/auth/auth.controller.ts",
       "source_location": "L18",
       "id": "auth_controller_signup",
-      "community": 2,
+      "community": 3,
       "norm_label": "signup()"
     },
     {
@@ -667,7 +667,7 @@
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/auth/auth.controller.ts",
       "source_location": "L30",
       "id": "auth_controller_signin",
-      "community": 2,
+      "community": 3,
       "norm_label": "signin()"
     },
     {
@@ -676,7 +676,7 @@
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/auth/auth.controller.ts",
       "source_location": "L43",
       "id": "auth_controller_updatepassword",
-      "community": 2,
+      "community": 3,
       "norm_label": "updatepassword()"
     },
     {
@@ -685,7 +685,7 @@
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/auth/auth.controller.ts",
       "source_location": "L52",
       "id": "auth_controller_googleinitiate",
-      "community": 2,
+      "community": 3,
       "norm_label": "googleinitiate()"
     },
     {
@@ -694,7 +694,7 @@
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/auth/auth.controller.ts",
       "source_location": "L66",
       "id": "auth_controller_googlecallback",
-      "community": 2,
+      "community": 3,
       "norm_label": "googlecallback()"
     },
     {
@@ -703,7 +703,7 @@
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/auth/auth.controller.ts",
       "source_location": "L85",
       "id": "auth_controller_loginfailed",
-      "community": 2,
+      "community": 3,
       "norm_label": "loginfailed()"
     },
     {
@@ -712,7 +712,7 @@
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/auth/auth.controller.ts",
       "source_location": "L91",
       "id": "auth_controller_loginsuccess",
-      "community": 2,
+      "community": 3,
       "norm_label": "loginsuccess()"
     },
     {
@@ -721,7 +721,7 @@
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/auth/auth.controller.ts",
       "source_location": "L116",
       "id": "auth_controller_logout",
-      "community": 2,
+      "community": 3,
       "norm_label": "logout()"
     },
     {
@@ -730,7 +730,7 @@
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/auth/auth.service.ts",
       "source_location": "L1",
       "id": "users_tamalcodes_gh_karmacircle_be_src_modules_auth_auth_service_ts",
-      "community": 3,
+      "community": 2,
       "norm_label": "auth.service.ts"
     },
     {
@@ -739,7 +739,7 @@
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/auth/auth.service.ts",
       "source_location": "L19",
       "id": "auth_service_signtoken",
-      "community": 3,
+      "community": 2,
       "norm_label": "signtoken()"
     },
     {
@@ -748,7 +748,7 @@
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/auth/auth.service.ts",
       "source_location": "L33",
       "id": "auth_service_verifytokenloosely",
-      "community": 2,
+      "community": 3,
       "norm_label": "verifytokenloosely()"
     },
     {
@@ -757,7 +757,7 @@
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/auth/auth.service.ts",
       "source_location": "L48",
       "id": "auth_service_bumptokenversion",
-      "community": 2,
+      "community": 3,
       "norm_label": "bumptokenversion()"
     },
     {
@@ -766,34 +766,34 @@
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/auth/auth.service.ts",
       "source_location": "L52",
       "id": "auth_service_signup",
-      "community": 3,
+      "community": 2,
       "norm_label": "signup()"
     },
     {
       "label": "signin()",
       "file_type": "code",
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/auth/auth.service.ts",
-      "source_location": "L82",
+      "source_location": "L83",
       "id": "auth_service_signin",
-      "community": 3,
+      "community": 2,
       "norm_label": "signin()"
     },
     {
       "label": "updatePassword()",
       "file_type": "code",
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/auth/auth.service.ts",
-      "source_location": "L109",
+      "source_location": "L110",
       "id": "auth_service_updatepassword",
-      "community": 3,
+      "community": 2,
       "norm_label": "updatepassword()"
     },
     {
       "label": "findOrCreateGoogleUser()",
       "file_type": "code",
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/auth/auth.service.ts",
-      "source_location": "L135",
+      "source_location": "L136",
       "id": "auth_service_findorcreategoogleuser",
-      "community": 3,
+      "community": 2,
       "norm_label": "findorcreategoogleuser()"
     },
     {
@@ -802,7 +802,7 @@
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/auth/auth.cookies.ts",
       "source_location": "L1",
       "id": "users_tamalcodes_gh_karmacircle_be_src_modules_auth_auth_cookies_ts",
-      "community": 2,
+      "community": 3,
       "norm_label": "auth.cookies.ts"
     },
     {
@@ -811,7 +811,7 @@
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/auth/auth.cookies.ts",
       "source_location": "L11",
       "id": "auth_cookies_httponlycookieoptions",
-      "community": 2,
+      "community": 3,
       "norm_label": "httponlycookieoptions()"
     },
     {
@@ -820,7 +820,7 @@
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/auth/auth.cookies.ts",
       "source_location": "L21",
       "id": "auth_cookies_readablecookieoptions",
-      "community": 2,
+      "community": 3,
       "norm_label": "readablecookieoptions()"
     },
     {
@@ -829,7 +829,7 @@
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/auth/auth.cookies.ts",
       "source_location": "L31",
       "id": "auth_cookies_clearedcookieoptions",
-      "community": 2,
+      "community": 3,
       "norm_label": "clearedcookieoptions()"
     },
     {
@@ -901,8 +901,17 @@
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.model.ts",
       "source_location": "L1",
       "id": "users_tamalcodes_gh_karmacircle_be_src_modules_users_user_model_ts",
-      "community": 42,
+      "community": 2,
       "norm_label": "user.model.ts"
+    },
+    {
+      "label": "getUserModel()",
+      "file_type": "code",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.model.ts",
+      "source_location": "L114",
+      "id": "user_model_getusermodel",
+      "community": 2,
+      "norm_label": "getusermodel()"
     },
     {
       "label": "user.routes.ts",
@@ -910,7 +919,7 @@
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.routes.ts",
       "source_location": "L1",
       "id": "users_tamalcodes_gh_karmacircle_be_src_modules_users_user_routes_ts",
-      "community": 43,
+      "community": 42,
       "norm_label": "user.routes.ts"
     },
     {
@@ -946,7 +955,7 @@
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.service.ts",
       "source_location": "L1",
       "id": "users_tamalcodes_gh_karmacircle_be_src_modules_users_user_service_ts",
-      "community": 3,
+      "community": 2,
       "norm_label": "user.service.ts"
     },
     {
@@ -955,7 +964,7 @@
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.service.ts",
       "source_location": "L11",
       "id": "user_service_generateuniqueusername",
-      "community": 3,
+      "community": 2,
       "norm_label": "generateuniqueusername()"
     },
     {
@@ -964,7 +973,7 @@
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.service.ts",
       "source_location": "L21",
       "id": "user_service_findbyemail",
-      "community": 3,
+      "community": 2,
       "norm_label": "findbyemail()"
     },
     {
@@ -991,7 +1000,7 @@
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.service.ts",
       "source_location": "L46",
       "id": "user_service_findall",
-      "community": 3,
+      "community": 2,
       "norm_label": "findall()"
     },
     {
@@ -1009,7 +1018,7 @@
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.service.ts",
       "source_location": "L75",
       "id": "user_service_updateprofile",
-      "community": 3,
+      "community": 2,
       "norm_label": "updateprofile()"
     },
     {
@@ -1018,7 +1027,7 @@
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.service.ts",
       "source_location": "L81",
       "id": "user_service_sanitize",
-      "community": 3,
+      "community": 2,
       "norm_label": "sanitize()"
     },
     {
@@ -1027,7 +1036,7 @@
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.validation.ts",
       "source_location": "L1",
       "id": "users_tamalcodes_gh_karmacircle_be_src_modules_users_user_validation_ts",
-      "community": 44,
+      "community": 43,
       "norm_label": "user.validation.ts"
     },
     {
@@ -1072,7 +1081,7 @@
       "source_file": "src/modules/events/event.model.ts",
       "source_location": "L1",
       "id": "src_modules_events_event_model_ts",
-      "community": 45,
+      "community": 44,
       "norm_label": "event.model.ts"
     },
     {
@@ -1108,7 +1117,7 @@
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/events/event.routes.ts",
       "source_location": "L1",
       "id": "users_tamalcodes_gh_karmacircle_be_src_modules_events_event_routes_ts",
-      "community": 46,
+      "community": 45,
       "norm_label": "event.routes.ts"
     },
     {
@@ -1117,7 +1126,7 @@
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/events/event.validation.ts",
       "source_location": "L1",
       "id": "users_tamalcodes_gh_karmacircle_be_src_modules_events_event_validation_ts",
-      "community": 47,
+      "community": 46,
       "norm_label": "event.validation.ts"
     },
     {
@@ -1144,7 +1153,7 @@
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/reports/report.model.ts",
       "source_location": "L1",
       "id": "users_tamalcodes_gh_karmacircle_be_src_modules_reports_report_model_ts",
-      "community": 48,
+      "community": 47,
       "norm_label": "report.model.ts"
     },
     {
@@ -1180,7 +1189,7 @@
       "source_file": "src/modules/reports/report.validation.ts",
       "source_location": "L1",
       "id": "src_modules_reports_report_validation_ts",
-      "community": 49,
+      "community": 48,
       "norm_label": "report.validation.ts"
     },
     {
@@ -1189,7 +1198,7 @@
       "source_file": "src/modules/reports/report.routes.ts",
       "source_location": "L1",
       "id": "src_modules_reports_report_routes_ts",
-      "community": 50,
+      "community": 49,
       "norm_label": "report.routes.ts"
     },
     {
@@ -1198,7 +1207,7 @@
       "source_file": "src/routes/index.ts",
       "source_location": "L1",
       "id": "src_routes_index_ts",
-      "community": 51,
+      "community": 50,
       "norm_label": "index.ts"
     },
     {
@@ -2654,7 +2663,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/auth/auth.service.ts",
-      "source_location": "L82",
+      "source_location": "L83",
       "weight": 1.0,
       "_src": "users_tamalcodes_gh_karmacircle_be_src_modules_auth_auth_service_ts",
       "_tgt": "auth_service_signin",
@@ -2666,7 +2675,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/auth/auth.service.ts",
-      "source_location": "L109",
+      "source_location": "L110",
       "weight": 1.0,
       "_src": "users_tamalcodes_gh_karmacircle_be_src_modules_auth_auth_service_ts",
       "_tgt": "auth_service_updatepassword",
@@ -2678,7 +2687,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/auth/auth.service.ts",
-      "source_location": "L135",
+      "source_location": "L136",
       "weight": 1.0,
       "_src": "users_tamalcodes_gh_karmacircle_be_src_modules_auth_auth_service_ts",
       "_tgt": "auth_service_findorcreategoogleuser",
@@ -2690,7 +2699,7 @@
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/auth/auth.service.ts",
-      "source_location": "L77",
+      "source_location": "L78",
       "weight": 1.0,
       "_src": "auth_service_signup",
       "_tgt": "auth_service_signtoken",
@@ -2702,7 +2711,7 @@
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/auth/auth.service.ts",
-      "source_location": "L104",
+      "source_location": "L105",
       "weight": 1.0,
       "_src": "auth_service_signin",
       "_tgt": "auth_service_signtoken",
@@ -2733,6 +2742,18 @@
       "_tgt": "user_service_generateuniqueusername",
       "source": "auth_service_signup",
       "target": "user_service_generateuniqueusername"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/auth/auth.service.ts",
+      "source_location": "L68",
+      "weight": 1.0,
+      "_src": "auth_service_signup",
+      "_tgt": "user_model_getusermodel",
+      "source": "auth_service_signup",
+      "target": "user_model_getusermodel"
     },
     {
       "relation": "calls",
@@ -2805,6 +2826,18 @@
       "_tgt": "user_service_generateuniqueusername",
       "source": "auth_service_findorcreategoogleuser",
       "target": "user_service_generateuniqueusername"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/auth/auth.service.ts",
+      "source_location": "L154",
+      "weight": 1.0,
+      "_src": "auth_service_findorcreategoogleuser",
+      "_tgt": "user_model_getusermodel",
+      "source": "auth_service_findorcreategoogleuser",
+      "target": "user_model_getusermodel"
     },
     {
       "relation": "contains",
@@ -2889,6 +2922,18 @@
       "_tgt": "user_service_findbytype",
       "source": "directory_controller_listclubs",
       "target": "user_service_findbytype"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.model.ts",
+      "source_location": "L114",
+      "weight": 1.0,
+      "_src": "users_tamalcodes_gh_karmacircle_be_src_modules_users_user_model_ts",
+      "_tgt": "user_model_getusermodel",
+      "source": "users_tamalcodes_gh_karmacircle_be_src_modules_users_user_model_ts",
+      "target": "user_model_getusermodel",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",

@@ -1,12 +1,12 @@
 # Graph Report - /Users/tamalcodes/Gh/KarmaCircle-BE  (2026-08-20)
 
 ## Corpus Check
-- 60 files · ~51,316 words
+- 60 files · ~51,990 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 171 nodes · 161 edges · 52 communities detected
-- Extraction: 66% EXTRACTED · 34% INFERRED · 0% AMBIGUOUS · INFERRED: 54 edges (avg confidence: 0.8)
+- 172 nodes · 164 edges · 51 communities detected
+- Extraction: 66% EXTRACTED · 34% INFERRED · 0% AMBIGUOUS · INFERRED: 56 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Community Hubs (Navigation)
@@ -61,15 +61,14 @@
 - [[_COMMUNITY_Community 48|Community 48]]
 - [[_COMMUNITY_Community 49|Community 49]]
 - [[_COMMUNITY_Community 50|Community 50]]
-- [[_COMMUNITY_Community 51|Community 51]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `toSkipLimit()` - 7 edges
 2. `buildPaginationMeta()` - 7 edges
 3. `findByEmail()` - 7 edges
 4. `loginSuccess()` - 6 edges
-5. `listClubs()` - 5 edges
-6. `signup()` - 5 edges
+5. `signup()` - 6 edges
+6. `listClubs()` - 5 edges
 7. `listUsers()` - 5 edges
 8. `sanitize()` - 5 edges
 9. `listEvents()` - 5 edges
@@ -103,12 +102,12 @@ Cohesion: 0.11
 Nodes (19): Addressing Grievances, Consequences of Unacceptable Behavior, Contact Info, Expected Behavior, JWOC Code of Conduct Purpose, Open Source Citizenship Goal, Reporting Guidelines, Code of Conduct Scope (+11 more)
 
 ### Community 2 - "Community 2"
-Cohesion: 0.18
-Nodes (9): loginSuccess(), logout(), signin(), signup(), clearedCookieOptions(), httpOnlyCookieOptions(), readableCookieOptions(), bumpTokenVersion() (+1 more)
+Cohesion: 0.24
+Nodes (10): findOrCreateGoogleUser(), signin(), signToken(), signup(), updatePassword(), dashboard(), getUserModel(), findByEmail() (+2 more)
 
 ### Community 3 - "Community 3"
-Cohesion: 0.28
-Nodes (9): findOrCreateGoogleUser(), signin(), signToken(), signup(), updatePassword(), dashboard(), findByEmail(), generateUniqueUsername() (+1 more)
+Cohesion: 0.18
+Nodes (9): loginSuccess(), logout(), signin(), signup(), clearedCookieOptions(), httpOnlyCookieOptions(), readableCookieOptions(), bumpTokenVersion() (+1 more)
 
 ### Community 4 - "Community 4"
 Cohesion: 0.18
@@ -298,10 +297,6 @@ Nodes (0):
 Cohesion: 1.0
 Nodes (0): 
 
-### Community 51 - "Community 51"
-Cohesion: 1.0
-Nodes (0): 
-
 ## Knowledge Gaps
 - **15 isolated node(s):** `Milan Project Overview`, `JWOC Code of Conduct Purpose`, `Weapons Policy`, `Code of Conduct Scope`, `Contact Info` (+10 more)
   These have ≤1 connection - possible missing edges or undocumented components.
@@ -367,36 +362,34 @@ Nodes (0):
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 - **Thin community `Community 41`** (1 nodes): `directory.validation.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 42`** (1 nodes): `user.model.ts`
+- **Thin community `Community 42`** (1 nodes): `user.routes.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 43`** (1 nodes): `user.routes.ts`
+- **Thin community `Community 43`** (1 nodes): `user.validation.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 44`** (1 nodes): `user.validation.ts`
+- **Thin community `Community 44`** (1 nodes): `event.model.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 45`** (1 nodes): `event.model.ts`
+- **Thin community `Community 45`** (1 nodes): `event.routes.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 46`** (1 nodes): `event.routes.ts`
+- **Thin community `Community 46`** (1 nodes): `event.validation.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 47`** (1 nodes): `event.validation.ts`
+- **Thin community `Community 47`** (1 nodes): `report.model.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 48`** (1 nodes): `report.model.ts`
+- **Thin community `Community 48`** (1 nodes): `report.validation.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 49`** (1 nodes): `report.validation.ts`
+- **Thin community `Community 49`** (1 nodes): `report.routes.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 50`** (1 nodes): `report.routes.ts`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 51`** (1 nodes): `index.ts`
+- **Thin community `Community 50`** (1 nodes): `index.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `loginSuccess()` connect `Community 2` to `Community 3`?**
+- **Why does `loginSuccess()` connect `Community 3` to `Community 2`?**
+  _High betweenness centrality (0.037) - this node is a cross-community bridge._
+- **Why does `sanitize()` connect `Community 2` to `Community 3`?**
   _High betweenness centrality (0.036) - this node is a cross-community bridge._
-- **Why does `sanitize()` connect `Community 3` to `Community 2`?**
-  _High betweenness centrality (0.035) - this node is a cross-community bridge._
 - **Why does `listProducts()` connect `Community 0` to `Community 6`?**
-  _High betweenness centrality (0.031) - this node is a cross-community bridge._
+  _High betweenness centrality (0.032) - this node is a cross-community bridge._
 - **Are the 6 inferred relationships involving `toSkipLimit()` (e.g. with `listClubs()` and `listProducts()`) actually correct?**
   _`toSkipLimit()` has 6 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 6 inferred relationships involving `buildPaginationMeta()` (e.g. with `listClubs()` and `listProducts()`) actually correct?**
