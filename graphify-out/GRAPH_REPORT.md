@@ -1,12 +1,12 @@
 # Graph Report - /Users/tamalcodes/Gh/KarmaCircle-BE  (2026-08-20)
 
 ## Corpus Check
-- 60 files · ~48,269 words
+- 60 files · ~49,636 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 168 nodes · 156 edges · 52 communities detected
-- Extraction: 67% EXTRACTED · 33% INFERRED · 0% AMBIGUOUS · INFERRED: 52 edges (avg confidence: 0.8)
+- 171 nodes · 161 edges · 52 communities detected
+- Extraction: 66% EXTRACTED · 34% INFERRED · 0% AMBIGUOUS · INFERRED: 54 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Community Hubs (Navigation)
@@ -84,8 +84,8 @@
   CODE_OF_CONDUCT.md → SECURITY.md
 - `Creating an Issue` --semantically_similar_to--> `Reporting a Vulnerability`  [INFERRED] [semantically similar]
   CONTRIBUTING.md → SECURITY.md
-- `updatePassword()` --calls--> `findByEmail()`  [INFERRED]
-  src/modules/auth/auth.service.ts → /Users/tamalcodes/Gh/KarmaCircle-BE/src/modules/users/user.service.ts
+- `buildTestApp()` --calls--> `createApp()`  [INFERRED]
+  tests/helpers/test-app.ts → src/app.ts
 
 ## Hyperedges (group relationships)
 - **Pull Request Contribution Workflow** — contributing_creating_issue, contributing_working_on_issue, contributing_closing_issue, contributing_creating_pr, contributing_pr_title_format, contributing_reviewing_pr [EXTRACTED 0.90]
@@ -96,31 +96,31 @@
 
 ### Community 0 - "Community 0"
 Cohesion: 0.14
-Nodes (16): loginSuccess(), logout(), signin(), signup(), clearedCookieOptions(), httpOnlyCookieOptions(), readableCookieOptions(), findOrCreateGoogleUser() (+8 more)
+Nodes (14): listClubs(), listAllUsers(), listClubs(), listEvents(), createEvent(), findAll(), findByUid(), buildPaginationMeta() (+6 more)
 
 ### Community 1 - "Community 1"
 Cohesion: 0.11
 Nodes (19): Addressing Grievances, Consequences of Unacceptable Behavior, Contact Info, Expected Behavior, JWOC Code of Conduct Purpose, Open Source Citizenship Goal, Reporting Guidelines, Code of Conduct Scope (+11 more)
 
 ### Community 2 - "Community 2"
-Cohesion: 0.19
-Nodes (11): listClubs(), listAllUsers(), listClubs(), listEvents(), createEvent(), findAll(), findByUid(), buildPaginationMeta() (+3 more)
+Cohesion: 0.18
+Nodes (9): loginSuccess(), logout(), signin(), signup(), clearedCookieOptions(), httpOnlyCookieOptions(), readableCookieOptions(), bumpTokenVersion() (+1 more)
 
 ### Community 3 - "Community 3"
+Cohesion: 0.28
+Nodes (9): findOrCreateGoogleUser(), signin(), signToken(), signup(), updatePassword(), dashboard(), findByEmail(), generateUniqueUsername() (+1 more)
+
+### Community 4 - "Community 4"
 Cohesion: 0.18
 Nodes (13): Installing Dependencies, Techstack Overview, Cloning the Repository, Forking the Repository, Clone Setup Next Steps, Django Code of Conduct, Geek Feminism Anti-Harassment Policy, License and Attribution (+5 more)
 
-### Community 4 - "Community 4"
+### Community 5 - "Community 5"
 Cohesion: 0.2
 Nodes (5): createApp(), connectToMongo(), handler(), main(), buildTestApp()
 
-### Community 5 - "Community 5"
+### Community 6 - "Community 6"
 Cohesion: 0.22
 Nodes (2): getProduct(), findBySlug()
-
-### Community 6 - "Community 6"
-Cohesion: 0.29
-Nodes (3): listUsers(), findByUsername(), findIndividuals()
 
 ### Community 7 - "Community 7"
 Cohesion: 0.4
@@ -172,11 +172,11 @@ Nodes (0):
 
 ### Community 19 - "Community 19"
 Cohesion: 1.0
-Nodes (2): Coding Standards, Backend Setup Next Steps
+Nodes (0): 
 
 ### Community 20 - "Community 20"
 Cohesion: 1.0
-Nodes (0): 
+Nodes (2): Coding Standards, Backend Setup Next Steps
 
 ### Community 21 - "Community 21"
 Cohesion: 1.0
@@ -311,29 +311,29 @@ Nodes (0):
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 - **Thin community `Community 13`** (2 nodes): `validate.ts`, `validate()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 14`** (2 nodes): `requireAuth()`, `auth.ts`
+- **Thin community `Community 14`** (2 nodes): `skipInTest()`, `rate-limit.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 15`** (2 nodes): `loadEnv()`, `env.ts`
+- **Thin community `Community 15`** (2 nodes): `requireAuth()`, `auth.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 16`** (2 nodes): `asyncHandler()`, `async-handler.ts`
+- **Thin community `Community 16`** (2 nodes): `loadEnv()`, `env.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 17`** (2 nodes): `createOrder()`, `payment.service.ts`
+- **Thin community `Community 17`** (2 nodes): `asyncHandler()`, `async-handler.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 18`** (2 nodes): `createOrder()`, `payment.controller.ts`
+- **Thin community `Community 18`** (2 nodes): `createOrder()`, `payment.service.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 19`** (2 nodes): `Coding Standards`, `Backend Setup Next Steps`
+- **Thin community `Community 19`** (2 nodes): `createOrder()`, `payment.controller.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 20`** (1 nodes): `jest.config.js`
+- **Thin community `Community 20`** (2 nodes): `Coding Standards`, `Backend Setup Next Steps`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 21`** (1 nodes): `commitlint.config.js`
+- **Thin community `Community 21`** (1 nodes): `jest.config.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 22`** (1 nodes): `auth.test.ts`
+- **Thin community `Community 22`** (1 nodes): `commitlint.config.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 23`** (1 nodes): `env.setup.ts`
+- **Thin community `Community 23`** (1 nodes): `auth.test.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 24`** (1 nodes): `jest.setup.ts`
+- **Thin community `Community 24`** (1 nodes): `env.setup.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 25`** (1 nodes): `rate-limit.ts`
+- **Thin community `Community 25`** (1 nodes): `jest.setup.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 - **Thin community `Community 26`** (1 nodes): `express.d.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
@@ -391,9 +391,11 @@ Nodes (0):
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `sanitize()` connect `Community 0` to `Community 6`?**
+- **Why does `loginSuccess()` connect `Community 2` to `Community 3`?**
   _High betweenness centrality (0.036) - this node is a cross-community bridge._
-- **Why does `listProducts()` connect `Community 2` to `Community 5`?**
+- **Why does `sanitize()` connect `Community 3` to `Community 2`?**
+  _High betweenness centrality (0.035) - this node is a cross-community bridge._
+- **Why does `listProducts()` connect `Community 0` to `Community 6`?**
   _High betweenness centrality (0.031) - this node is a cross-community bridge._
 - **Are the 6 inferred relationships involving `toSkipLimit()` (e.g. with `listClubs()` and `listProducts()`) actually correct?**
   _`toSkipLimit()` has 6 INFERRED edges - model-reasoned connections that need verification._
@@ -403,5 +405,3 @@ _Questions this graph is uniquely positioned to answer:_
   _`findByEmail()` has 6 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 5 inferred relationships involving `loginSuccess()` (e.g. with `signToken()` and `sanitize()`) actually correct?**
   _`loginSuccess()` has 5 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 4 inferred relationships involving `listClubs()` (e.g. with `findByUsername()` and `findByType()`) actually correct?**
-  _`listClubs()` has 4 INFERRED edges - model-reasoned connections that need verification._
